@@ -1,0 +1,83 @@
+============================================================
+🚀 CRONISTA V80.1 - LAUNCHER SHIM
+============================================================
+Iniciando aplicación modularizada desde app/main.py...
+INFO:     Started server process [8836]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:45122 - "GET /api/rate-limit-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45136 - "POST /new HTTP/1.1" 200 OK
+2026-02-19 16:51:21 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:51:46 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Rondador', usando 'Guerrero' por defecto
+2026-02-19 16:51:46 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:51:54 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:51:54 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:03 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:15 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:27 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:37 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_portrait | Error generando retrato: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_portrait | Error generando retrato: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_portrait | Error generando retrato: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:52:50 | ERROR    | skill_images         | generate_portrait | Error generando retrato: <urlopen error [Errno 111] Connection refused>
+INFO:     127.0.0.1:45150 - "POST /new HTTP/1.1" 200 OK
+2026-02-19 16:52:50 | WARNING  | system               | log_request     | POST /new - Status: 422 - Duration: 0.002s
+INFO:     127.0.0.1:53182 - "POST /new HTTP/1.1" 422 Unprocessable Content
+2026-02-19 16:52:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:13 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Roguesa', usando 'Guerrero' por defecto
+2026-02-19 16:53:13 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-19 16:53:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:22 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:22 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:32 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:45 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:54 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:03 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_map    | Error generando mapa: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_portrait | Error generando retrato: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_portrait | Error generando retrato: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_portrait | Error generando retrato: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | comfy_client         | queue_prompt    | Error enviando prompt a ComfyUI: <urlopen error [Errno 111] Connection refused>
+2026-02-19 16:54:13 | ERROR    | skill_images         | generate_portrait | Error generando retrato: <urlopen error [Errno 111] Connection refused>
+INFO:     127.0.0.1:51924 - "POST /new HTTP/1.1" 200 OK
+2026-02-19 16:54:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:35 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Arquero', usando 'Guerrero' por defecto
+2026-02-19 16:54:35 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Renegado', usando 'Guerrero' por defecto
+2026-02-19 16:54:35 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:44 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:44 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:54 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:55:05 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session

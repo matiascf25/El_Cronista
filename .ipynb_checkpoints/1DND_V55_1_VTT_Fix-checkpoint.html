@@ -1,0 +1,215 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>El Misterio del Objeto Perdido</title><style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+    body{background:#1a1a1a;color:#e0e0e0;font-family:'Libre Baskerville',serif;padding:0;margin:0;}
+    .app-container { display: flex; height: 100vh; overflow: hidden; }
+    .sidebar { width: 320px; background: #222; overflow-y: auto; border-right: 2px solid #444; padding: 20px; }
+    .main-content { flex: 1; overflow-y: auto; padding: 40px; background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); }
+    .float-btn { position: fixed; top: 20px; right: 20px; z-index: 1000; background: #eebb00; color: #000; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.3); font-family: 'Montserrat'; }
+    .float-btn:hover { background: #ffcc00; }
+    h1{font-family:'Montserrat',sans-serif;color:#eebb00;text-align:center;font-size:2.5em;margin-bottom:10px;text-transform:uppercase;border-bottom: 2px solid #eebb00; padding-bottom: 15px;}
+    .badge{background:#444;color:#eebb00;padding:4px 12px;font-family:'Montserrat';font-weight:bold;border-radius:4px;display:block;width:fit-content;margin:0 auto 20px;text-transform:uppercase;font-size:0.8em;}
+    .scene-card{background:#2a2a2a;border:1px solid #444;box-shadow:0 4px 10px rgba(0,0,0,0.5);margin-bottom:40px;border-radius: 8px; overflow: hidden;}
+    .scene-header{background:#eebb00;color:#000;padding:10px 20px;font-family:'Montserrat';font-weight:bold;display:flex;justify-content:space-between;}
+    .read-aloud{background:#222;border-left:4px solid #eebb00;padding:15px;font-style:italic;margin:0;color:#ccc;}
+    .visual-img{width:100%;height:350px;object-fit:cover;border-bottom:1px solid #444;}
+    .dm-secret { position: relative; filter: blur(10px); transition: filter 0.4s ease; cursor: pointer; user-select: none; background:#330000; padding:15px; border:1px dashed #c0392b; margin: 10px 20px; border-radius: 4px;}
+    .dm-secret:not(.revealed)::after { content: "🔒 CLIC PARA REVELAR"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #c0392b; color: #fff; padding: 5px 10px; border-radius: 4px; font-family: 'Montserrat'; font-weight: bold; pointer-events: none; z-index: 10; animation: pulse 2s infinite; }
+    .dm-secret.revealed { filter: blur(0); cursor: default; user-select: auto; background:#222; border:1px solid #555;}
+    body.player-mode .dm-secret { display: none !important; }
+    body.player-mode .dm-only { display: none !important; }
+    .char-card { background: #333; margin-bottom: 20px; border-radius: 6px; overflow: hidden; border: 1px solid #555; }
+    .char-img { width: 100%; height: 150px; object-fit: cover; }
+    .char-name { padding: 10px; background: #111; font-family: 'Montserrat'; font-weight: bold; color: #eebb00; text-align: center; }
+    .char-stats { display: flex; text-align: center; background: #222; padding: 5px; }
+    .stat-box { flex: 1; border-right: 1px solid #444; }
+    .stat-box:last-child { border: none; }
+    #dice-overlay { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.9); padding: 30px; border-radius: 10px; color: #fff; text-align: center; font-family: 'Montserrat'; z-index: 2000; display: none; border: 2px solid #eebb00; }
+    #dice-result { font-size: 3em; font-weight: bold; color: #eebb00; margin: 10px 0; }
+    .clickable-roll { cursor: pointer; color: #eebb00; text-decoration: underline; }
+    .clickable-roll:hover { color: #fff; }
+    @keyframes pulse { 0% { transform: translate(-50%, -50%) scale(1); } 50% { transform: translate(-50%, -50%) scale(1.05); } 100% { transform: translate(-50%, -50%) scale(1); } }
+    </style>
+
+    <script>
+    function toggleSecret(element) { element.classList.toggle('revealed'); }
+    function togglePlayerMode() {
+        document.body.classList.toggle('player-mode');
+        const btn = document.getElementById('modeBtn');
+        if (document.body.classList.contains('player-mode')) {
+            btn.innerText = "👁️ VISTA DM";
+            btn.style.background = "#2ecc71";
+        } else {
+            btn.innerText = "📺 VISTA JUGADOR";
+            btn.style.background = "#eebb00";
+        }
+    }
+    function rollDice(diceStr) {
+        let mod = 0; let sides = 20; let count = 1;
+        if (diceStr.includes('d')) {
+            const parts = diceStr.split('d');
+            count = parseInt(parts[0]) || 1;
+            const rest = parts[1].split('+');
+            sides = parseInt(rest[0]);
+            if (rest.length > 1) mod = parseInt(rest[1]);
+        } else if (diceStr.includes('+')) {
+            mod = parseInt(diceStr.replace('+',''));
+        }
+        let total = 0; let rolls = [];
+        for(let i=0; i<count; i++) {
+            let r = Math.floor(Math.random() * sides) + 1;
+            rolls.push(r);
+            total += r;
+        }
+        total += mod;
+        const overlay = document.getElementById('dice-overlay');
+        const resDiv = document.getElementById('dice-result');
+        const descDiv = document.getElementById('dice-desc');
+        overlay.style.display = 'block';
+        resDiv.innerText = "...";
+        descDiv.innerText = "Lanzando " + diceStr + "...";
+        setTimeout(() => {
+            resDiv.innerText = total;
+            // FIX: Usamos doble llave para escapar en Python
+            descDiv.innerText = `[${rolls.join('+')}] + ${mod}`; 
+            setTimeout(() => { overlay.style.display = 'none'; }, 2000);
+        }, 600);
+    }
+    </script>
+    </head><body><button id='modeBtn' class='float-btn' onclick='togglePlayerMode()'>📺 VISTA JUGADOR</button><div id='dice-overlay'><div id='dice-desc'></div><div id='dice-result'></div></div><iframe style='display:none;' src='https://www.youtube.com/embed/ZwbKj5s9Hqo?autoplay=1&loop=1&playlist=ZwbKj5s9Hqo'></iframe><div class='app-container'><div class='sidebar'><h3 style='text-align:center;color:#888;margin-top:0;'>GRUPO</h3><div class='char-card'>
+            <img src='https://tse2.mm.bing.net/th?q=dnd%20character%20portrait%20Semiorco%20Druida%20Thorgar%20fantasy%20art&w=400&h=400&c=7&rs=1' class='char-img'>
+            <div class='char-name'>Thorgar<br><small style='font-size:0.7em;color:#aaa;'>Semiorco Druida</small></div>
+            <div class='char-stats'><div class='stat-box'><b>15</b><br><small>SAB</small></div><div class='stat-box'><b>14</b><br><small>CON</small></div><div class='stat-box'><b>13</b><br><small>FUE</small></div><div class='stat-box'><b>12</b><br><small>DES</small></div><div class='stat-box'><b>10</b><br><small>INT</small></div><div class='stat-box'><b>8</b><br><small>CAR</small></div></div>
+            <div style='padding:10px;font-size:0.85em;color:#ccc;'>
+                <div style='margin-bottom:5px;'>🛡️ AC 11 ❤️ HP 24</div>
+                <details><summary>Habilidades</summary><ul><li><b>Enmarañar:</b> Atrapa enemigos.</li><li><b>Forma Salvaje:</b> Bestia.</li></ul></details>
+                <details><summary>Equipo</summary>Garrote de Hierro, Pellejo de Lobo Blanco</details>
+                <details><summary>Historia</summary><i>Nacido en una era de tinieblas, Thorgar fue abandonado por su tribu de semiorcos al nacer. Criado por un druida elfo que lo encontró y lo crio como propio, Thorgar aprendió a comunicarse con la naturaleza y los animales. Ahora viaja a través del tiempo en reverso para evitar el destino funesto de su pueblo.</i></details>
+            </div>
+        </div><div class='char-card'>
+            <img src='https://tse2.mm.bing.net/th?q=dnd%20character%20portrait%20Drac%C3%B3nido%20P%C3%ADcaro%20Elara%20fantasy%20art&w=400&h=400&c=7&rs=1' class='char-img'>
+            <div class='char-name'>Elara<br><small style='font-size:0.7em;color:#aaa;'>Dracónido Pícaro</small></div>
+            <div class='char-stats'><div class='stat-box'><b>15</b><br><small>DES</small></div><div class='stat-box'><b>14</b><br><small>INT</small></div><div class='stat-box'><b>13</b><br><small>FUE</small></div><div class='stat-box'><b>12</b><br><small>CON</small></div><div class='stat-box'><b>10</b><br><small>SAB</small></div><div class='stat-box'><b>8</b><br><small>CAR</small></div></div>
+            <div style='padding:10px;font-size:0.85em;color:#ccc;'>
+                <div style='margin-bottom:5px;'>🛡️ AC 12 ❤️ HP 21</div>
+                <details><summary>Habilidades</summary><ul><li><b>Acción Astuta:</b> Dash/Hide bonus.</li><li><b>Ataque Furtivo:</b> +2d6 daño.</li></ul></details>
+                <details><summary>Equipo</summary>Espada corta de plata, Piedra del destino</details>
+                <details><summary>Historia</summary><i>Nacida en un mundo donde el tiempo fluye en reverso, Elara es una dracónido que ha aprendido a adaptarse y sobrevivir en este ambiente caótico.</i></details>
+            </div>
+        </div><div class='char-card'>
+            <img src='https://tse2.mm.bing.net/th?q=dnd%20character%20portrait%20Enano%20Mago%20Rowan%20fantasy%20art&w=400&h=400&c=7&rs=1' class='char-img'>
+            <div class='char-name'>Rowan<br><small style='font-size:0.7em;color:#aaa;'>Enano Mago</small></div>
+            <div class='char-stats'><div class='stat-box'><b>15</b><br><small>INT</small></div><div class='stat-box'><b>14</b><br><small>CON</small></div><div class='stat-box'><b>13</b><br><small>FUE</small></div><div class='stat-box'><b>12</b><br><small>DES</small></div><div class='stat-box'><b>10</b><br><small>SAB</small></div><div class='stat-box'><b>8</b><br><small>CAR</small></div></div>
+            <div style='padding:10px;font-size:0.85em;color:#ccc;'>
+                <div style='margin-bottom:5px;'>🛡️ AC 11 ❤️ HP 20</div>
+                <details><summary>Habilidades</summary><ul><li><b>Recuperar Arcano:</b> Recarga slot.</li><li><b>Proyectil Mágico:</b> 3x 1d4+1.</li></ul></details>
+                <details><summary>Equipo</summary>Báculo de poder, Piedra filosofal</details>
+                <details><summary>Historia</summary><i>Nací en un clan de enanos mineros, pero desde temprana edad supe que mi destino no estaba bajo tierra. Mi habilidad con la magia era inusual entre los míos y decidí explorar el mundo más allá de las minas.</i></details>
+            </div>
+        </div><div class='char-card'>
+            <img src='https://tse2.mm.bing.net/th?q=dnd%20character%20portrait%20Humano%20Monje%20Seraphina%20fantasy%20art&w=400&h=400&c=7&rs=1' class='char-img'>
+            <div class='char-name'>Seraphina<br><small style='font-size:0.7em;color:#aaa;'>Humano Monje</small></div>
+            <div class='char-stats'><div class='stat-box'><b>15</b><br><small>DES</small></div><div class='stat-box'><b>14</b><br><small>SAB</small></div><div class='stat-box'><b>13</b><br><small>FUE</small></div><div class='stat-box'><b>12</b><br><small>CON</small></div><div class='stat-box'><b>10</b><br><small>INT</small></div><div class='stat-box'><b>8</b><br><small>CAR</small></div></div>
+            <div style='padding:10px;font-size:0.85em;color:#ccc;'>
+                <div style='margin-bottom:5px;'>🛡️ AC 14 ❤️ HP 21</div>
+                <details><summary>Habilidades</summary><ul><li><b>Defensa Sin Armadura:</b> AC=10+DES+SAB.</li><li><b>Artes Marciales:</b> Atq extra.</li></ul></details>
+                <details><summary>Equipo</summary>Bastón de madera tallado con símbolos antiguos, Pétalos de flores secas que representan el ciclo de la vida y la muerte</details>
+                <details><summary>Historia</summary><i>Nacida en un mundo donde el tiempo fluye al revés, Seraphina aprendió desde temprana edad a aceptar y adaptarse a lo desconocido. Su vida cambió cuando encontró un antiguo templo en ruinas, donde descubrió la disciplina de los monjes. A pesar de las dificultades para aprender y progresar en un ambiente que se resistía a sus esfuerzos, ella persistedió hasta convertirse en una experta en su arte.</i></details>
+            </div>
+        </div></div><div class='main-content'><span class='badge'>🌵 WESTERN ARCANO</span><h1>El Misterio del Objeto Perdido</h1><div class='synopsis'>En un mundo donde el tiempo fluye en reversa, cuatro aventureros se adentrarán en un misterioso desierto en busca de un objeto perdido que podría cambiar el curso del destino.</div><div class='scene-card'>
+            <img src='https://tse2.mm.bing.net/th?q=dnd%205e%20battle%20map%20top%20down%20grid%20art%20tabletop&w=800&h=600&c=7&rs=1' class='visual-img'>
+            <div class='scene-header'><span>Escena 1: La Taberna del Tiempo Contrajido</span> <span class='dm-only' style='font-size:0.8em;opacity:0.7;'>[Encuentro: Combate/Exploración]</span></div>
+            <div class='read-aloud'>"Una taberna polvorienta y llena de sombras donde los viajeros cansados comparten historias sobre el objeto perdido. El aire está cargado con rumores y suspicacias."</div>
+
+            <div style='padding:20px;'>
+                <div class='dm-secret' onclick='toggleSecret(this)'>
+                    <span class='dm-label'>👁️ ENCUENTRO</span>
+                    <div class='stat-block' style='background:#333;color:#eee;padding:10px;border:1px solid #555;margin-bottom:5px;'>
+                <b style='color:#eebb00;font-size:1.1em;'>Espectro del Desierto</b> <small>(No-muerto)</small><br>
+                AC 13 | HP 22<br>
+                ⚔️ <span class='clickable-roll' onclick="rollDice('1d20+4')">Ataque +4</span> | 
+                🩸 <span class='clickable-roll' onclick="rollDice('1d8+3')">Daño 1d8+3</span><br>
+                ⚠️ <i>Profecía de la Muerte: Si un espectro del desierto reduce a cero los puntos de vida de una criatura, el tiempo fluye en reversa para esa criatura durante 1d4 rondas.</i>
+            </div><div class='stat-block' style='background:#333;color:#eee;padding:10px;border:1px solid #555;margin-bottom:5px;'>
+                <b style='color:#eebb00;font-size:1.1em;'>Golem de Arena</b> <small>(Elemental)</small><br>
+                AC 15 | HP 30<br>
+                ⚔️ <span class='clickable-roll' onclick="rollDice('1d20+4')">Ataque +4</span> | 
+                🩸 <span class='clickable-roll' onclick="rollDice('2d6+4')">Daño 2d6+4</span><br>
+                ⚠️ <i>Arena Movediza: Cada ronda, el golem de arena puede elegir si su ataque afecta a una sola criatura o a todas las criaturas dentro de un área de 10 metros. Si se selecciona el área, cada criatura debe realizar una prueba de Dexteridad (DD) con desventaja;those who fail are restrained until the end of their next turn.</i>
+            </div>
+                </div>
+                <div class='dm-secret' onclick='toggleSecret(this)'>
+                    <span class='dm-label'>🎲 CHEQUEOS</span>
+                    <ul><li>Explorar la taberna: <b>Sabiduría (Percepción)</b> CD 13 -> Los aventureros encuentran un mapa antiguo que muestra el camino hacia una antigua ciudad en ruinas donde podría encontrarse el objeto perdido.</li><li>Hablar con el dueño de la taberna: <b>Sabiduría (Percepción)</b> CD 14 -> El dueño de la taberna les proporciona información valiosa sobre el desierto y cómo sobrevivir en él.</li></ul>
+                </div>
+                <div class='dm-secret' onclick='toggleSecret(this)' style='border-color:#f1c40f;background:#332200;'>
+                    <span class='dm-label' style='color:#f39c12;'>💰 BOTÍN</span>
+                    💰 130 po
+                </div>
+            </div>
+        </div><div class='scene-card'>
+            <img src='https://tse2.mm.bing.net/th?q=dnd%205e%20battle%20map%20top%20down%20grid%20art%20tabletop&w=800&h=600&c=7&rs=1' class='visual-img'>
+            <div class='scene-header'><span>Escena 2: El Desierto del Espejismo</span> <span class='dm-only' style='font-size:0.8em;opacity:0.7;'>[Encuentro: Exploración/Combate]</span></div>
+            <div class='read-aloud'>"Un vasto desierto donde el tiempo fluye en reversa, creando una ilusión óptica que engaña a los sentidos. Las arenas movedizas y las tormentas de arena son solo algunos de los peligros que acechan."</div>
+
+            <div style='padding:20px;'>
+                <div class='dm-secret' onclick='toggleSecret(this)'>
+                    <span class='dm-label'>👁️ ENCUENTRO</span>
+                    <div class='stat-block' style='background:#333;color:#eee;padding:10px;border:1px solid #555;margin-bottom:5px;'>
+                <b style='color:#eebb00;font-size:1.1em;'>Espectro del Desierto</b> <small>(No muerto)</small><br>
+                AC 13 | HP 22<br>
+                ⚔️ <span class='clickable-roll' onclick="rollDice('1d20+4')">Ataque +4</span> | 
+                🩸 <span class='clickable-roll' onclick="rollDice('1d8+3')">Daño 1d8+3</span><br>
+                ⚠️ <i>Puede realizar una acción adicional fuera de su turno cada vez que es golpeado por un ataque cuerpo a cuerpo.</i>
+            </div><div class='stat-block' style='background:#333;color:#eee;padding:10px;border:1px solid #555;margin-bottom:5px;'>
+                <b style='color:#eebb00;font-size:1.1em;'>Miraje</b> <small>(Ilusión)</small><br>
+                AC 15 | HP 7<br>
+                ⚔️ <span class='clickable-roll' onclick="rollDice('1d20+4')">Ataque +4</span> | 
+                🩸 <span class='clickable-roll' onclick="rollDice('1d4+2')">Daño 1d4+2</span><br>
+                ⚠️ <i>Puede hacer que un personaje crea una ilusión de su elección, obligándolo a repetir un ataque de habilidad para ver más allá del espejismo.</i>
+            </div>
+                </div>
+                <div class='dm-secret' onclick='toggleSecret(this)'>
+                    <span class='dm-label'>🎲 CHEQUEOS</span>
+                    <ul><li>Buscar agua en el oasis: <b>Inteligencia (Investigación)</b> CD 12 -> Encontrar una fuente de agua fresca y purificada.</li><li>Investigar ruinas antiguas: <b>Inteligencia (Investigación)</b> CD 15 -> Descubrir pistas sobre el paradero del objeto perdido.</li></ul>
+                </div>
+                <div class='dm-secret' onclick='toggleSecret(this)' style='border-color:#f1c40f;background:#332200;'>
+                    <span class='dm-label' style='color:#f39c12;'>💰 BOTÍN</span>
+                    💰 50 po
+                </div>
+            </div>
+        </div><div class='scene-card'>
+            <img src='https://tse2.mm.bing.net/th?q=dnd%205e%20battle%20map%20top%20down%20grid%20art%20tabletop&w=800&h=600&c=7&rs=1' class='visual-img'>
+            <div class='scene-header'><span>Escena 3: La Fortaleza del Tiempo</span> <span class='dm-only' style='font-size:0.8em;opacity:0.7;'>[Encuentro: Combate/Exploración]</span></div>
+            <div class='read-aloud'>"Una antigua fortaleza enterrada en las arenas donde el tiempo parece haber detenido su marcha. En su interior, los aventureros encontrarán un misterioso mecanismo que guarda relación con el objeto perdido."</div>
+
+            <div style='padding:20px;'>
+                <div class='dm-secret' onclick='toggleSecret(this)'>
+                    <span class='dm-label'>👁️ ENCUENTRO</span>
+                    <div class='stat-block' style='background:#333;color:#eee;padding:10px;border:1px solid #555;margin-bottom:5px;'>
+                <b style='color:#eebb00;font-size:1.1em;'>Guerrero del Tiempo</b> <small>(Humanoide)</small><br>
+                AC 13 | HP 22<br>
+                ⚔️ <span class='clickable-roll' onclick="rollDice('1d20+4')">Ataque +4</span> | 
+                🩸 <span class='clickable-roll' onclick="rollDice('1d8+3')">Daño 1d8+3</span><br>
+                ⚠️ <i>Regreso en el tiempo. Si es reducido a 0 puntos de vida, regresa automáticamente a su estado con 20 HP después de 1d4 rondas.</i>
+            </div><div class='stat-block' style='background:#333;color:#eee;padding:10px;border:1px solid #555;margin-bottom:5px;'>
+                <b style='color:#eebb00;font-size:1.1em;'>Mago del Tiempo</b> <small>(Humanoide)</small><br>
+                AC 11 | HP 17<br>
+                ⚔️ <span class='clickable-roll' onclick="rollDice('1d20+4')">Ataque +4</span> | 
+                🩸 <span class='clickable-roll' onclick="rollDice('1d6')">Daño 1d6</span><br>
+                ⚠️ <i>Rejuvenecimiento. Pueda recuperar 2d4+2 puntos de vida como una acción.</i>
+            </div>
+                </div>
+                <div class='dm-secret' onclick='toggleSecret(this)'>
+                    <span class='dm-label'>🎲 CHEQUEOS</span>
+                    <ul><li>Examinar dispositivo temporal en el centro de la sala: <b>Sabiduría (Percepción)</b> CD 12 -> Se revela un mapa que muestra la ubicación del objeto perdido.</li><li>Intentar abrir una puerta sellada con runas: <b>Sabiduría (Percepción)</b> CD 13 -> La puerta se abre revelando un pasaje secreto hacia la cámara del tiempo.</li></ul>
+                </div>
+                <div class='dm-secret' onclick='toggleSecret(this)' style='border-color:#f1c40f;background:#332200;'>
+                    <span class='dm-label' style='color:#f39c12;'>💰 BOTÍN</span>
+                    💰 130 po, ✨ Botas Élficas, 📜 Scroll Escudo
+                </div>
+            </div>
+        </div><div class='twist-box' style='background:#222;border:2px solid #eebb00;padding:20px;text-align:center;margin-top:50px;border-radius:10px;' class='dm-only'>
+        <h2 style='color:#eebb00;margin:0;'>⚡ El Desierto Eterno ⚡</h2>
+        <p class='dm-only' style='color:#ccc;'>Los aventureros se dieron cuenta de que el misterioso objeto perdido era en realidad un dispositivo capaz de detener el flujo del tiempo en reversa, pero al activarlo descubrieron que estaban atrapados en el desierto para siempre.</p>
+        <small class='dm-only' style='color:#666;'>(Secreto final para el DM)</small>
+    </div></div></div></body></html>

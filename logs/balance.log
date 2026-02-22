@@ -1,0 +1,25 @@
+2026-02-16 19:17:51 | INFO     | balance              | adjust_encounter | ⚖️ Balanceo: XP Encuentro 20 vs Deadly Threshold 400
+2026-02-16 19:22:41 | INFO     | balance              | adjust_encounter | ⚖️ Balanceo: XP Encuentro 80 vs Deadly Threshold 400
+2026-02-16 19:23:22 | INFO     | balance              | adjust_encounter | ⚖️ Balanceo: XP Encuentro 800 vs Deadly Threshold 400
+2026-02-16 19:23:22 | WARNING  | balance              | adjust_encounter | ⚠️ Encuentro DEADLY detectado. Aplicando nerfeo.
+2026-02-16 19:23:22 | INFO     | balance              | adjust_encounter |    -> Orco Jefe: HP 15 -> 7
+2026-02-16 19:33:00 | INFO     | balance              | adjust_encounter | ⚖️ Balanceo: XP Encuentro 800 vs Deadly Threshold 400
+2026-02-16 19:33:00 | WARNING  | balance              | adjust_encounter | ⚠️ Encuentro DEADLY detectado. Aplicando nerfeo.
+2026-02-16 19:33:00 | INFO     | balance              | adjust_encounter |    -> Orco Jefe: HP 15 -> 7
+2026-02-16 20:11:10 | INFO     | balance              | adjust_encounter | ⚖️ Balanceo: XP Encuentro 800 vs Deadly Threshold 400
+2026-02-16 20:11:10 | WARNING  | balance              | adjust_encounter | ⚠️ Encuentro DEADLY detectado. Aplicando nerfeo.
+2026-02-16 20:11:10 | INFO     | balance              | adjust_encounter |    -> Orco Jefe: HP 15 -> 7
+2026-02-17 17:24:33 | INFO     | balance              | adjust_encounter | ⚖️ Balanceo: XP Encuentro 7200 vs Deadly Threshold 1600
+2026-02-17 17:24:33 | WARNING  | balance              | adjust_encounter | ⚠️ Encuentro DEADLY detectado. Aplicando nerfeo.
+2026-02-17 17:24:33 | INFO     | balance              | adjust_encounter |    -> Piratas fantasmales: HP 30 -> 15
+2026-02-17 17:24:33 | INFO     | balance              | adjust_encounter |    -> Habitantes corrompidos: HP 24 -> 12
+2026-02-17 17:24:33 | INFO     | balance              | adjust_encounter |    -> El líder corrompido: HP 50 -> 25
+2026-02-17 17:24:33 | INFO     | balance              | adjust_encounter |    -> Criaturas mutantes: HP 30 -> 15
+2026-02-17 17:24:33 | INFO     | balance              | adjust_encounter |    -> Drago Darkheart corrompido: HP 75 -> 37
+2026-02-17 17:25:12 | INFO     | balance              | adjust_encounter | ⚖️ Balanceo: XP Encuentro 7200 vs Deadly Threshold 1600
+2026-02-17 17:25:12 | WARNING  | balance              | adjust_encounter | ⚠️ Encuentro DEADLY detectado. Aplicando nerfeo.
+2026-02-17 17:25:12 | INFO     | balance              | adjust_encounter |    -> Piratas fantasmales: HP 30 -> 15
+2026-02-17 17:25:12 | INFO     | balance              | adjust_encounter |    -> Habitantes corrompidos: HP 24 -> 12
+2026-02-17 17:25:12 | INFO     | balance              | adjust_encounter |    -> El líder corrompido: HP 50 -> 25
+2026-02-17 17:25:12 | INFO     | balance              | adjust_encounter |    -> Criaturas mutantes: HP 30 -> 15
+2026-02-17 17:25:12 | INFO     | balance              | adjust_encounter |    -> Drago Darkheart corrompido: HP 75 -> 37

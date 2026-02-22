@@ -1,0 +1,111 @@
+2026-02-09 19:18:25 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-09 19:32:23 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-09 19:34:00 | INFO     | combat               | start_combat    | ⚔️ Iniciando combate - Sesión: default_session
+2026-02-09 19:34:00 | INFO     | combat               | start_combat    | PJs: 4, Grupos enemigos: 3
+2026-02-09 19:34:00 | INFO     | combat               | start_combat    | ✓ Combate iniciado con 7 combatientes
+2026-02-09 19:34:00 | INFO     | combat               | start_combat    | Orden de iniciativa: ['Piratas Fantasma', 'Bestia del Corazón', 'Thorne', 'Astraria', 'Rayos Eternos', 'Lumen', 'Shadowscale']
+2026-02-10 07:08:30 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-10 07:17:30 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-10 19:55:05 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-10 19:59:50 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-10 20:16:43 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-10 20:22:57 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-14 10:43:41 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-14 10:45:50 | INFO     | combat               | start_combat    | ⚔️ Iniciando combate - Sesión: default_session
+2026-02-14 10:45:50 | INFO     | combat               | start_combat    | PJs: 4, Grupos enemigos: 5
+2026-02-14 10:45:50 | INFO     | combat               | start_combat    | ✓ Combate iniciado con 9 combatientes
+2026-02-14 10:45:50 | INFO     | combat               | start_combat    | Orden de iniciativa: ['Grug Nariz de Piedra', 'Esbirros del Maestro de la Canción', 'Thalion del Clán de la Música', 'Piratas del Cielo', 'Lysandra del Bosque Eterno', 'Criaturas de cristal', 'Espíritus del bosque', 'Echo de la Luna', 'Maestro de la Canción (desesperado)']
+2026-02-16 19:17:51 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 19:19:00 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 19:22:41 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 19:23:22 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 19:33:00 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 19:34:33 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:11:10 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:11:55 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:19:26 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:31:31 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:32:33 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:34:57 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:37:34 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:37:34 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:41:21 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:47:05 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 20:53:02 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 21:00:20 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 21:09:40 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 21:22:14 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 21:30:40 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 22:18:03 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 22:26:36 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 22:27:55 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-16 22:31:37 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-17 16:27:17 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-17 16:37:23 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-17 16:41:40 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-17 16:45:37 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-17 17:00:02 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-17 17:03:47 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-17 17:21:48 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-17 17:24:33 | INFO     | combat               | start_combat    | ⚔️ Iniciando combate - Sesión: default_session
+2026-02-17 17:24:33 | INFO     | combat               | start_combat    | PJs: 4, Grupos enemigos: 5
+2026-02-17 17:24:33 | INFO     | combat               | start_combat    | ✓ Combate iniciado con 9 combatientes
+2026-02-17 17:24:33 | INFO     | combat               | start_combat    | Orden de iniciativa: ['Habitantes corrompidos', 'Criaturas mutantes', 'Drago Darkheart corrompido', 'Lysandra', 'Eolande', 'Thora', 'Zephyrus', 'El líder corrompido', 'Piratas fantasmales']
+2026-02-17 17:25:09 | INFO     | combat               | next_turn       | Turno de: Criaturas mutantes (Ini: 15)
+2026-02-17 17:25:12 | INFO     | combat               | start_combat    | ⚔️ Iniciando combate - Sesión: default_session
+2026-02-17 17:25:12 | INFO     | combat               | start_combat    | PJs: 4, Grupos enemigos: 5
+2026-02-17 17:25:12 | INFO     | combat               | start_combat    | ✓ Combate iniciado con 9 combatientes
+2026-02-17 17:25:12 | INFO     | combat               | start_combat    | Orden de iniciativa: ['Thora', 'Criaturas mutantes', 'Lysandra', 'Zephyrus', 'Habitantes corrompidos', 'Piratas fantasmales', 'Drago Darkheart corrompido', 'El líder corrompido', 'Eolande']
+2026-02-17 17:25:28 | INFO     | combat               | end_combat      | ⚔️ Combate finalizado - Duración: 1 rondas
+2026-02-17 17:45:48 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 19:31:11 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 19:31:57 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 19:34:33 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 19:47:17 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 19:51:18 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 19:53:17 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:10:56 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:12:02 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:13:21 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:19:30 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:21:48 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:22:43 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:27:21 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:30:37 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:46:09 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:48:41 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:51:48 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-18 20:56:47 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:23:22 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:25:09 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:26:35 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:28:58 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:30:06 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:31:12 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:33:51 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:36:35 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:46:45 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:49:32 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:50:12 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:51:03 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:54:42 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:55:10 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:55:36 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:55:44 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:56:56 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:57:19 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 16:57:40 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 17:08:36 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 17:16:11 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 17:35:45 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 17:37:27 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 17:42:54 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 18:01:01 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-19 18:11:11 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-21 22:12:18 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-21 22:18:24 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-21 22:27:40 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-21 22:37:30 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-21 22:43:42 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-21 22:51:59 | INFO     | combat               | __init__        | CombatTracker inicializado
+2026-02-21 23:08:53 | INFO     | combat               | __init__        | CombatTracker inicializado

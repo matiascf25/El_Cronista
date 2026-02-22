@@ -1,0 +1,19 @@
+{
+    "name": "dnd5-srd",
+    "version": "1.0.0",
+    "description": "Dungeons & Dragons 5th Edition - SRD Database",
+    "keywords": ["dungeons", "dragons", "dnd", "5e", "5th", "edition", "srd", "json"],
+    "homepage": "https://github.com/soryy708/5e-database",
+    "bugs": {"url": "https://github.com/soryy708/5e-database/issues"},
+    "license": "MIT",
+    "author": {
+        "name": "Adrian Padua",
+        "url": "https://github.com/adrpadua"
+    },
+    "contributors": [{
+        "name": "Ivan Rubinson",
+        "email": "IvanRubinson@gmail.com",
+        "url": "https://github.com/soryy708"
+    }],
+    "repository": {"type": "git", "url": "https://github.com/soryy708/5e-database"}
+}

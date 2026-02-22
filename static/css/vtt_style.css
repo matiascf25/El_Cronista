@@ -1,0 +1,133 @@
+/* VTT UI Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevent scroll */
+}
+
+/* Layout Container */
+.vtt-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+/* Collapsible Left Panel */
+#left-panel {
+    width: 25%;
+    height: 100%;
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    z-index: 10;
+    position: relative;
+    padding: 10px;
+}
+
+#left-panel.collapsed {
+    width: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+/* Toggle Button */
+#toggle-panel-btn {
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    background: #444;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 0 4px 4px 0;
+    padding: 10px 5px;
+    cursor: pointer;
+    z-index: 20;
+    transition: left 0.3s ease, background 0.2s;
+}
+
+#toggle-panel-btn:hover {
+    background: #666;
+}
+
+/* Main Content (Canvas) */
+#main-content {
+    flex-grow: 1;
+    height: 100%;
+    background-color: #000;
+    position: relative;
+    /* transition: margin-left 0.3s ease; No need if flex handles it */
+}
+
+/* Canvas Wrapper to fix Fabric sizing issues */
+#vtt-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Bottom Action Bar */
+.bottom-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 30;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.bottom-bar button {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.bottom-bar button:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+.bottom-bar button.primary {
+    background: #27ae60;
+    border-color: #2ecc71;
+}
+
+.bottom-bar button.danger {
+    background: #c0392b;
+    border-color: #e74c3c;
+}
+
+/* DM Grid Items */
+.dm-box {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dm-box:hover {
+    background: #2a2a2a;
+}

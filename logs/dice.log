@@ -1,0 +1,4 @@
+2026-02-16 19:21:49 | INFO     | dice                 | evaluar_formula_dados | Evaluando dados: 1d8
+2026-02-16 19:21:49 | INFO     | dice                 | evaluar_formula_dados | ✓ Resultado: 8 ([8] +)
+2026-02-17 17:07:53 | INFO     | dice                 | evaluar_formula_dados | Evaluando dados: 1d8
+2026-02-17 17:07:53 | INFO     | dice                 | evaluar_formula_dados | ✓ Resultado: 7 ([7] +)

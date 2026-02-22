@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRONISTA - JUGADOR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Cinzel+Decorative:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0b0a09;
+            --gold: #c5a059;
+            --text: #e8e1d5;
+        }
+
+        body {
+            background: var(--bg-dark);
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Libre Baskerville', serif;
+            color: var(--text);
+        }
+
+        /* CAPAS DE VISUALIZACIÓN */
+        #layers {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* 1. LAYER DE FONDO (Narrativo / Atmosférico) */
+        #bg-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            transition: opacity 1s, transform 20s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 1;
+        }
+
+        #bg-layer.active {
+            opacity: 1;
+            transform: scale(1.1);
+            /* Slow zoom effect */
+        }
+
+        /* 2. LAYER VTT (Canvas Táctico) */
+        #vtt-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            display: none;
+            /* Se activa solo en modo combate */
+        }
+
+        /* 3. LAYER NARRATIVO (Texto flotante) */
+        #text-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            pointer-events: none;
+            /* Click through */
+        }
+
+        .narrative-box {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            max-width: 800px;
+            border-top: 2px solid var(--gold);
+            border-bottom: 2px solid var(--gold);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out;
+        }
+
+        .narrative-box.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .narrative-text {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            text-shadow: 0 2px 4px #000;
+        }
+
+        /* 4. UI MÓVIL (Ficha de Personaje) - Solo visible en móvil */
+        #mobile-hud {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #1a1714;
+            border-top: 2px solid var(--gold);
+            z-index: 100;
+            padding: 10px;
+            display: none;
+            /* Activado por media query o JS */
+        }
+
+        @media (max-width: 768px) {
+            #mobile-hud {
+                display: block;
+            }
+
+            #text-layer {
+                padding: 20px;
+            }
+
+            .narrative-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        .hud-tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        .hud-tab {
+            background: none;
+            border: 1px solid #333;
+            color: #888;
+            padding: 10px;
+            flex: 1;
+            font-family: 'Montserrat';
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .hud-tab.active {
+            color: var(--gold);
+            border-color: var(--gold);
+            background: rgba(197, 160, 89, 0.1);
+        }
+
+        .hud-content {
+            height: 200px;
+            overflow-y: auto;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="layers">
+        <div id="bg-layer"></div>
+        <div id="vtt-layer"><canvas id="c"></canvas></div>
+
+        <div id="text-layer">
+            <div id="narrative-container" class="narrative-box">
+                <p id="narrative-content" class="narrative-text">Esperando al Narrador...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE HUD (Solo visible en pantallas pequeñas) -->
+    <div id="mobile-hud">
+        <!-- Selector de Personaje (Múltiples PJs) -->
+        <div id="pj-selector-container"
+            style="display:none; padding:5px 10px; border-bottom:1px solid #333; margin-bottom:10px;">
+            <select id="pj-selector" onchange="loadPjData(this.value)"
+                style="background:#111; color:var(--gold); border:1px solid #444; width:100%; padding:5px; font-family:'Montserrat'; font-weight:bold;">
+            </select>
+        </div>
+
+        <div class="hud-tabs">
+            <button class="hud-tab active" onclick="showTab('stats')">🛡️ Stats</button>
+            <button class="hud-tab" onclick="showTab('inv')">🎒 Inv.</button>
+            <button class="hud-tab" onclick="showTab('spells')">✨ Rasgos</button>
+            <button class="hud-tab" onclick="showTab('bg')">📜 Origen</button>
+        </div>
+
+        <div id="hud-stats" class="hud-content">
+            <!-- Header Identity & Portrait -->
+            <div style="display:flex; gap:15px; padding:10px; align-items:center; border-bottom:1px solid #333;">
+                <div
+                    style="width:80px; height:80px; border:2px solid var(--gold); border-radius:50%; overflow:hidden; flex-shrink:0;">
+                    <img id="hud-portrait" src="" style="width:100%; height:100%; object-fit:cover; display:none;"
+                        onerror="if(this.src && this.src !== window.location.href) this.style.display='none'">
+                </div>
+                <div>
+                    <h3 id="hud-name" style="margin:0; color:var(--text); font-size:1.3rem;">Aventurero</h3>
+                    <div id="hud-class-race" style="color:var(--text-muted); font-size:0.9rem;">Raza Clase Nvl 1</div>
+                </div>
+            </div>
+
+            <!-- Stats Core -->
+            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; padding:10px; text-align:center;">
+                <div>
+                    <div id="hud-str" style="font-size:1.8rem; color:var(--gold);">10</div>
+                    <small>FUE</small>
+                </div>
+                <div>
+                    <div id="hud-dex" style="font-size:1.8rem; color:var(--gold);">10</div>
+                    <small>DES</small>
+                </div>
+                <div>
+                    <div id="hud-con" style="font-size:1.8rem; color:var(--gold);">10</div>
+                    <small>CON</small>
+                </div>
+                <div>
+                    <div id="hud-int" style="font-size:1.8rem; color:var(--gold);">10</div>
+                    <small>INT</small>
+                </div>
+                <div>
+                    <div id="hud-wis" style="font-size:1.8rem; color:var(--gold);">10</div>
+                    <small>SAB</small>
+                </div>
+                <div>
+                    <div id="hud-cha" style="font-size:1.8rem; color:var(--gold);">10</div>
+                    <small>CAR</small>
+                </div>
+            </div>
+
+            <hr style="border-color:#333;">
+            <div style="display:flex; justify-content:space-around; padding-top:10px; font-weight:bold;">
+                <span title="Puntos de Golpe">❤️ <span style="color:#e74c3c;" id="hud-hp">-</span></span>
+                <span title="Clase de Armadura">🛡️ <span style="color:#3498db;" id="hud-ac">-</span></span>
+                <span title="Iniciativa">⚡ <span id="hud-init">-</span></span>
+                <span title="Velocidad">🦶 <span id="hud-speed">-</span></span>
+            </div>
+
+            <hr style="border-color:#333;">
+            <!-- Salvaciones y Habilidades -->
+            <div style="padding:10px; display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:0.8rem;">
+                <div>
+                    <strong style="color:var(--gold-dim);">Saves Clave</strong>
+                    <ul id="hud-saves" style="list-style:none; padding:0; margin:5px 0 0 0; color:var(--text-muted);">
+                    </ul>
+                </div>
+                <div>
+                    <strong style="color:var(--gold-dim);">Habilidades</strong>
+                    <ul id="hud-skills" style="list-style:none; padding:0; margin:5px 0 0 0; color:var(--text-muted);">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="hud-inv" class="hud-content" style="display:none; padding:10px;">
+            <ul id="hud-equipment" style="list-style:none; padding:0; margin:0;">
+                <li style="color:#888;">Cargando inventario...</li>
+            </ul>
+            <strong style="color:var(--gold-dim);">Hechizos y Trucos</strong>
+            <ul id="hud-magic" style="list-style:none; padding:0; margin:5px 0 0 0;"></ul>
+        </div>
+
+        <div id="hud-bg" class="hud-content" style="display:none; padding:10px;">
+            <strong style="color:var(--gold-dim);" id="hud-bg-title">Trasfondo</strong>
+            <ul id="hud-bg-list" style="list-style:none; padding:0; margin:5px 0 0 0; color:#ccc; font-size:0.9rem;">
+            </ul>
+            <strong style="color:var(--gold-dim); display:block; margin-top:15px;">Competencias e Idiomas</strong>
+            <ul id="hud-bg-extra" style="list-style:none; padding:0; margin:5px 0 0 0; color:#888; font-size:0.8rem;">
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // CONFIGURACIÓN INICIAL
+        const ws = new WebSocket("ws://" + location.host + "/ws/default_session?client_type=player");
+
+        // FABRIC JS SETUP
+        const canvas = new fabric.Canvas('c', {
+            width: window.innerWidth,
+            height: window.innerHeight,
+            selection: false
+        });
+
+        // WEBSOCKET HANDLER
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            console.log("WS Recibido:", data);
+
+            if (data.type === 'show_scene') {
+                updateScene(data);
+            } else if (data.type === 'vtt_scene') {
+                activateVTT(data);
+            } else if (data.type === 'show_image') {
+                showImageOverlay(data.url);
+            } else if (data.type === 'image_generated') {
+                if (data.subtype === 'portrait' && data.pj_index !== undefined) {
+                    if (currentPjs[data.pj_index]) {
+                        currentPjs[data.pj_index].img = data.url;
+                        const selector = document.getElementById('pj-selector');
+                        // Update UI if we are looking at the updated PJ (or if single player mode)
+                        if (!selector || selector.value == data.pj_index || selector.style.display === 'none') {
+                            loadPjData(data.pj_index);
+                        }
+                    }
+                }
+            }
+        };
+
+        // LÓGICA DE ESCENA
+        function updateScene(data) {
+            // 1. Ocultar VTT
+            document.getElementById('vtt-layer').style.display = 'none';
+
+            // 2. Actualizar fondo
+            const bg = document.getElementById('bg-layer');
+            if (data.img) {
+                bg.style.backgroundImage = `url('${data.img}')`;
+                bg.classList.remove('active');
+                void bg.offsetWidth; // Trigger reflow
+                bg.classList.add('active');
+            }
+
+            // 3. Mostrar Texto
+            const container = document.getElementById('narrative-container');
+            const content = document.getElementById('narrative-content');
+
+            if (data.narrative && data.narrative.length > 5) {
+                content.innerText = data.narrative;
+                container.classList.add('visible');
+            } else {
+                container.classList.remove('visible');
+            }
+        }
+
+        // LÓGICA VTT
+        function activateVTT(data) {
+            // 1. Mostrar capa VTT y ocultar texto
+            document.getElementById('vtt-layer').style.display = 'block';
+            document.getElementById('narrative-container').classList.remove('visible');
+
+            // 2. Cargar imagen de fondo en Canvas
+            fabric.Image.fromURL(data.img, (img) => {
+                // Escalar imagen para llenar pantalla manteniendo aspect ratio
+                const scale = Math.min(
+                    canvas.width / img.width,
+                    canvas.height / img.height
+                );
+
+                canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
+                    scaleX: scale,
+                    scaleY: scale,
+                    originX: 'center',
+                    originY: 'center',
+                    top: canvas.height / 2,
+                    left: canvas.width / 2
+                });
+
+                // 3. Dibujar Grid (Opcional)
+                drawGrid(50 * scale); // Ajustar grid al scale de la imagen
+            });
+        }
+
+        function drawGrid(gridSize) {
+            // Limpiar grid anterior si existe (sería un grupo específico)
+            // ... lógica de grid simple ...
+        }
+
+        // UTILS
+        function showTab(tab) {
+            document.querySelectorAll('.hud-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.hud-tab').forEach(el => el.classList.remove('active'));
+
+            document.getElementById('hud-' + tab).style.display = 'block';
+            event.target.classList.add('active');
+        }
+
+        // DATOS DE PERSONAJES
+        const pjsData = {{ pjs_data | default ("[]") | safe }};
+        let currentPjs = [];
+
+        function initPjs() {
+            if (pjsData && Array.isArray(pjsData) && pjsData.length > 0) {
+                currentPjs = pjsData;
+
+                // Mostrar selector si hay > 1 PJ
+                if (currentPjs.length > 1) {
+                    const selector = document.getElementById('pj-selector');
+                    selector.innerHTML = '';
+                    currentPjs.forEach((pj, idx) => {
+                        const opt = document.createElement('option');
+                        opt.value = idx;
+                        opt.text = `${pj.nombre} (${pj.clase})`;
+                        selector.appendChild(opt);
+                    });
+                    document.getElementById('pj-selector-container').style.display = 'block';
+                }
+
+                // Cargar el primero por defecto
+                loadPjData(0);
+            }
+        }
+
+        function loadPjData(index) {
+            const pj = currentPjs[index];
+            if (!pj) return;
+
+            // Identity Header
+            document.getElementById('hud-name').innerText = pj.nombre;
+            document.getElementById('hud-class-race').innerText = `${pj.raza} ${pj.clase} Nvl ${pj.nivel}`;
+
+            const portraitImg = document.getElementById('hud-portrait');
+            if (pj.img) {
+                portraitImg.src = pj.img;
+                portraitImg.style.display = 'block';
+            } else {
+                portraitImg.style.display = 'none';
+            }
+
+            // Background Tab
+            document.getElementById('hud-bg-title').innerText = `Trasfondo: ${pj.trasfondo || 'Desconocido'}`;
+            const bgList = document.getElementById('hud-bg-list');
+            bgList.innerHTML = `
+                <li style="margin-bottom:5px;"><strong>${pj.rasgo_trasfondo || 'Rasgo principal'}</strong></li>
+                <li><em>Personalidad:</em> ${pj.rasgo_personalidad || ''}</li>
+                <li><em>Ideal:</em> ${pj.ideal || ''}</li>
+                <li><em>Vínculo:</em> ${pj.vinculo || ''}</li>
+                <li><em>Defecto:</em> ${pj.defecto || ''}</li>
+            `;
+            const bgExtra = document.getElementById('hud-bg-extra');
+            bgExtra.innerHTML = `
+                <li><strong>Idiomas:</strong> ${(pj.idiomas || []).join(', ')}</li>
+                <li><strong>Armas:</strong> ${(pj.competencias_armas || []).join(', ')}</li>
+                <li><strong>Armaduras:</strong> ${(pj.competencias_armaduras || []).join(', ')}</li>
+            `;
+
+            // Stats Core
+            document.getElementById('hud-str').innerText = pj.stats['FUE'];
+            document.getElementById('hud-dex').innerText = pj.stats['DES'];
+            document.getElementById('hud-con').innerText = pj.stats['CON'];
+            document.getElementById('hud-int').innerText = pj.stats['INT'];
+            document.getElementById('hud-wis').innerText = pj.stats['SAB'];
+            document.getElementById('hud-cha').innerText = pj.stats['CAR'];
+
+            // Header Stats
+            document.getElementById('hud-hp').innerText = `${pj.hp} / ${pj.hp_max}`;
+            document.getElementById('hud-hp').parentElement.title = `HP. Dados: ${pj.dados_golpe || ''}`;
+            document.getElementById('hud-ac').innerText = pj.ac;
+            document.getElementById('hud-ac').parentElement.title = `AC: ${pj.ac_detalle || pj.ac}`;
+            document.getElementById('hud-init').innerText = pj.iniciativa_display || '';
+            document.getElementById('hud-speed').innerText = pj.velocidad || '';
+
+            // Saves
+            const savesList = document.getElementById('hud-saves');
+            savesList.innerHTML = '';
+            (pj.salvaciones_competentes || []).forEach(s => {
+                const li = document.createElement('li');
+                li.innerText = `+${pj.salvaciones[s]?.valor || 0} ${s}`;
+                savesList.appendChild(li);
+            });
+
+            // Skills
+            const skillsList = document.getElementById('hud-skills');
+            skillsList.innerHTML = '';
+            (pj.habilidades_competentes || []).forEach(h => {
+                const li = document.createElement('li');
+                li.innerText = `+${pj.habilidades_valores[h]?.valor || 0} ${h}`;
+                skillsList.appendChild(li);
+            });
+
+            // Inventory
+            const invList = document.getElementById('hud-equipment');
+            invList.innerHTML = '';
+            (pj.equipo || []).forEach(eq => {
+                const li = document.createElement('li');
+                li.innerHTML = `📦 <span style="color:#ccc;">${eq}</span>`;
+                li.style.marginBottom = '6px';
+                invList.appendChild(li);
+            });
+
+            // Traits & Spells
+            const traitsList = document.getElementById('hud-traits');
+            traitsList.innerHTML = '';
+            (pj.habilidades || []).forEach(t => {
+                const name = typeof t === 'object' ? t.nombre : t;
+                const desc = typeof t === 'object' ? t.desc : '';
+                const li = document.createElement('li');
+                li.innerHTML = `<strong style="color:#ccc;">${name}</strong>${desc ? ' <span style="font-size:0.8rem;color:#888;">- ' + desc + '</span>' : ''}`;
+                li.style.marginBottom = '4px';
+                traitsList.appendChild(li);
+            });
+
+            const magicList = document.getElementById('hud-magic');
+            magicList.innerHTML = '';
+            const allMagic = [...(pj.trucos || []), ...(pj.hechizos || [])];
+            if (allMagic.length === 0) {
+                magicList.innerHTML = '<li style="color:#888;">Ninguno</li>';
+            } else {
+                allMagic.forEach(m => {
+                    const name = typeof m === 'object' ? m.nombre : m;
+                    const desc = typeof m === 'object' ? m.desc : '';
+                    const li = document.createElement('li');
+                    li.innerHTML = `✨ <strong style="color:#ccc;">${name}</strong>${desc ? ' <span style="font-size:0.8rem;color:#888;">- ' + desc + '</span>' : ''}`;
+                    li.style.marginBottom = '4px';
+                    magicList.appendChild(li);
+                });
+            }
+        }
+
+        // RESIZE HANDLER
+        window.addEventListener('resize', () => {
+            canvas.setDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+        });
+
+        // Initialize Player Data on Load
+        initPjs();
+    </script>
+</body>
+
+</html>

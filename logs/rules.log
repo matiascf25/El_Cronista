@@ -1,0 +1,583 @@
+2026-02-14 10:44:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Echo de la Luna
+2026-02-14 10:44:09 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Echo de la Luna, generando aleatorios
+2026-02-14 10:44:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Echo de la Luna (Bardo Nv.3, HP:27, AC:10)
+2026-02-14 10:44:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grug Nariz de Piedra
+2026-02-14 10:44:09 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grug Nariz de Piedra, generando aleatorios
+2026-02-14 10:44:09 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grug Nariz de Piedra
+2026-02-14 10:44:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grug Nariz de Piedra (Guerrero Nv.3, HP:22, AC:16)
+2026-02-14 10:44:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lysandra del Bosque Eterno
+2026-02-14 10:44:09 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Rangersa', usando 'Guerrero' por defecto
+2026-02-14 10:44:09 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lysandra del Bosque Eterno, generando aleatorios
+2026-02-14 10:44:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra del Bosque Eterno (Guerrero Nv.3, HP:19, AC:16)
+2026-02-14 10:44:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion del Clán de la Música
+2026-02-14 10:44:09 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thalion del Clán de la Música, generando aleatorios
+2026-02-14 10:44:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion del Clán de la Música (Mago Nv.3, HP:23, AC:12)
+2026-02-16 19:19:27 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Kael'thas Ebonwhisper
+2026-02-16 19:19:27 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Kael'thas Ebonwhisper, generando aleatorios
+2026-02-16 19:19:27 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Kael'thas Ebonwhisper (Hechicero Nv.3, HP:11, AC:13)
+2026-02-16 19:19:27 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gromm Stoneheart
+2026-02-16 19:19:27 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Gromm Stoneheart, generando aleatorios
+2026-02-16 19:19:27 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Gromm Stoneheart
+2026-02-16 19:19:27 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gromm Stoneheart (Guerrero Nv.3, HP:19, AC:16)
+2026-02-16 19:19:27 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lumen Sparkwing
+2026-02-16 19:19:27 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lumen Sparkwing, generando aleatorios
+2026-02-16 19:19:27 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lumen Sparkwing (Explorador Nv.3, HP:22, AC:12)
+2026-02-16 19:19:27 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zephyrus Shadowstride
+2026-02-16 19:19:27 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Ratero', usando 'Guerrero' por defecto
+2026-02-16 19:19:27 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Zephyrus Shadowstride, generando aleatorios
+2026-02-16 19:19:27 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyrus Shadowstride (Guerrero Nv.3, HP:25, AC:16)
+2026-02-16 19:34:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara la Audaz
+2026-02-16 19:34:50 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Guerrera', usando 'Guerrero' por defecto
+2026-02-16 19:34:50 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Elara la Audaz, generando aleatorios
+2026-02-16 19:34:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara la Audaz (Guerrero Nv.3, HP:31, AC:16)
+2026-02-16 19:34:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Luminary
+2026-02-16 19:34:50 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Luminary, generando aleatorios
+2026-02-16 19:34:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Luminary (Mago Nv.3, HP:11, AC:10)
+2026-02-16 19:34:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grimgold
+2026-02-16 19:34:50 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grimgold, generando aleatorios
+2026-02-16 19:34:50 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grimgold
+2026-02-16 19:34:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grimgold (Explorador Nv.3, HP:31, AC:11)
+2026-02-16 19:34:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande
+2026-02-16 19:34:50 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande, generando aleatorios
+2026-02-16 19:34:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande (Bardo Nv.3, HP:21, AC:9)
+2026-02-16 20:12:15 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Silvadark
+2026-02-16 20:12:15 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thalion Silvadark, generando aleatorios
+2026-02-16 20:12:15 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Silvadark (Hechicero Nv.3, HP:20, AC:9)
+2026-02-16 20:12:15 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Stoneheart
+2026-02-16 20:12:15 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grom Stoneheart, generando aleatorios
+2026-02-16 20:12:15 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Stoneheart
+2026-02-16 20:12:15 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Stoneheart (Guerrero Nv.3, HP:31, AC:16)
+2026-02-16 20:12:15 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Whisperwind
+2026-02-16 20:12:15 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Rogue asesino', usando 'Guerrero' por defecto
+2026-02-16 20:12:15 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande Whisperwind, generando aleatorios
+2026-02-16 20:12:15 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Whisperwind (Guerrero Nv.3, HP:28, AC:16)
+2026-02-16 20:12:15 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zephyrion Skyweaver
+2026-02-16 20:12:15 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Zephyrion Skyweaver, generando aleatorios
+2026-02-16 20:12:15 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyrion Skyweaver (Mago Nv.3, HP:23, AC:11)
+2026-02-16 20:19:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkheart
+2026-02-16 20:19:50 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Drago Darkheart, generando aleatorios
+2026-02-16 20:19:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkheart (Mago Nv.3, HP:23, AC:12)
+2026-02-16 20:19:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Liana Whisperwind
+2026-02-16 20:19:50 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Liana Whisperwind, generando aleatorios
+2026-02-16 20:19:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Liana Whisperwind (Explorador Nv.3, HP:25, AC:13)
+2026-02-16 20:19:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Ironhide
+2026-02-16 20:19:50 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thorne Ironhide, generando aleatorios
+2026-02-16 20:19:50 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thorne Ironhide
+2026-02-16 20:19:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Ironhide (Guerrero Nv.3, HP:19, AC:16)
+2026-02-16 20:19:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eira Skyborn
+2026-02-16 20:19:50 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eira Skyborn, generando aleatorios
+2026-02-16 20:19:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eira Skyborn (Bardo Nv.3, HP:27, AC:9)
+2026-02-16 20:35:33 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara
+2026-02-16 20:35:33 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-16 20:35:33 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Elara, generando aleatorios
+2026-02-16 20:35:33 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara (Guerrero Nv.3, HP:22, AC:16)
+2026-02-16 20:35:33 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne
+2026-02-16 20:35:33 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thorne, generando aleatorios
+2026-02-16 20:35:33 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne (Guerrero Nv.3, HP:25, AC:16)
+2026-02-16 20:35:33 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gwendolyn
+2026-02-16 20:35:33 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Gwendolyn, generando aleatorios
+2026-02-16 20:35:33 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gwendolyn (Explorador Nv.3, HP:19, AC:10)
+2026-02-16 20:35:33 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zephyr
+2026-02-16 20:35:33 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Zephyr, generando aleatorios
+2026-02-16 20:35:33 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyr (Bardo Nv.3, HP:18, AC:12)
+2026-02-16 20:41:35 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Ealdholt
+2026-02-16 20:41:35 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thalion Ealdholt, generando aleatorios
+2026-02-16 20:41:35 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Ealdholt (Pícaro Nv.3, HP:24, AC:9)
+2026-02-16 20:41:35 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkheart
+2026-02-16 20:41:35 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Drago Darkheart, generando aleatorios
+2026-02-16 20:41:35 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkheart (Paladín Nv.3, HP:28, AC:16)
+2026-02-16 20:41:35 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Sylverwing
+2026-02-16 20:41:35 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Sorceress', usando 'Guerrero' por defecto
+2026-02-16 20:41:35 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande Sylverwing, generando aleatorios
+2026-02-16 20:41:35 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Sylverwing (Guerrero Nv.3, HP:25, AC:16)
+2026-02-16 20:41:35 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Stonefist
+2026-02-16 20:41:35 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grom Stonefist, generando aleatorios
+2026-02-16 20:41:35 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Stonefist
+2026-02-16 20:41:35 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Stonefist (Bárbaro Nv.3, HP:32, AC:13)
+2026-02-16 20:47:22 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Darkblade
+2026-02-16 20:47:22 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Cazador de tesoros', usando 'Guerrero' por defecto
+2026-02-16 20:47:22 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thalion Darkblade, generando aleatorios
+2026-02-16 20:47:22 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Darkblade (Guerrero Nv.3, HP:25, AC:16)
+2026-02-16 20:47:22 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gwendolyn Shadowheart
+2026-02-16 20:47:22 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga del gremio', usando 'Guerrero' por defecto
+2026-02-16 20:47:22 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Gwendolyn Shadowheart, generando aleatorios
+2026-02-16 20:47:22 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gwendolyn Shadowheart (Guerrero Nv.3, HP:19, AC:16)
+2026-02-16 20:47:22 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkheart
+2026-02-16 20:47:22 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Drago Darkheart, generando aleatorios
+2026-02-16 20:47:22 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Drago Darkheart
+2026-02-16 20:47:22 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkheart (Guerrero Nv.3, HP:25, AC:16)
+2026-02-16 20:47:22 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Moonwhisper
+2026-02-16 20:47:22 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande Moonwhisper, generando aleatorios
+2026-02-16 20:47:22 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Moonwhisper (Explorador Nv.3, HP:19, AC:11)
+2026-02-16 20:53:24 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra de las Sombras
+2026-02-16 20:53:24 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Asesina de sombras', usando 'Guerrero' por defecto
+2026-02-16 20:53:24 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lyra de las Sombras, generando aleatorios
+2026-02-16 20:53:24 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra de las Sombras (Guerrero Nv.3, HP:28, AC:16)
+2026-02-16 20:53:24 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Stoneheart
+2026-02-16 20:53:24 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Herrero de armas', usando 'Guerrero' por defecto
+2026-02-16 20:53:24 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grom Stoneheart, generando aleatorios
+2026-02-16 20:53:24 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Stoneheart
+2026-02-16 20:53:24 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Stoneheart (Guerrero Nv.3, HP:28, AC:16)
+2026-02-16 20:53:24 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eira Whisperwind
+2026-02-16 20:53:24 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga de las runas', usando 'Guerrero' por defecto
+2026-02-16 20:53:24 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eira Whisperwind, generando aleatorios
+2026-02-16 20:53:24 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eira Whisperwind (Guerrero Nv.3, HP:19, AC:16)
+2026-02-16 20:53:24 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Kael'thas Nightstalker
+2026-02-16 20:53:24 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Kael'thas Nightstalker, generando aleatorios
+2026-02-16 20:53:24 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Kael'thas Nightstalker (Explorador Nv.3, HP:19, AC:13)
+2026-02-16 21:00:37 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara Encantada
+2026-02-16 21:00:37 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Elara Encantada, generando aleatorios
+2026-02-16 21:00:37 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara Encantada (Hechicero Nv.3, HP:20, AC:11)
+2026-02-16 21:00:37 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Martillo de Hielo
+2026-02-16 21:00:37 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thorne Martillo de Hielo, generando aleatorios
+2026-02-16 21:00:37 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thorne Martillo de Hielo
+2026-02-16 21:00:37 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Martillo de Hielo (Guerrero Nv.3, HP:25, AC:16)
+2026-02-16 21:00:37 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Viento de Plata
+2026-02-16 21:00:37 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Ladrona', usando 'Guerrero' por defecto
+2026-02-16 21:00:37 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lyra Viento de Plata, generando aleatorios
+2026-02-16 21:00:37 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Viento de Plata (Guerrero Nv.3, HP:25, AC:16)
+2026-02-16 21:00:37 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eamon Arcano
+2026-02-16 21:00:37 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eamon Arcano, generando aleatorios
+2026-02-16 21:00:37 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eamon Arcano (Clérigo Nv.3, HP:21, AC:14)
+2026-02-16 21:09:59 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grifo de Hueso
+2026-02-16 21:09:59 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Cavador de cráneos', usando 'Guerrero' por defecto
+2026-02-16 21:09:59 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grifo de Hueso, generando aleatorios
+2026-02-16 21:09:59 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grifo de Hueso
+2026-02-16 21:09:59 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grifo de Hueso (Guerrero Nv.3, HP:28, AC:16)
+2026-02-16 21:09:59 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara la Luminosa
+2026-02-16 21:09:59 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Elara la Luminosa, generando aleatorios
+2026-02-16 21:09:59 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara la Luminosa (Mago Nv.3, HP:17, AC:12)
+2026-02-16 21:09:59 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Bruma
+2026-02-16 21:09:59 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Sacerdote de la bruma', usando 'Guerrero' por defecto
+2026-02-16 21:09:59 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Bruma, generando aleatorios
+2026-02-16 21:09:59 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Bruma (Guerrero Nv.3, HP:31, AC:16)
+2026-02-16 21:09:59 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zephyrus
+2026-02-16 21:09:59 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Artillero de viento', usando 'Guerrero' por defecto
+2026-02-16 21:09:59 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Zephyrus, generando aleatorios
+2026-02-16 21:09:59 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyrus (Guerrero Nv.3, HP:19, AC:16)
+2026-02-16 21:22:33 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lysandra de la Cristalería
+2026-02-16 21:22:33 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lysandra de la Cristalería, generando aleatorios
+2026-02-16 21:22:33 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra de la Cristalería (Druida Nv.3, HP:21, AC:11)
+2026-02-16 21:22:33 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Viento de Hoja
+2026-02-16 21:22:33 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande Viento de Hoja, generando aleatorios
+2026-02-16 21:22:33 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Viento de Hoja (Explorador Nv.3, HP:19, AC:11)
+2026-02-16 21:22:33 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Golondrina Gris
+2026-02-16 21:22:33 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Golondrina Gris, generando aleatorios
+2026-02-16 21:22:33 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Golondrina Gris
+2026-02-16 21:22:33 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Golondrina Gris (Clérigo Nv.3, HP:27, AC:14)
+2026-02-16 21:22:33 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Melianta Corazón de Flor
+2026-02-16 21:22:33 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Melianta Corazón de Flor, generando aleatorios
+2026-02-16 21:22:33 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Melianta Corazón de Flor (Bardo Nv.3, HP:21, AC:11)
+2026-02-16 21:31:00 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Aela Viento de Tormenta
+2026-02-16 21:31:00 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Guerrera', usando 'Guerrero' por defecto
+2026-02-16 21:31:00 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Aela Viento de Tormenta, generando aleatorios
+2026-02-16 21:31:00 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Aela Viento de Tormenta (Guerrero Nv.3, HP:31, AC:16)
+2026-02-16 21:31:00 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Kael'thas Canto del Bosque
+2026-02-16 21:31:00 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Kael'thas Canto del Bosque, generando aleatorios
+2026-02-16 21:31:00 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Kael'thas Canto del Bosque (Mago Nv.3, HP:14, AC:12)
+2026-02-16 21:31:00 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grimgor Martillo de Hierro
+2026-02-16 21:31:00 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grimgor Martillo de Hierro, generando aleatorios
+2026-02-16 21:31:00 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grimgor Martillo de Hierro
+2026-02-16 21:31:00 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grimgor Martillo de Hierro (Clérigo Nv.3, HP:18, AC:14)
+2026-02-16 21:31:00 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lira Cantos del Crepúsculo
+2026-02-16 21:31:00 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lira Cantos del Crepúsculo, generando aleatorios
+2026-02-16 21:31:00 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lira Cantos del Crepúsculo (Bardo Nv.3, HP:21, AC:12)
+2026-02-16 22:28:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thora Valthor
+2026-02-16 22:28:09 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Guerrera', usando 'Guerrero' por defecto
+2026-02-16 22:28:09 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thora Valthor, generando aleatorios
+2026-02-16 22:28:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thora Valthor (Guerrero Nv.3, HP:25, AC:16)
+2026-02-16 22:28:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Silvyr
+2026-02-16 22:28:09 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-16 22:28:09 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande Silvyr, generando aleatorios
+2026-02-16 22:28:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Silvyr (Guerrero Nv.3, HP:22, AC:16)
+2026-02-16 22:28:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkheart
+2026-02-16 22:28:09 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Rogues', usando 'Guerrero' por defecto
+2026-02-16 22:28:09 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Drago Darkheart, generando aleatorios
+2026-02-16 22:28:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkheart (Guerrero Nv.3, HP:22, AC:16)
+2026-02-16 22:28:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Thunderson
+2026-02-16 22:28:09 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grom Thunderson, generando aleatorios
+2026-02-16 22:28:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Thunderson (Guerrero Nv.3, HP:28, AC:16)
+2026-02-16 22:31:52 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Aquilino el Temerario
+2026-02-16 22:31:52 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Aquilino el Temerario, generando aleatorios
+2026-02-16 22:31:52 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Aquilino el Temerario (Guerrero Nv.3, HP:28, AC:16)
+2026-02-16 22:31:52 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara la Encantadora
+2026-02-16 22:31:52 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Elara la Encantadora, generando aleatorios
+2026-02-16 22:31:52 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara la Encantadora (Mago Nv.3, HP:14, AC:12)
+2026-02-16 22:31:52 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom el Enano Forjador
+2026-02-16 22:31:52 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Artillero', usando 'Guerrero' por defecto
+2026-02-16 22:31:52 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grom el Enano Forjador, generando aleatorios
+2026-02-16 22:31:52 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom el Enano Forjador
+2026-02-16 22:31:52 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom el Enano Forjador (Guerrero Nv.3, HP:22, AC:16)
+2026-02-16 22:31:52 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lysandra la Ladrona de Almas
+2026-02-16 22:31:52 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Ladron', usando 'Guerrero' por defecto
+2026-02-16 22:31:52 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lysandra la Ladrona de Almas, generando aleatorios
+2026-02-16 22:31:52 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra la Ladrona de Almas (Guerrero Nv.3, HP:31, AC:16)
+2026-02-17 16:37:46 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gritos de Hierro
+2026-02-17 16:37:46 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Gritos de Hierro, generando aleatorios
+2026-02-17 16:37:46 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Gritos de Hierro
+2026-02-17 16:37:46 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gritos de Hierro (Guerrero Nv.3, HP:28, AC:16)
+2026-02-17 16:37:46 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Luz Estelar
+2026-02-17 16:37:46 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Luz Estelar, generando aleatorios
+2026-02-17 16:37:46 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Luz Estelar (Mago Nv.3, HP:20, AC:11)
+2026-02-17 16:37:46 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Corazón de Piedra
+2026-02-17 16:37:46 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Corazón de Piedra, generando aleatorios
+2026-02-17 16:37:46 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Corazón de Piedra (Clérigo Nv.3, HP:24, AC:14)
+2026-02-17 16:37:46 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Sombrasur
+2026-02-17 16:37:46 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Ladrón', usando 'Guerrero' por defecto
+2026-02-17 16:37:46 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Sombrasur, generando aleatorios
+2026-02-17 16:37:46 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Sombrasur (Guerrero Nv.3, HP:25, AC:16)
+2026-02-17 16:45:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lysandra Eowyn
+2026-02-17 16:45:57 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lysandra Eowyn, generando aleatorios
+2026-02-17 16:45:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra Eowyn (Druida Nv.3, HP:27, AC:11)
+2026-02-17 16:45:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkheart
+2026-02-17 16:45:57 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Drago Darkheart, generando aleatorios
+2026-02-17 16:45:57 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Drago Darkheart
+2026-02-17 16:45:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkheart (Guerrero Nv.3, HP:25, AC:16)
+2026-02-17 16:45:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Moonwhisper
+2026-02-17 16:45:57 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande Moonwhisper, generando aleatorios
+2026-02-17 16:45:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Moonwhisper (Mago Nv.3, HP:23, AC:12)
+2026-02-17 16:45:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gwendolyn Shadowdancer
+2026-02-17 16:45:57 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Ladrona', usando 'Guerrero' por defecto
+2026-02-17 16:45:57 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Gwendolyn Shadowdancer, generando aleatorios
+2026-02-17 16:45:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gwendolyn Shadowdancer (Guerrero Nv.3, HP:31, AC:16)
+2026-02-17 17:04:14 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande
+2026-02-17 17:04:14 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande, generando aleatorios
+2026-02-17 17:04:14 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande (Bardo Nv.3, HP:18, AC:12)
+2026-02-17 17:04:14 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne
+2026-02-17 17:04:14 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thorne, generando aleatorios
+2026-02-17 17:04:14 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thorne
+2026-02-17 17:04:14 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne (Guerrero Nv.3, HP:28, AC:16)
+2026-02-17 17:04:14 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lira
+2026-02-17 17:04:14 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lira, generando aleatorios
+2026-02-17 17:04:14 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lira (Mago Nv.3, HP:17, AC:11)
+2026-02-17 17:04:14 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Kael
+2026-02-17 17:04:14 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Rogador', usando 'Guerrero' por defecto
+2026-02-17 17:04:14 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Kael, generando aleatorios
+2026-02-17 17:04:14 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Kael (Guerrero Nv.3, HP:25, AC:16)
+2026-02-17 17:22:10 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande
+2026-02-17 17:22:10 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga de la sombra', usando 'Guerrero' por defecto
+2026-02-17 17:22:10 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Eolande, generando aleatorios
+2026-02-17 17:22:10 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande (Guerrero Nv.3, HP:31, AC:16)
+2026-02-17 17:22:10 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thora
+2026-02-17 17:22:10 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Guerrera del martillo', usando 'Guerrero' por defecto
+2026-02-17 17:22:10 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Thora, generando aleatorios
+2026-02-17 17:22:10 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thora (Guerrero Nv.3, HP:25, AC:16)
+2026-02-17 17:22:10 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lysandra
+2026-02-17 17:22:10 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lysandra, generando aleatorios
+2026-02-17 17:22:10 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra (Bárbaro Nv.3, HP:29, AC:14)
+2026-02-17 17:22:10 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zephyrus
+2026-02-17 17:22:10 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Zephyrus, generando aleatorios
+2026-02-17 17:22:10 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyrus (Hechicero Nv.3, HP:23, AC:9)
+2026-02-17 17:29:19 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara
+2026-02-17 17:29:19 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga del viento', usando 'Guerrero' por defecto
+2026-02-17 17:29:19 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Elara, generando aleatorios
+2026-02-17 17:29:19 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara (Guerrero Nv.3, HP:22, AC:16)
+2026-02-17 17:29:19 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom
+2026-02-17 17:29:19 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Grom, generando aleatorios
+2026-02-17 17:29:19 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom
+2026-02-17 17:29:19 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom (Guerrero Nv.3, HP:28, AC:16)
+2026-02-17 17:29:19 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lira
+2026-02-17 17:29:19 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Rogu', usando 'Guerrero' por defecto
+2026-02-17 17:29:19 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lira, generando aleatorios
+2026-02-17 17:29:19 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lira (Guerrero Nv.3, HP:22, AC:16)
+2026-02-17 17:46:05 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Ignacio el Impávido
+2026-02-17 17:46:05 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Ignacio el Impávido, generando aleatorios
+2026-02-17 17:46:05 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Ignacio el Impávido (Guerrero Nv.3, HP:28, AC:16)
+2026-02-17 17:46:05 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra la Luminosa
+2026-02-17 17:46:05 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-17 17:46:05 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Lyra la Luminosa, generando aleatorios
+2026-02-17 17:46:05 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra la Luminosa (Guerrero Nv.3, HP:22, AC:16)
+2026-02-17 17:46:05 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gronk el Gruñón
+2026-02-17 17:46:05 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Gronk el Gruñón, generando aleatorios
+2026-02-17 17:46:05 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Gronk el Gruñón
+2026-02-17 17:46:05 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gronk el Gruñón (Explorador Nv.3, HP:25, AC:12)
+2026-02-17 17:46:05 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zephyr el Elegíaco
+2026-02-17 17:46:05 | WARNING  | rules                | sanitizar_pj    | Stats faltantes para Zephyr el Elegíaco, generando aleatorios
+2026-02-17 17:46:05 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyr el Elegíaco (Bardo Nv.3, HP:15, AC:11)
+2026-02-18 19:31:11 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: TestHero
+2026-02-18 19:31:11 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: TestHero (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 19:31:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: TestHero
+2026-02-18 19:31:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: TestHero (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 19:33:06 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: TestHero
+2026-02-18 19:33:06 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: TestHero (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 19:35:00 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Kael
+2026-02-18 19:35:00 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Kael (Explorador Nv.1, HP:12, AC:13)
+2026-02-18 19:35:00 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra
+2026-02-18 19:35:00 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Hechicera del viento', usando 'Guerrero' por defecto
+2026-02-18 19:35:00 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra (Guerrero Nv.1, HP:11, AC:16)
+2026-02-18 19:35:00 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thora
+2026-02-18 19:35:00 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Guerrera del martillo', usando 'Guerrero' por defecto
+2026-02-18 19:35:00 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thora
+2026-02-18 19:35:00 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thora (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 19:35:00 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zek
+2026-02-18 19:35:00 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zek (Mago Nv.1, HP:6, AC:12)
+2026-02-18 19:35:11 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: TestHero
+2026-02-18 19:35:11 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: TestHero (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 19:36:39 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lumynra
+2026-02-18 19:36:39 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lumynra (Bardo Nv.1, HP:9, AC:12)
+2026-02-18 19:36:39 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Keth'thalas
+2026-02-18 19:36:39 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Keth'thalas (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 19:36:39 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zora
+2026-02-18 19:36:39 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zora (Hechicero Nv.1, HP:7, AC:12)
+2026-02-18 19:36:39 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gromm
+2026-02-18 19:36:39 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Clerigo', usando 'Guerrero' por defecto
+2026-02-18 19:36:39 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Gromm
+2026-02-18 19:36:39 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gromm (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 19:46:36 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: TestHeroLvl5
+2026-02-18 19:46:36 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: TestHeroLvl5 (Guerrero Nv.5, HP:49, AC:16)
+2026-02-18 19:48:43 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: TestHeroLvl5
+2026-02-18 19:48:43 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: TestHeroLvl5 (Guerrero Nv.5, HP:49, AC:16)
+2026-02-18 19:51:40 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Élfico de las runas
+2026-02-18 19:51:40 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Élfico de las runas (Hechicero Nv.3, HP:14, AC:12)
+2026-02-18 19:51:40 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Guerrero de jade
+2026-02-18 19:51:40 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Guerrero de jade (Guerrero Nv.3, HP:28, AC:16)
+2026-02-18 19:51:40 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Exploradora del cristal
+2026-02-18 19:51:40 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Exploradora del cristal (Explorador Nv.3, HP:28, AC:12)
+2026-02-18 19:51:40 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Bardo del cristal
+2026-02-18 19:51:40 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Bardo del cristal (Bardo Nv.3, HP:21, AC:12)
+2026-02-18 19:53:43 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Swiftshadow
+2026-02-18 19:53:43 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Swiftshadow (Explorador Nv.1, HP:11, AC:12)
+2026-02-18 19:53:43 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Nightingale
+2026-02-18 19:53:43 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Bruja', usando 'Guerrero' por defecto
+2026-02-18 19:53:43 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Nightingale (Guerrero Nv.1, HP:10, AC:16)
+2026-02-18 19:53:43 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grit Longtooth
+2026-02-18 19:53:43 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grit Longtooth
+2026-02-18 19:53:43 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grit Longtooth (Clérigo Nv.1, HP:10, AC:14)
+2026-02-18 19:53:43 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Zephyr Stormweaver
+2026-02-18 19:53:43 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyr Stormweaver (Bardo Nv.1, HP:9, AC:11)
+2026-02-18 20:10:56 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thrain
+2026-02-18 20:10:56 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thrain
+2026-02-18 20:10:56 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thrain (Clérigo Nv.3, HP:24, AC:14)
+2026-02-18 20:12:02 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thrain
+2026-02-18 20:12:02 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thrain
+2026-02-18 20:12:02 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thrain (Clérigo Nv.3, HP:24, AC:14)
+2026-02-18 20:13:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Kael Darkheart
+2026-02-18 20:13:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Kael Darkheart (Pícaro Nv.1, HP:10, AC:12)
+2026-02-18 20:13:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Whisperwind
+2026-02-18 20:13:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Whisperwind (Hechicero Nv.1, HP:8, AC:11)
+2026-02-18 20:13:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Stoneheart
+2026-02-18 20:13:50 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Stoneheart
+2026-02-18 20:13:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Stoneheart (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 20:13:50 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Moonshadow
+2026-02-18 20:13:50 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Moonshadow (Pícaro Nv.1, HP:10, AC:12)
+2026-02-18 20:21:48 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Kael
+2026-02-18 20:21:48 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Kael (Mago Nv.3, HP:17, AC:12)
+2026-02-18 20:21:48 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Throg
+2026-02-18 20:21:48 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Throg (Bárbaro Nv.3, HP:35, AC:14)
+2026-02-18 20:23:16 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Silvertree
+2026-02-18 20:23:16 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Silvertree (Mago Nv.1, HP:7, AC:12)
+2026-02-18 20:23:16 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara Stormweaver
+2026-02-18 20:23:16 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-18 20:23:16 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara Stormweaver (Guerrero Nv.1, HP:11, AC:16)
+2026-02-18 20:23:16 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grit Longtooth
+2026-02-18 20:23:16 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grit Longtooth (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 20:23:16 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkheart
+2026-02-18 20:23:16 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkheart (Paladín Nv.1, HP:11, AC:16)
+2026-02-18 20:27:21 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorgrim
+2026-02-18 20:27:21 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thorgrim
+2026-02-18 20:27:21 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorgrim (Guerrero Nv.5, HP:44, AC:16)
+2026-02-18 20:27:21 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara
+2026-02-18 20:27:21 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara (Mago Nv.5, HP:27, AC:12)
+2026-02-18 20:31:13 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Gris
+2026-02-18 20:31:13 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Cazador', usando 'Guerrero' por defecto
+2026-02-18 20:31:13 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Gris (Guerrero Nv.1, HP:11, AC:16)
+2026-02-18 20:31:13 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Plateada
+2026-02-18 20:31:13 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Plateada (Mago Nv.1, HP:7, AC:12)
+2026-02-18 20:31:13 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Grimm
+2026-02-18 20:31:13 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Grimm
+2026-02-18 20:31:13 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Grimm (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 20:31:13 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Cantante
+2026-02-18 20:31:13 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Cantante (Bardo Nv.1, HP:9, AC:12)
+2026-02-18 20:46:37 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara
+2026-02-18 20:46:37 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Bruja', usando 'Guerrero' por defecto
+2026-02-18 20:46:37 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara (Guerrero Nv.1, HP:11, AC:16)
+2026-02-18 20:46:37 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion
+2026-02-18 20:46:37 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Cazador', usando 'Guerrero' por defecto
+2026-02-18 20:46:37 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion (Guerrero Nv.1, HP:10, AC:16)
+2026-02-18 20:46:37 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gromm
+2026-02-18 20:46:37 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Gromm
+2026-02-18 20:46:37 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gromm (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 20:46:37 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra
+2026-02-18 20:46:37 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Sacerdotisa de lathander', usando 'Guerrero' por defecto
+2026-02-18 20:46:37 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 20:52:17 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Élfico Plateado
+2026-02-18 20:52:17 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Élfico Plateado (Explorador Nv.1, HP:11, AC:12)
+2026-02-18 20:52:17 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Élfico Dorado
+2026-02-18 20:52:17 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Élfico Dorado (Mago Nv.1, HP:6, AC:11)
+2026-02-18 20:52:17 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Enano de las colinas
+2026-02-18 20:52:17 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Clerigo', usando 'Guerrero' por defecto
+2026-02-18 20:52:17 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Enano de las colinas
+2026-02-18 20:52:17 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Enano de las colinas (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 20:52:17 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Humano
+2026-02-18 20:52:17 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Humano (Guerrero Nv.1, HP:11, AC:16)
+2026-02-18 20:57:12 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara de la Lanza Dorada
+2026-02-18 20:57:12 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara de la Lanza Dorada (Guerrero Nv.1, HP:12, AC:16)
+2026-02-18 20:57:12 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion de la Hoja Plateada
+2026-02-18 20:57:12 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion de la Hoja Plateada (Mago Nv.1, HP:6, AC:12)
+2026-02-18 20:57:12 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Stoneheart
+2026-02-18 20:57:12 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Stoneheart
+2026-02-18 20:57:12 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Stoneheart (Clérigo Nv.1, HP:9, AC:14)
+2026-02-18 20:57:12 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lira Whisperwind
+2026-02-18 20:57:12 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lira Whisperwind (Bardo Nv.1, HP:9, AC:12)
+2026-02-19 16:37:14 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elyria
+2026-02-19 16:37:14 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Bruja', usando 'Guerrero' por defecto
+2026-02-19 16:37:14 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elyria (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 16:37:14 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion
+2026-02-19 16:37:14 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion (Explorador Nv.1, HP:12, AC:12)
+2026-02-19 16:37:14 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago
+2026-02-19 16:37:14 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 16:37:14 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra
+2026-02-19 16:37:14 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra (Mago Nv.1, HP:7, AC:11)
+2026-02-19 16:51:46 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara
+2026-02-19 16:51:46 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara (Mago Nv.1, HP:7, AC:10)
+2026-02-19 16:51:46 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorin
+2026-02-19 16:51:46 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thorin
+2026-02-19 16:51:46 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorin (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 16:51:46 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lira
+2026-02-19 16:51:46 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Rondador', usando 'Guerrero' por defecto
+2026-02-19 16:51:46 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lira (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 16:51:46 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gromm
+2026-02-19 16:51:46 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gromm (Clérigo Nv.1, HP:10, AC:14)
+2026-02-19 16:53:13 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara Shadowstride
+2026-02-19 16:53:13 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Roguesa', usando 'Guerrero' por defecto
+2026-02-19 16:53:13 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara Shadowstride (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 16:53:13 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Stoneheart
+2026-02-19 16:53:13 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thorne Stoneheart
+2026-02-19 16:53:13 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Stoneheart (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 16:53:13 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Whisperwind
+2026-02-19 16:53:13 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-19 16:53:13 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Whisperwind (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 16:53:13 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grit Longtooth
+2026-02-19 16:53:13 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grit Longtooth (Clérigo Nv.1, HP:10, AC:14)
+2026-02-19 16:54:35 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Silverheart
+2026-02-19 16:54:35 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Arquero', usando 'Guerrero' por defecto
+2026-02-19 16:54:35 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Silverheart (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 16:54:35 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eira Stoneheart
+2026-02-19 16:54:35 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eira Stoneheart (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 16:54:35 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Kael'thas Shadowstride
+2026-02-19 16:54:35 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Kael'thas Shadowstride (Mago Nv.1, HP:7, AC:10)
+2026-02-19 16:54:35 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lira Whisperwind
+2026-02-19 16:54:35 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Renegado', usando 'Guerrero' por defecto
+2026-02-19 16:54:35 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lira Whisperwind (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 16:58:04 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Silverheart
+2026-02-19 16:58:04 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Silverheart (Mago Nv.1, HP:6, AC:12)
+2026-02-19 16:58:04 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gwendolyn Stoneheart
+2026-02-19 16:58:04 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gwendolyn Stoneheart (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 16:58:04 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Whisperwind
+2026-02-19 16:58:04 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Rogativa', usando 'Guerrero' por defecto
+2026-02-19 16:58:04 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Whisperwind (Guerrero Nv.1, HP:10, AC:16)
+2026-02-19 16:58:04 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkblade
+2026-02-19 16:58:04 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkblade (Paladín Nv.1, HP:12, AC:16)
+2026-02-19 17:09:08 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Swiftshadow
+2026-02-19 17:09:08 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Swiftshadow (Explorador Nv.1, HP:11, AC:12)
+2026-02-19 17:09:08 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Nightingale
+2026-02-19 17:09:08 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Nightingale (Bardo Nv.1, HP:9, AC:12)
+2026-02-19 17:09:08 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Stoneheart
+2026-02-19 17:09:08 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Stoneheart
+2026-02-19 17:09:08 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Stoneheart (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 17:09:08 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Moonwhisper
+2026-02-19 17:09:08 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Moonwhisper (Clérigo Nv.1, HP:9, AC:14)
+2026-02-19 17:16:38 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion de la Luna
+2026-02-19 17:16:38 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Cazador', usando 'Guerrero' por defecto
+2026-02-19 17:16:38 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion de la Luna (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 17:16:38 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lira de la Canción
+2026-02-19 17:16:38 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lira de la Canción (Bardo Nv.1, HP:9, AC:12)
+2026-02-19 17:16:38 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gromm el Terrenal
+2026-02-19 17:16:38 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Gromm el Terrenal
+2026-02-19 17:16:38 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gromm el Terrenal (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 17:16:38 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande la Astróloga
+2026-02-19 17:16:38 | WARNING  | rules                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-19 17:16:38 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande la Astróloga (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 17:37:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Blackwood
+2026-02-19 17:37:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Blackwood (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 17:37:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara Whisperwind
+2026-02-19 17:37:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara Whisperwind (Druida Nv.1, HP:9, AC:12)
+2026-02-19 17:37:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grit Longshadow
+2026-02-19 17:37:57 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grit Longshadow
+2026-02-19 17:37:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grit Longshadow (Bardo Nv.1, HP:9, AC:12)
+2026-02-19 17:37:57 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lysandra Nightingale
+2026-02-19 17:37:57 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra Nightingale (Hechicero Nv.1, HP:6, AC:11)
+2026-02-19 17:43:25 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Spatharius
+2026-02-19 17:43:25 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Spatharius (Bardo Nv.1, HP:9, AC:12)
+2026-02-19 17:43:25 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Whisperwind
+2026-02-19 17:43:25 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Whisperwind (Explorador Nv.1, HP:12, AC:12)
+2026-02-19 17:43:25 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Ironheart
+2026-02-19 17:43:25 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Thorne Ironheart
+2026-02-19 17:43:25 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Ironheart (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 17:43:25 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eira Shadowwalker
+2026-02-19 17:43:25 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eira Shadowwalker (Brujo Nv.1, HP:10, AC:12)
+2026-02-19 18:01:34 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Darkheart
+2026-02-19 18:01:34 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Darkheart (Bardo Nv.1, HP:10, AC:12)
+2026-02-19 18:01:34 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Shadowstride
+2026-02-19 18:01:34 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Shadowstride (Explorador Nv.1, HP:10, AC:12)
+2026-02-19 18:01:34 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grimgold Stoneheart
+2026-02-19 18:01:34 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grimgold Stoneheart
+2026-02-19 18:01:34 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grimgold Stoneheart (Guerrero Nv.1, HP:11, AC:16)
+2026-02-19 18:01:34 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gwendolyn Whisperwind
+2026-02-19 18:01:34 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gwendolyn Whisperwind (Druida Nv.1, HP:9, AC:12)
+2026-02-19 18:11:40 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thora Darkblade
+2026-02-19 18:11:40 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thora Darkblade (Bárbaro Nv.1, HP:14, AC:12)
+2026-02-19 18:11:40 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Whisperwind
+2026-02-19 18:11:40 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Whisperwind (Bardo Nv.1, HP:8, AC:12)
+2026-02-19 18:11:40 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Stoneheart
+2026-02-19 18:11:40 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Stoneheart
+2026-02-19 18:11:40 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Stoneheart (Guerrero Nv.1, HP:12, AC:16)
+2026-02-19 18:11:40 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Nightingale
+2026-02-19 18:11:40 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Nightingale (Mago Nv.1, HP:7, AC:10)
+2026-02-21 22:12:51 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thora Stoneheart
+2026-02-21 22:12:51 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thora Stoneheart (Guerrero Nv.1, HP:11, AC:16)
+2026-02-21 22:12:51 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Eolande Moonshadow
+2026-02-21 22:12:51 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Moonshadow (Bardo Nv.1, HP:8, AC:12)
+2026-02-21 22:12:51 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Brother Malachi
+2026-02-21 22:12:51 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Brother Malachi (Clérigo Nv.1, HP:10, AC:14)
+2026-02-21 22:12:51 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grit Longstride
+2026-02-21 22:12:51 | INFO     | rules                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grit Longstride
+2026-02-21 22:12:51 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grit Longstride (Explorador Nv.1, HP:11, AC:12)
+2026-02-21 22:18:51 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkheart
+2026-02-21 22:18:51 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkheart (Bardo Nv.1, HP:9, AC:12)
+2026-02-21 22:18:51 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Shadowstrider
+2026-02-21 22:18:51 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Shadowstrider (Explorador Nv.1, HP:10, AC:12)
+2026-02-21 22:18:51 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thalion Moonwhisper
+2026-02-21 22:18:51 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Moonwhisper (Druida Nv.1, HP:9, AC:12)
+2026-02-21 22:18:51 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Malakai Blackwood
+2026-02-21 22:18:51 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Malakai Blackwood (Mago Nv.1, HP:7, AC:10)
+2026-02-21 22:28:06 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darío
+2026-02-21 22:28:06 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darío (Guerrero Nv.1, HP:11, AC:16)
+2026-02-21 22:28:06 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Evelyn Élfica
+2026-02-21 22:28:06 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Evelyn Élfica (Bardo Nv.1, HP:10, AC:12)
+2026-02-21 22:28:06 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Tempranillo
+2026-02-21 22:28:06 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Tempranillo (Clérigo Nv.1, HP:10, AC:14)
+2026-02-21 22:28:06 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Luna Lóbrega
+2026-02-21 22:28:06 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Luna Lóbrega (Explorador Nv.1, HP:11, AC:12)
+2026-02-21 22:37:59 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Blackwood
+2026-02-21 22:37:59 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Blackwood (Bardo Nv.1, HP:9, AC:12)
+2026-02-21 22:37:59 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Luna Shadowwalker
+2026-02-21 22:37:59 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Luna Shadowwalker (Explorador Nv.1, HP:12, AC:12)
+2026-02-21 22:37:59 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grom Thunderheart
+2026-02-21 22:37:59 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Thunderheart (Guerrero Nv.1, HP:12, AC:16)
+2026-02-21 22:37:59 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Whisperwind
+2026-02-21 22:37:59 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Whisperwind (Druida Nv.1, HP:9, AC:11)
+2026-02-21 22:44:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Shadowheart
+2026-02-21 22:44:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Shadowheart (Bardo Nv.1, HP:9, AC:12)
+2026-02-21 22:44:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elara Moonshadow
+2026-02-21 22:44:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elara Moonshadow (Druida Nv.1, HP:9, AC:12)
+2026-02-21 22:44:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Gallus Stoneheart
+2026-02-21 22:44:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Gallus Stoneheart (Guerrero Nv.1, HP:12, AC:16)
+2026-02-21 22:44:09 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Whisperwind
+2026-02-21 22:44:09 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Whisperwind (Brujo Nv.1, HP:9, AC:11)
+2026-02-21 22:52:41 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Shadowstride
+2026-02-21 22:52:41 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Shadowstride (Bardo Nv.5, HP:33, AC:12)
+2026-02-21 22:52:41 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Elowen Moonshadow
+2026-02-21 22:52:41 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Elowen Moonshadow (Druida Nv.5, HP:33, AC:12)
+2026-02-21 22:52:41 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Grit Longtooth
+2026-02-21 22:52:41 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Grit Longtooth (Guerrero Nv.5, HP:44, AC:16)
+2026-02-21 22:52:41 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Lyra Whisperwind
+2026-02-21 22:52:41 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Whisperwind (Mago Nv.5, HP:27, AC:10)
+2026-02-21 23:09:19 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Drago Darkheart
+2026-02-21 23:09:19 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Drago Darkheart (Bárbaro Nv.1, HP:14, AC:12)
+2026-02-21 23:09:19 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Luna Silverwind
+2026-02-21 23:09:19 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Luna Silverwind (Bardo Nv.1, HP:9, AC:12)
+2026-02-21 23:09:19 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Thorne Oakheart
+2026-02-21 23:09:19 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Oakheart (Clérigo Nv.1, HP:9, AC:14)
+2026-02-21 23:09:19 | INFO     | rules                | sanitizar_pj    | Sanitizando personaje: Whisper Windrunner
+2026-02-21 23:09:19 | INFO     | rules                | sanitizar_pj    | ✓ Personaje sanitizado: Whisper Windrunner (Explorador Nv.1, HP:11, AC:12)

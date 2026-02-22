@@ -1,0 +1,43 @@
+# CRONISTA V80.1 - Dependencias
+# ================================
+
+# Framework Web
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Templates
+jinja2==3.1.3
+
+# WebSockets
+websockets==12.0
+
+# HTTP Client
+requests==2.31.0
+
+# Validación de datos
+pydantic==2.5.3
+
+# Variables de entorno
+python-dotenv==1.0.0
+
+# CORS
+python-multipart==0.0.6
+
+# Logging (incluido en Python, pero puede requerir handlers adicionales)
+# logging - incluido en stdlib
+
+# Base de datos
+sqlmodel==0.0.22
+aiosqlite==0.20.0
+
+# ================================
+# INSTALACIÓN:
+# pip install -r requirements.txt
+#
+# NOTA: También necesitas Ollama instalado y corriendo:
+# https://ollama.ai/
+# ollama pull mistral-nemo
+# ================================
+slowapi==0.1.9
+cachetools==5.3.2

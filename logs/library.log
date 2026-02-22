@@ -1,0 +1,6 @@
+2026-02-16 21:51:27 | INFO     | library              | crear_npc       | ✅ NPC creado: Elara la Sabia (id=1)
+2026-02-16 21:51:27 | INFO     | library              | crear_enemy     | ✅ Enemigo creado: Esqueleto Guerrero (id=1)
+2026-02-16 21:51:27 | INFO     | library              | crear_encounter | ✅ Encuentro creado: Emboscada en el Bosque (id=1)
+2026-02-16 21:51:27 | INFO     | library              | eliminar_npc    | 🗑️ NPC eliminado: Elara la Sabia (id=1)
+2026-02-16 21:51:27 | INFO     | library              | eliminar_enemy  | 🗑️ Enemigo eliminado: Esqueleto Guerrero (id=1)
+2026-02-16 21:51:27 | INFO     | library              | eliminar_encounter | 🗑️ Encuentro eliminado: Emboscada en el Bosque (id=1)

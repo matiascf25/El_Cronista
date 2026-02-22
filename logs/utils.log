@@ -1,0 +1,276 @@
+2026-02-09 19:18:29 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-09 19:18:29 | INFO     | utils                | crear_datos_aventura | Setting: un bosque de cristal que vibra con una canción que vuelve loca a la gente
+2026-02-09 19:18:29 | INFO     | utils                | crear_datos_aventura | Estilo: EDAD PRIMIGENIA
+2026-02-09 19:18:29 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-09 19:18:29 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-09 19:18:46 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (2156 caracteres)
+2026-02-09 19:18:46 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-09 19:18:46 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Elara de las Nieves
+2026-02-09 19:18:46 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Elara de las Nieves, generando aleatorios
+2026-02-09 19:18:46 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Elara de las Nieves (Bárbaro, HP:23, AC:11)
+2026-02-09 19:18:46 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Thalion Grisplata
+2026-02-09 19:18:46 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Thalion Grisplata, generando aleatorios
+2026-02-09 19:18:46 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Thalion Grisplata (Guerrero, HP:22, AC:16)
+2026-02-09 19:18:46 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Lysandra Corazón de Luna
+2026-02-09 19:18:46 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Hechicera de la luna', usando 'Guerrero' por defecto
+2026-02-09 19:18:46 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Lysandra Corazón de Luna, generando aleatorios
+2026-02-09 19:18:46 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra Corazón de Luna (Guerrero, HP:28, AC:16)
+2026-02-09 19:18:46 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Kael'thas Sombraluna
+2026-02-09 19:18:46 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Roguesombras', usando 'Guerrero' por defecto
+2026-02-09 19:18:46 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Kael'thas Sombraluna, generando aleatorios
+2026-02-09 19:18:46 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Kael'thas Sombraluna (Guerrero, HP:19, AC:16)
+2026-02-09 19:18:46 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-09 19:18:46 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia...
+2026-02-09 19:18:46 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-09 19:19:09 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (4208 caracteres)
+2026-02-09 19:19:09 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-09 19:19:09 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: La Canción del Bosque de Cristal
+2026-02-09 19:19:09 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-09 19:19:09 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-09 19:19:09 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente
+2026-02-09 19:32:27 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-09 19:32:27 | INFO     | utils                | crear_datos_aventura | Setting: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-09 19:32:27 | INFO     | utils                | crear_datos_aventura | Estilo: PIRATAS
+2026-02-09 19:32:27 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-09 19:32:27 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-09 19:32:39 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (2277 caracteres)
+2026-02-09 19:32:39 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-09 19:32:39 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Astraria
+2026-02-09 19:32:39 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-09 19:32:39 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Astraria, generando aleatorios
+2026-02-09 19:32:39 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Astraria (Guerrero Nv.3, HP:25, AC:16)
+2026-02-09 19:32:39 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Thorne
+2026-02-09 19:32:39 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Thorne, generando aleatorios
+2026-02-09 19:32:39 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne (Guerrero Nv.3, HP:31, AC:16)
+2026-02-09 19:32:39 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Lumen
+2026-02-09 19:32:39 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Lumen, generando aleatorios
+2026-02-09 19:32:39 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Lumen (Bardo Nv.3, HP:15, AC:13)
+2026-02-09 19:32:39 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Shadowscale
+2026-02-09 19:32:39 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Shadowscale, generando aleatorios
+2026-02-09 19:32:39 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Shadowscale (Explorador Nv.3, HP:22, AC:12)
+2026-02-09 19:32:39 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-09 19:32:39 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia...
+2026-02-09 19:32:39 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-09 19:33:08 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (5516 caracteres)
+2026-02-09 19:33:08 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-09 19:33:08 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: El Calabozo del Titán
+2026-02-09 19:33:08 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-09 19:33:08 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-09 19:33:08 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente
+2026-02-09 19:38:37 | INFO     | utils                | evaluar_formula_dados | Evaluando dados: 1d20
+2026-02-09 19:38:37 | INFO     | utils                | evaluar_formula_dados | ✓ Resultado: 16 ([16] +)
+2026-02-09 19:38:38 | INFO     | utils                | evaluar_formula_dados | Evaluando dados: 1d8
+2026-02-09 19:38:38 | INFO     | utils                | evaluar_formula_dados | ✓ Resultado: 6 ([6] +)
+2026-02-10 07:08:33 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-10 07:08:33 | INFO     | utils                | crear_datos_aventura | Setting: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-10 07:08:33 | INFO     | utils                | crear_datos_aventura | Estilo: EDAD PRIMIGENIA
+2026-02-10 07:08:33 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-10 07:08:33 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 07:08:52 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (2878 caracteres)
+2026-02-10 07:08:52 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 07:08:52 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Kael'thas
+2026-02-10 07:08:52 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Kael'thas, generando aleatorios
+2026-02-10 07:08:52 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Kael'thas (Explorador Nv.3, HP:19, AC:11)
+2026-02-10 07:08:52 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Gromm
+2026-02-10 07:08:52 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Gromm, generando aleatorios
+2026-02-10 07:08:52 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Gromm (Guerrero Nv.3, HP:25, AC:16)
+2026-02-10 07:08:52 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Lyra
+2026-02-10 07:08:52 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Hechicera del underdark', usando 'Guerrero' por defecto
+2026-02-10 07:08:52 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Lyra, generando aleatorios
+2026-02-10 07:08:52 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra (Guerrero Nv.3, HP:19, AC:16)
+2026-02-10 07:08:52 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Zephyrion
+2026-02-10 07:08:52 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Asaltante del underdark', usando 'Guerrero' por defecto
+2026-02-10 07:08:52 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Zephyrion, generando aleatorios
+2026-02-10 07:08:52 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyrion (Guerrero Nv.3, HP:31, AC:16)
+2026-02-10 07:08:52 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-10 07:08:52 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia...
+2026-02-10 07:08:52 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 07:09:16 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (4518 caracteres)
+2026-02-10 07:09:16 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 07:09:16 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: El susurro de los hongos
+2026-02-10 07:09:16 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-10 07:09:16 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-10 07:09:16 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente
+2026-02-10 07:17:34 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-10 07:17:34 | INFO     | utils                | crear_datos_aventura | Setting: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-10 07:17:34 | INFO     | utils                | crear_datos_aventura | Estilo: PIRATAS
+2026-02-10 07:17:34 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-10 07:17:34 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 07:17:49 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (2781 caracteres)
+2026-02-10 07:17:49 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 07:17:49 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Éilder de los Vientos
+2026-02-10 07:17:49 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Éilder de los Vientos, generando aleatorios
+2026-02-10 07:17:49 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Éilder de los Vientos (Mago Nv.3, HP:17, AC:12)
+2026-02-10 07:17:49 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Grom Stoneheart
+2026-02-10 07:17:49 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Grom Stoneheart, generando aleatorios
+2026-02-10 07:17:49 | INFO     | utils                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Stoneheart
+2026-02-10 07:17:49 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Stoneheart (Guerrero Nv.3, HP:28, AC:16)
+2026-02-10 07:17:49 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Lysandra Nightingale
+2026-02-10 07:17:49 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Ronda', usando 'Guerrero' por defecto
+2026-02-10 07:17:49 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Lysandra Nightingale, generando aleatorios
+2026-02-10 07:17:49 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra Nightingale (Guerrero Nv.3, HP:25, AC:16)
+2026-02-10 07:17:49 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Zephyrus Swiftwing
+2026-02-10 07:17:49 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Zephyrus Swiftwing, generando aleatorios
+2026-02-10 07:17:49 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyrus Swiftwing (Bardo Nv.3, HP:24, AC:11)
+2026-02-10 07:17:49 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-10 07:17:49 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia...
+2026-02-10 07:17:49 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 07:18:13 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (5391 caracteres)
+2026-02-10 07:18:13 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 07:18:13 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: La Torre de los Vientos
+2026-02-10 07:18:13 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-10 07:18:13 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-10 07:18:13 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente
+2026-02-10 19:55:09 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-10 19:55:09 | INFO     | utils                | crear_datos_aventura | Setting: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-10 19:55:09 | INFO     | utils                | crear_datos_aventura | Estilo: VIEJO OESTE
+2026-02-10 19:55:09 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-10 19:55:09 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 19:55:30 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (3137 caracteres)
+2026-02-10 19:55:30 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 19:55:30 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Elara
+2026-02-10 19:55:30 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Elara, generando aleatorios
+2026-02-10 19:55:30 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Elara (Bárbaro Nv.3, HP:23, AC:10)
+2026-02-10 19:55:30 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Zathras
+2026-02-10 19:55:30 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Zathras, generando aleatorios
+2026-02-10 19:55:30 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Zathras (Mago Nv.3, HP:11, AC:11)
+2026-02-10 19:55:30 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Gromm
+2026-02-10 19:55:30 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Clerigo', usando 'Guerrero' por defecto
+2026-02-10 19:55:30 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Gromm, generando aleatorios
+2026-02-10 19:55:30 | INFO     | utils                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Gromm
+2026-02-10 19:55:30 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Gromm (Guerrero Nv.3, HP:19, AC:16)
+2026-02-10 19:55:30 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Shenara
+2026-02-10 19:55:30 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Rogui', usando 'Guerrero' por defecto
+2026-02-10 19:55:30 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Shenara, generando aleatorios
+2026-02-10 19:55:30 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Shenara (Guerrero Nv.3, HP:22, AC:16)
+2026-02-10 19:55:30 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-10 19:55:30 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia...
+2026-02-10 19:55:30 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 19:55:54 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (5263 caracteres)
+2026-02-10 19:55:54 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 19:55:54 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: La Lanza de cristal
+2026-02-10 19:55:54 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-10 19:55:54 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-10 19:55:54 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente
+2026-02-10 19:59:53 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-10 19:59:53 | INFO     | utils                | crear_datos_aventura | Setting: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-10 19:59:53 | INFO     | utils                | crear_datos_aventura | Estilo: CIBERPUNK
+2026-02-10 19:59:53 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-10 19:59:53 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 20:00:05 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (2318 caracteres)
+2026-02-10 20:00:05 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 20:00:05 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Eolande
+2026-02-10 20:00:05 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Hechicera de la luna', usando 'Guerrero' por defecto
+2026-02-10 20:00:05 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Eolande, generando aleatorios
+2026-02-10 20:00:05 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande (Guerrero Nv.3, HP:22, AC:16)
+2026-02-10 20:00:05 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Grom
+2026-02-10 20:00:05 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Grom, generando aleatorios
+2026-02-10 20:00:05 | INFO     | utils                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom
+2026-02-10 20:00:05 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Grom (Guerrero Nv.3, HP:19, AC:16)
+2026-02-10 20:00:05 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Lyra
+2026-02-10 20:00:05 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Lyra, generando aleatorios
+2026-02-10 20:00:05 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra (Bardo Nv.3, HP:21, AC:10)
+2026-02-10 20:00:05 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Zephyr
+2026-02-10 20:00:05 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Sacerdote del viento', usando 'Guerrero' por defecto
+2026-02-10 20:00:05 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Zephyr, generando aleatorios
+2026-02-10 20:00:05 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Zephyr (Guerrero Nv.3, HP:25, AC:16)
+2026-02-10 20:00:05 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-10 20:00:05 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia...
+2026-02-10 20:00:05 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 20:00:24 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (3734 caracteres)
+2026-02-10 20:00:24 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 20:00:24 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: La Ciudad del Cráneo
+2026-02-10 20:00:24 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-10 20:00:24 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-10 20:00:24 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente
+2026-02-10 20:23:01 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-10 20:23:01 | INFO     | utils                | crear_datos_aventura | Setting: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-10 20:23:01 | INFO     | utils                | crear_datos_aventura | Estilo: MISTERIO NOIR
+2026-02-10 20:23:01 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-10 20:23:01 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 20:23:13 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (1934 caracteres)
+2026-02-10 20:23:13 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 20:23:13 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Elyana Viento de Hierro
+2026-02-10 20:23:13 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Guerrera', usando 'Guerrero' por defecto
+2026-02-10 20:23:13 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Elyana Viento de Hierro, generando aleatorios
+2026-02-10 20:23:13 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Elyana Viento de Hierro (Guerrero Nv.3, HP:28, AC:16)
+2026-02-10 20:23:13 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Kael'thas Rayo de Luna
+2026-02-10 20:23:13 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Kael'thas Rayo de Luna, generando aleatorios
+2026-02-10 20:23:13 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Kael'thas Rayo de Luna (Mago Nv.3, HP:14, AC:11)
+2026-02-10 20:23:13 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Grugnek Ojo de Trueno
+2026-02-10 20:23:13 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Grugnek Ojo de Trueno, generando aleatorios
+2026-02-10 20:23:13 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Grugnek Ojo de Trueno (Guerrero Nv.3, HP:25, AC:16)
+2026-02-10 20:23:13 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Lira Canción de Plata
+2026-02-10 20:23:13 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Lira Canción de Plata, generando aleatorios
+2026-02-10 20:23:13 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Lira Canción de Plata (Bardo Nv.3, HP:15, AC:11)
+2026-02-10 20:23:13 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-10 20:23:13 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia ENRIQUECIDA...
+2026-02-10 20:23:13 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 20:24:02 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (9394 caracteres)
+2026-02-10 20:24:02 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 20:24:02 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: La Torre de los Ecos
+2026-02-10 20:24:02 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-10 20:24:02 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-10 20:24:02 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente
+2026-02-10 20:25:53 | INFO     | utils                | evaluar_formula_dados | Evaluando dados: 1d8+3
+2026-02-10 20:25:53 | INFO     | utils                | evaluar_formula_dados | ✓ Resultado: 6 ([3] +3)
+2026-02-10 20:27:32 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-10 20:27:32 | INFO     | utils                | crear_datos_aventura | Setting: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-10 20:27:32 | INFO     | utils                | crear_datos_aventura | Estilo: STEAMPUNK
+2026-02-10 20:27:32 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-10 20:27:32 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 20:27:51 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (4012 caracteres)
+2026-02-10 20:27:51 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 20:27:51 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Lyra Umbraclara
+2026-02-10 20:27:51 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Lyra Umbraclara, generando aleatorios
+2026-02-10 20:27:51 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Lyra Umbraclara (Pícaro Nv.3, HP:18, AC:9)
+2026-02-10 20:27:51 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Grom Grimgruesome
+2026-02-10 20:27:51 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Warrior', usando 'Guerrero' por defecto
+2026-02-10 20:27:51 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Grom Grimgruesome, generando aleatorios
+2026-02-10 20:27:51 | INFO     | utils                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom Grimgruesome
+2026-02-10 20:27:51 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Grom Grimgruesome (Guerrero Nv.3, HP:22, AC:16)
+2026-02-10 20:27:51 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Eolande Sombraviva
+2026-02-10 20:27:51 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Eolande Sombraviva, generando aleatorios
+2026-02-10 20:27:51 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Eolande Sombraviva (Hechicero Nv.3, HP:14, AC:12)
+2026-02-10 20:27:51 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Thorne Silencio
+2026-02-10 20:27:51 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Thorne Silencio, generando aleatorios
+2026-02-10 20:27:51 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne Silencio (Explorador Nv.3, HP:25, AC:13)
+2026-02-10 20:27:51 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-10 20:27:51 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia ENRIQUECIDA...
+2026-02-10 20:27:51 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 20:28:49 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (10624 caracteres)
+2026-02-10 20:28:49 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 20:28:49 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: Los Susurros del Underdark
+2026-02-10 20:28:49 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-10 20:28:49 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-10 20:28:49 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente
+2026-02-10 20:28:49 | INFO     | utils                | crear_datos_aventura | 🎲 Iniciando generación de aventura
+2026-02-10 20:28:49 | INFO     | utils                | crear_datos_aventura | Setting: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-10 20:28:49 | INFO     | utils                | crear_datos_aventura | Estilo: EDAD PRIMIGENIA
+2026-02-10 20:28:49 | INFO     | utils                | crear_datos_aventura | Paso 1/3: Generando personajes...
+2026-02-10 20:28:49 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 20:28:59 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (1917 caracteres)
+2026-02-10 20:28:59 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 20:28:59 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Elara
+2026-02-10 20:28:59 | WARNING  | utils                | sanitizar_pj    | Clase no reconocida 'Maga', usando 'Guerrero' por defecto
+2026-02-10 20:28:59 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Elara, generando aleatorios
+2026-02-10 20:28:59 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Elara (Guerrero Nv.3, HP:31, AC:16)
+2026-02-10 20:28:59 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Grom
+2026-02-10 20:28:59 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Grom, generando aleatorios
+2026-02-10 20:28:59 | INFO     | utils                | _generar_url_imagen_personaje | Usando estrategia especial de imagen para enano: Grom
+2026-02-10 20:28:59 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Grom (Guerrero Nv.3, HP:19, AC:16)
+2026-02-10 20:28:59 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Lysandra
+2026-02-10 20:28:59 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Lysandra, generando aleatorios
+2026-02-10 20:28:59 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Lysandra (Explorador Nv.3, HP:31, AC:12)
+2026-02-10 20:28:59 | INFO     | utils                | sanitizar_pj    | Sanitizando personaje: Thorne
+2026-02-10 20:28:59 | WARNING  | utils                | sanitizar_pj    | Stats faltantes para Thorne, generando aleatorios
+2026-02-10 20:28:59 | INFO     | utils                | sanitizar_pj    | ✓ Personaje sanitizado: Thorne (Bardo Nv.3, HP:27, AC:9)
+2026-02-10 20:28:59 | INFO     | utils                | crear_datos_aventura | ✓ 4 personajes generados
+2026-02-10 20:28:59 | INFO     | utils                | crear_datos_aventura | Paso 2/3: Generando historia ENRIQUECIDA...
+2026-02-10 20:28:59 | INFO     | utils                | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-10 20:29:56 | INFO     | utils                | generar_con_ia  | ✓ Respuesta recibida de Ollama (9822 caracteres)
+2026-02-10 20:29:56 | INFO     | utils                | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-10 20:29:56 | INFO     | utils                | crear_datos_aventura | ✓ Historia generada: La Torre Infinita
+2026-02-10 20:29:56 | INFO     | utils                | crear_datos_aventura | Paso 3/3: Agregando URLs de imágenes...
+2026-02-10 20:29:56 | INFO     | utils                | crear_datos_aventura | ✓ Imágenes agregadas
+2026-02-10 20:29:56 | INFO     | utils                | crear_datos_aventura | 🎉 Aventura generada exitosamente

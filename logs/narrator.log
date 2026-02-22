@@ -1,0 +1,2 @@
+2026-02-16 20:20:50 | WARNING  | narrator             | _generar_historia | Fallo generación de historia o menos de 5 escenas, usando historia enriquecida fallback
+2026-02-16 20:20:50 | INFO     | narrator             | _historia_fallback_enriquecida | Usando historia fallback ENRIQUECIDA (5 escenas)

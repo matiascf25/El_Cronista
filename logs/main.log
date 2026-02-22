@@ -1,0 +1,1048 @@
+2026-02-09 19:18:25 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-09 19:18:25 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-09 19:18:25 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-09 19:18:28 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-09 19:18:29 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-09 19:18:29 | INFO     | main                 | new_game        | Setting seleccionado: un bosque de cristal que vibra con una canción que vuelve loca a la gente
+2026-02-09 19:18:29 | INFO     | main                 | new_game        | Estilo seleccionado: EDAD PRIMIGENIA
+2026-02-09 19:19:09 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Canción del Bosque de Cristal
+2026-02-09 19:19:09 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-09 19:19:09 | ERROR    | main                 | log_requests    | Error procesando request GET /dm: 'dict object' has no attribute 'plot_twist'
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/anyio/streams/memory.py", line 117, in receive
+    return self.receive_nowait()
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/anyio/streams/memory.py", line 110, in receive_nowait
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/main.py", line 53, in log_requests
+    response = await call_next(request)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/fastapi/routing.py", line 299, in app
+    raise e
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/fastapi/routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/main.py", line 110, in dm_interface
+    return templates.TemplateResponse("dm_screen.html", {
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/templating.py", line 224, in TemplateResponse
+    return _TemplateResponse(
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/templating.py", line 38, in __init__
+    content = template.render(context)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/dm_screen.html", line 177, in top-level template code
+    <h3>⚡ SECRETO: <span contenteditable="true" id="twist-title">{{ adv.historia.plot_twist.titulo }}</span></h3>
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'plot_twist'
+2026-02-09 19:32:23 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-09 19:32:23 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-09 19:32:23 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-09 19:32:26 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-09 19:32:27 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-09 19:32:27 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-09 19:32:27 | INFO     | main                 | new_game        | Estilo seleccionado: PIRATAS
+2026-02-09 19:33:08 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Calabozo del Titán
+2026-02-09 19:33:08 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-09 19:33:08 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-09 19:34:00 | INFO     | main                 | combat_api      | ⚔️ Acción de combate: start (sesión: default_session)
+2026-02-09 19:34:00 | INFO     | main                 | combat_api      | Iniciando combate con 3 grupos de enemigos
+2026-02-09 19:35:11 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-09 19:35:14 | INFO     | main                 | oracle          | ✅ Oráculo completado: 634 caracteres generados
+2026-02-09 19:35:26 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-09 19:35:35 | INFO     | main                 | oracle          | ✅ Oráculo completado: 2038 caracteres generados
+2026-02-09 19:38:17 | INFO     | main                 | journal_get     | 📖 Obteniendo journal para sesión: default_session
+2026-02-09 19:38:37 | INFO     | main                 | roll            | 🎲 Tirando dados: 1d20
+2026-02-09 19:38:37 | INFO     | main                 | roll            | ✅ Resultado: 16
+2026-02-09 19:38:38 | INFO     | main                 | roll            | 🎲 Tirando dados: 1d8
+2026-02-09 19:38:38 | INFO     | main                 | roll            | ✅ Resultado: 6
+2026-02-09 20:03:00 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-10 07:08:30 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-10 07:08:30 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-10 07:08:30 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-10 07:08:32 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-10 07:08:33 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-10 07:08:33 | INFO     | main                 | new_game        | Setting seleccionado: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-10 07:08:33 | INFO     | main                 | new_game        | Estilo seleccionado: EDAD PRIMIGENIA
+2026-02-10 07:09:16 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El susurro de los hongos
+2026-02-10 07:09:16 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-10 07:09:16 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-10 07:12:15 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-10 07:17:30 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-10 07:17:30 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-10 07:17:30 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-10 07:17:33 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-10 07:17:34 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-10 07:17:34 | INFO     | main                 | new_game        | Setting seleccionado: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-10 07:17:34 | INFO     | main                 | new_game        | Estilo seleccionado: PIRATAS
+2026-02-10 07:18:13 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Torre de los Vientos
+2026-02-10 07:18:13 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-10 07:18:13 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-10 07:18:40 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-10 19:55:05 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-10 19:55:05 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-10 19:55:05 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-10 19:55:07 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-10 19:55:09 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-10 19:55:09 | INFO     | main                 | new_game        | Setting seleccionado: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-10 19:55:09 | INFO     | main                 | new_game        | Estilo seleccionado: VIEJO OESTE
+2026-02-10 19:55:54 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Lanza de cristal
+2026-02-10 19:55:54 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-10 19:55:54 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-10 19:56:47 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-10 19:59:50 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-10 19:59:50 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-10 19:59:50 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-10 19:59:52 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-10 19:59:53 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-10 19:59:53 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-10 19:59:53 | INFO     | main                 | new_game        | Estilo seleccionado: CIBERPUNK
+2026-02-10 20:00:24 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Ciudad del Cráneo
+2026-02-10 20:00:24 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-10 20:00:24 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-10 20:01:25 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-10 20:22:57 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-10 20:22:57 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-10 20:22:57 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-10 20:23:00 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-10 20:23:01 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-10 20:23:01 | INFO     | main                 | new_game        | Setting seleccionado: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-10 20:23:01 | INFO     | main                 | new_game        | Estilo seleccionado: MISTERIO NOIR
+2026-02-10 20:24:02 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Torre de los Ecos
+2026-02-10 20:24:02 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-10 20:24:02 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-10 20:24:29 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-10 20:24:35 | INFO     | main                 | oracle          | ✅ Oráculo completado: 1424 caracteres generados
+2026-02-10 20:25:53 | INFO     | main                 | roll            | 🎲 Tirando dados: 1d8+3
+2026-02-10 20:25:53 | INFO     | main                 | roll            | ✅ Resultado: 6
+2026-02-10 20:26:10 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-10 20:26:14 | INFO     | main                 | oracle          | ✅ Oráculo completado: 1020 caracteres generados
+2026-02-10 20:27:23 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-10 20:27:23 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-10 20:27:23 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-10 20:27:31 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-10 20:27:32 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-10 20:27:32 | INFO     | main                 | new_game        | Setting seleccionado: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-10 20:27:32 | INFO     | main                 | new_game        | Estilo seleccionado: STEAMPUNK
+2026-02-10 20:28:49 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: Los Susurros del Underdark
+2026-02-10 20:28:49 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-10 20:28:49 | INFO     | main                 | new_game        | Setting seleccionado: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-10 20:28:49 | INFO     | main                 | new_game        | Estilo seleccionado: EDAD PRIMIGENIA
+2026-02-10 20:29:56 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Torre Infinita
+2026-02-10 20:29:56 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-10 20:29:57 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-10 20:33:39 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-10 20:33:48 | INFO     | main                 | oracle          | ✅ Oráculo completado: 1952 caracteres generados
+2026-02-10 20:34:24 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-14 10:43:41 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-14 10:43:41 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-14 10:43:41 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-14 10:43:47 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-14 10:43:49 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-14 10:43:49 | INFO     | main                 | new_game        | Setting seleccionado: un bosque de cristal que vibra con una canción que vuelve loca a la gente
+2026-02-14 10:43:49 | INFO     | main                 | new_game        | Estilo seleccionado: STEAMPUNK
+2026-02-14 10:45:00 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Canción del Bosque de Cristal
+2026-02-14 10:45:00 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-14 10:45:00 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-14 10:45:50 | INFO     | main                 | combat_api      | ⚔️ Acción de combate: start (sesión: default_session)
+2026-02-14 10:45:50 | INFO     | main                 | combat_api      | Iniciando combate con 5 grupos de enemigos
+2026-02-14 10:46:00 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 19:19:00 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 19:19:00 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 19:19:00 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 19:19:06 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 19:19:07 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 19:19:07 | INFO     | main                 | new_game        | Setting seleccionado: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-16 19:19:07 | INFO     | main                 | new_game        | Estilo seleccionado: HORROR GÓTICO
+2026-02-16 19:20:19 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: Las sombras del Underdark
+2026-02-16 19:20:19 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 19:20:19 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 19:21:42 | INFO     | main                 | journal_get     | 📖 Obteniendo journal para sesión: default_session
+2026-02-16 19:21:44 | INFO     | main                 | journal_get     | 📖 Obteniendo journal para sesión: default_session
+2026-02-16 19:21:49 | INFO     | main                 | roll            | 🎲 Tirando dados: 1d8
+2026-02-16 19:21:49 | INFO     | main                 | roll            | ✅ Resultado: 8
+2026-02-16 19:23:01 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 19:23:01 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 19:23:02 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 19:23:02 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 19:23:04 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 19:23:04 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 19:23:06 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 19:23:06 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 19:23:08 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 19:34:33 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 19:34:33 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 19:34:33 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 19:34:36 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 19:34:37 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 19:34:37 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-16 19:34:37 | INFO     | main                 | new_game        | Estilo seleccionado: VIEJO OESTE
+2026-02-16 19:35:13 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Cráneo del Titán
+2026-02-16 19:35:13 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 19:35:13 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 19:35:19 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 20:11:55 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 20:11:55 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 20:11:55 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 20:12:00 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 20:12:01 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 20:12:01 | INFO     | main                 | new_game        | Setting seleccionado: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-16 20:12:01 | INFO     | main                 | new_game        | Estilo seleccionado: HORROR GÓTICO
+2026-02-16 20:13:11 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Torre del Eterna Noche
+2026-02-16 20:13:11 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 20:13:11 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 20:14:01 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:14:01 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 20:16:57 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 20:19:26 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 20:19:26 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 20:19:26 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 20:19:29 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 20:19:30 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 20:19:30 | INFO     | main                 | new_game        | Setting seleccionado: unas islas flotantes unidas por cadenas oxidadas sobre un abismo sin fin
+2026-02-16 20:19:30 | INFO     | main                 | new_game        | Estilo seleccionado: VIEJO OESTE
+2026-02-16 20:20:50 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Secreto de las Ruinas de Sombraluna
+2026-02-16 20:20:50 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 20:20:50 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 20:27:14 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 20:34:57 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 20:34:57 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 20:34:57 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 20:35:02 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 20:35:20 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 20:35:20 | INFO     | main                 | new_game        | Setting seleccionado: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-16 20:35:20 | INFO     | main                 | new_game        | Estilo seleccionado: CIBERPUNK
+2026-02-16 20:36:18 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Ascenso Infinito
+2026-02-16 20:36:18 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 20:36:18 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 20:36:31 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:36:31 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 20:39:25 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 20:41:18 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 20:41:21 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 20:41:21 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 20:41:21 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 20:41:23 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 20:41:24 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 20:41:24 | INFO     | main                 | new_game        | Setting seleccionado: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-16 20:41:24 | INFO     | main                 | new_game        | Estilo seleccionado: VIEJO OESTE
+2026-02-16 20:42:27 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Torre Infinita: Ecos de Desiertos Olvidados
+2026-02-16 20:42:27 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 20:42:27 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 20:42:33 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:42:33 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 20:42:40 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:42:40 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 20:42:40 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:42:40 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 20:46:54 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 20:46:54 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 20:46:54 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 20:46:56 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:46:56 | ERROR    | main                 | oracle          | Error en Oráculo: name 'SYSTEM_INSTRUCTIONS' is not defined
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 282, in oracle
+    "prompt": f"{SYSTEM_INSTRUCTIONS}\n\nCONTEXTO:\n{contexto}\n\nTAREA:\n{prompt}",
+NameError: name 'SYSTEM_INSTRUCTIONS' is not defined
+2026-02-16 20:46:57 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 20:47:05 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 20:47:05 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 20:47:05 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 20:47:07 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 20:47:08 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 20:47:08 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-16 20:47:08 | INFO     | main                 | new_game        | Estilo seleccionado: TERROR CÓSMICO
+2026-02-16 20:48:12 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Ciudad del Titán Muerto
+2026-02-16 20:48:12 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 20:48:12 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 20:48:17 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:48:19 | INFO     | main                 | oracle          | ✅ Oráculo completado: 347 caracteres generados
+2026-02-16 20:51:39 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 20:53:02 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 20:53:02 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 20:53:02 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 20:53:07 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 20:53:08 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 20:53:08 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-16 20:53:08 | INFO     | main                 | new_game        | Estilo seleccionado: BOSQUE FEÉRICO
+2026-02-16 20:54:11 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Ciénaga de los Susurros
+2026-02-16 20:54:11 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 20:54:11 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 20:57:02 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:57:04 | INFO     | main                 | oracle          | ✅ Oráculo completado: 430 caracteres generados
+2026-02-16 20:57:08 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 20:57:11 | INFO     | main                 | oracle          | ✅ Oráculo completado: 120 caracteres generados
+2026-02-16 20:59:49 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 21:00:20 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 21:00:20 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 21:00:20 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 21:00:24 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 21:00:26 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 21:00:26 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-16 21:00:26 | INFO     | main                 | new_game        | Estilo seleccionado: CIBERPUNK
+2026-02-16 21:01:22 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Ciudad del Titán Muerto
+2026-02-16 21:01:22 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 21:01:22 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 21:01:51 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 21:01:54 | INFO     | main                 | oracle          | ✅ Oráculo completado: 539 caracteres generados
+2026-02-16 21:09:34 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 21:09:40 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 21:09:40 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 21:09:40 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 21:09:42 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 21:09:44 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 21:09:44 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-16 21:09:44 | INFO     | main                 | new_game        | Estilo seleccionado: HORROR GÓTICO
+2026-02-16 21:10:45 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Cráneo del Titán
+2026-02-16 21:10:45 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 21:10:45 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 21:11:16 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 21:11:26 | INFO     | main                 | oracle          | ✅ Oráculo completado: 1473 caracteres generados
+2026-02-16 21:14:28 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 21:22:14 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 21:22:14 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 21:22:14 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 21:22:16 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 21:22:17 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 21:22:17 | INFO     | main                 | new_game        | Setting seleccionado: un bosque de cristal que vibra con una canción que vuelve loca a la gente
+2026-02-16 21:22:17 | INFO     | main                 | new_game        | Estilo seleccionado: CIENCIA FANTASÍA
+2026-02-16 21:23:18 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Sinfonía del Bosque de Cristal
+2026-02-16 21:23:18 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 21:23:18 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 21:26:36 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 21:30:40 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 21:30:40 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 21:30:40 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas
+2026-02-16 21:30:42 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 21:30:43 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 21:30:43 | INFO     | main                 | new_game        | Setting seleccionado: unas islas flotantes unidas por cadenas oxidadas sobre un abismo sin fin
+2026-02-16 21:30:43 | INFO     | main                 | new_game        | Estilo seleccionado: ALTA FANTASÍA
+2026-02-16 21:31:49 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: Las Islas Flotantes de Eón
+2026-02-16 21:31:49 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 21:31:49 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 22:06:50 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-16 22:26:36 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 22:26:36 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 22:26:36 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-16 22:26:36 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-16 22:27:55 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 22:27:55 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 22:27:55 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-16 22:27:55 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-16 22:27:57 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 22:27:58 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 22:27:58 | INFO     | main                 | new_game        | Setting seleccionado: una torre infinita donde cada piso es un ecosistema distinto
+2026-02-16 22:27:58 | INFO     | main                 | new_game        | Estilo seleccionado: ALTA FANTASÍA
+2026-02-16 22:28:52 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Torre Infinita: Luz vs Oscuridad
+2026-02-16 22:28:52 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 22:28:52 | ERROR    | main                 | log_requests    | Error procesando request GET /dm: expected token 'end of print statement', got ':'
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/anyio/streams/memory.py", line 117, in receive
+    return self.receive_nowait()
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/anyio/streams/memory.py", line 110, in receive_nowait
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 65, in log_requests
+    response = await call_next(request)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/fastapi/routing.py", line 299, in app
+    raise e
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/fastapi/routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 122, in dm_interface
+    return templates.TemplateResponse("dm_screen.html", {
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/templating.py", line 223, in TemplateResponse
+    template = self.get_template(name)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/starlette/templating.py", line 137, in get_template
+    return self.env.get_template(name)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/jinja2/loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/matiascorderoflores/miniconda3/envs/DMaster/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/dm_screen.html", line 1231, in template
+    <b>📋 ${data.name}</b> <small style="color:${{ 'Fácil': '#2ecc71', 'Media': '#f1c40f', 'Difícil': '#e74c3c', 'Letal': '#8e44ad' }[data.difficulty] || '#aaa'}">${data.difficulty}</small>
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ':'
+2026-02-16 22:31:37 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-16 22:31:37 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-16 22:31:37 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-16 22:31:37 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-16 22:31:39 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-16 22:31:41 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-16 22:31:41 | INFO     | main                 | new_game        | Setting seleccionado: unas islas flotantes unidas por cadenas oxidadas sobre un abismo sin fin
+2026-02-16 22:31:41 | INFO     | main                 | new_game        | Estilo seleccionado: ALTA FANTASÍA
+2026-02-16 22:32:50 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: Las Islas de Aetherna: El Resurgimiento del Abismo
+2026-02-16 22:32:50 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-16 22:32:50 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session
+2026-02-16 22:33:06 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 22:33:12 | INFO     | main                 | oracle          | ✅ Oráculo completado: 685 caracteres generados
+2026-02-16 22:33:17 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-16 22:33:21 | INFO     | main                 | oracle          | ✅ Oráculo completado: 570 caracteres generados
+2026-02-16 22:34:06 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session
+2026-02-17 16:37:23 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-17 16:37:23 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-17 16:37:23 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-17 16:37:23 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-17 16:37:26 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-17 16:37:28 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-17 16:37:28 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-17 16:37:28 | INFO     | main                 | new_game        | Estilo seleccionado: STEAMPUNK
+2026-02-17 16:38:44 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: Los Susurros del Titán Durmiente
+2026-02-17 16:38:44 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-17 16:38:44 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-17 16:39:01 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-17 16:40:08 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-17 16:40:10 | INFO     | main                 | oracle          | ✅ Oráculo completado: 392 caracteres generados
+2026-02-17 16:40:13 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Plaza del Reloj de Bronce
+2026-02-17 16:40:19 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-17 16:43:08 | INFO     | main                 | journal_get     | 📖 Obteniendo journal para sesión: default_session
+2026-02-17 16:45:26 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-17 16:45:37 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-17 16:45:37 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-17 16:45:37 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-17 16:45:37 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-17 16:45:42 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-17 16:45:43 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-17 16:45:43 | INFO     | main                 | new_game        | Setting seleccionado: un bosque de cristal que vibra con una canción que vuelve loca a la gente
+2026-02-17 16:45:43 | INFO     | main                 | new_game        | Estilo seleccionado: HORROR GÓTICO
+2026-02-17 16:46:46 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Canto del Cristal Muerto
+2026-02-17 16:46:46 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-17 16:46:46 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-17 16:48:10 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-17 16:48:12 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Canción del Bosque Muerto
+2026-02-17 16:48:32 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-17 17:00:02 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-17 17:00:02 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-17 17:00:02 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-17 17:00:02 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-17 17:03:47 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-17 17:03:47 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-17 17:03:47 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-17 17:03:47 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-17 17:03:53 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-17 17:03:54 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-17 17:03:54 | INFO     | main                 | new_game        | Setting seleccionado: un bosque de cristal que vibra con una canción que vuelve loca a la gente
+2026-02-17 17:03:54 | INFO     | main                 | new_game        | Estilo seleccionado: EDAD PRIMIGENIA
+2026-02-17 17:05:00 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Canto de los Cristales Rotos
+2026-02-17 17:05:00 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:05:00 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-17 17:05:00 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-17 17:06:22 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:06:22 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:06:28 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:06:28 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:06:28 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:06:36 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:06:36 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:06:37 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:06:40 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Entrada Silenciosa
+2026-02-17 17:06:44 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-17 17:06:44 | INFO     | main                 | ws_endpoint     | Estado de mapa enviado a default_session
+2026-02-17 17:07:04 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-17 17:07:16 | INFO     | main                 | ws_endpoint     | Token movido: enemigo_0_0_3 → (256, 128)
+2026-02-17 17:07:36 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:07:53 | INFO     | main                 | roll            | 🎲 Tirando dados: 1d8
+2026-02-17 17:07:53 | INFO     | main                 | roll            | ✅ Resultado: 7
+2026-02-17 17:07:58 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-17 17:08:00 | INFO     | main                 | oracle          | ✅ Oráculo completado: 467 caracteres generados
+2026-02-17 17:08:02 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Cueva de los Ecos
+2026-02-17 17:08:08 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Cueva de los Ecos
+2026-02-17 17:08:12 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:08:13 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:08:15 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Cueva de los Ecos
+2026-02-17 17:08:36 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:08:36 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 1 al VTT (default_session)
+2026-02-17 17:08:42 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 1 al VTT (default_session)
+2026-02-17 17:08:46 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:08:46 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:08:49 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 1 al VTT (default_session)
+2026-02-17 17:08:50 | INFO     | main                 | ws_endpoint     | Estado de mapa enviado a default_session
+2026-02-17 17:09:19 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:21:44 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-17 17:21:48 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-17 17:21:48 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-17 17:21:48 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-17 17:21:48 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-17 17:21:51 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-17 17:21:53 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-17 17:21:53 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-17 17:21:53 | INFO     | main                 | new_game        | Estilo seleccionado: PIRATAS
+2026-02-17 17:22:56 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La ciudad titán
+2026-02-17 17:22:56 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-17 17:22:56 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-17 17:23:09 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:23:23 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 El puerto fantasma
+2026-02-17 17:23:44 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-17 17:23:45 | INFO     | main                 | ws_endpoint     | Estado de mapa enviado a default_session
+2026-02-17 17:24:20 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:24:29 | INFO     | main                 | journal_get     | 📖 Obteniendo journal para sesión: default_session
+2026-02-17 17:24:33 | INFO     | main                 | combat_api      | ⚔️ Acción de combate: start (sesión: default_session)
+2026-02-17 17:24:33 | INFO     | main                 | combat_api      | Verificando balance del encuentro...
+2026-02-17 17:24:33 | INFO     | main                 | combat_api      | Iniciando combate con 5 grupos de enemigos
+2026-02-17 17:25:09 | INFO     | main                 | combat_api      | ⚔️ Acción de combate: next_turn (sesión: default_session)
+2026-02-17 17:25:12 | INFO     | main                 | combat_api      | ⚔️ Acción de combate: start (sesión: default_session)
+2026-02-17 17:25:12 | INFO     | main                 | combat_api      | Verificando balance del encuentro...
+2026-02-17 17:25:12 | INFO     | main                 | combat_api      | Iniciando combate con 5 grupos de enemigos
+2026-02-17 17:25:25 | INFO     | main                 | combat_api      | ⚔️ Acción de combate: damage (sesión: default_session)
+2026-02-17 17:25:25 | ERROR    | main                 | combat_api      | Valor inválido en combate: invalid literal for int() with base 10: '1d6'
+2026-02-17 17:25:28 | INFO     | main                 | combat_api      | ⚔️ Acción de combate: end (sesión: default_session)
+2026-02-17 17:25:28 | INFO     | main                 | combat_api      | Finalizando combate
+2026-02-17 17:28:37 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-17 17:28:37 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-17 17:28:37 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-17 17:28:47 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 El puerto fantasma
+2026-02-17 17:28:53 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 El puerto fantasma
+2026-02-17 17:29:11 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-17 17:29:12 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-17 17:29:12 | INFO     | main                 | new_game        | Setting seleccionado: unas islas flotantes unidas por cadenas oxidadas sobre un abismo sin fin
+2026-02-17 17:29:12 | INFO     | main                 | new_game        | Estilo seleccionado: MISTERIO NOIR
+2026-02-17 17:30:07 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Abismo del Corazón Negro
+2026-02-17 17:30:07 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-17 17:30:07 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-17 17:30:40 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 Las Ruinas del Muerto
+2026-02-17 17:30:44 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:30:44 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:30:50 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 El Callejón del Perdedor
+2026-02-17 17:31:01 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-17 17:31:01 | INFO     | main                 | ws_endpoint     | Estado de mapa enviado a default_session
+2026-02-17 17:31:19 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:31:29 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-17 17:45:48 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-17 17:45:48 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-17 17:45:48 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-17 17:45:48 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-17 17:45:50 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-17 17:45:51 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-17 17:45:51 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-17 17:45:51 | INFO     | main                 | new_game        | Estilo seleccionado: HORROR GÓTICO
+2026-02-17 17:46:54 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: La Ciudad del Cráneo Muerto
+2026-02-17 17:46:54 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:46:54 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-17 17:46:54 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-17 17:47:17 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:47:17 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:47:18 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:47:18 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:47:18 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:47:26 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Llegada a la Ciudad del Cráneo
+2026-02-17 17:47:30 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Llegada a la Ciudad del Cráneo
+2026-02-17 17:47:36 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:47:37 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:47:37 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:47:40 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Llegada a la Ciudad del Cráneo
+2026-02-17 17:48:00 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-17 17:48:00 | INFO     | main                 | ws_endpoint     | Estado de mapa enviado a default_session
+2026-02-17 17:48:08 | INFO     | main                 | ws_endpoint     | Token movido: pj_0 → (96, 224)
+2026-02-17 17:48:09 | INFO     | main                 | ws_endpoint     | Token movido: pj_1 → (160, 352)
+2026-02-17 17:48:12 | INFO     | main                 | ws_endpoint     | Token movido: pj_1 → (224, 352)
+2026-02-17 17:48:13 | INFO     | main                 | ws_endpoint     | Token movido: pj_0 → (224, 288)
+2026-02-17 17:48:14 | INFO     | main                 | ws_endpoint     | Token movido: pj_0 → (160, 224)
+2026-02-17 17:48:16 | INFO     | main                 | ws_endpoint     | Token movido: pj_2 → (288, 288)
+2026-02-17 17:48:17 | INFO     | main                 | ws_endpoint     | Token movido: pj_3 → (224, 224)
+2026-02-17 17:48:18 | INFO     | main                 | ws_endpoint     | Token movido: pj_2 → (96, 160)
+2026-02-17 17:48:20 | INFO     | main                 | ws_endpoint     | Token movido: pj_3 → (288, 480)
+2026-02-17 17:48:31 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:48:56 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 1 al VTT (default_session)
+2026-02-17 17:49:01 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 1 al VTT (default_session)
+2026-02-17 17:49:05 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-17 17:49:05 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-17 17:49:09 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 1 al VTT (default_session)
+2026-02-17 17:49:09 | INFO     | main                 | ws_endpoint     | Estado de mapa enviado a default_session
+2026-02-17 17:49:14 | INFO     | main                 | ws_endpoint     | Token movido: pj_0 → (96, 224)
+2026-02-17 17:49:15 | INFO     | main                 | ws_endpoint     | Token movido: pj_1 → (224, 224)
+2026-02-17 17:49:15 | INFO     | main                 | ws_endpoint     | Token movido: pj_0 → (96, 160)
+2026-02-17 17:49:16 | INFO     | main                 | ws_endpoint     | Token movido: pj_1 → (160, 160)
+2026-02-17 17:49:17 | INFO     | main                 | ws_endpoint     | Token movido: pj_2 → (160, 224)
+2026-02-17 17:49:19 | INFO     | main                 | ws_endpoint     | Token movido: enemigo_1_0_2 → (288, 480)
+2026-02-17 17:49:45 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-17 17:55:53 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-18 19:34:33 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 19:34:33 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 19:34:33 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 19:34:33 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 19:34:36 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 19:34:37 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-18 19:34:37 | INFO     | main                 | new_game        | Setting seleccionado: unas islas flotantes unidas por cadenas oxidadas sobre un abismo sin fin
+2026-02-18 19:34:37 | INFO     | main                 | new_game        | Estilo seleccionado: VIEJO OESTE
+2026-02-18 19:35:53 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: Islas del Abismo: El Sol de la Venganza
+2026-02-18 19:35:53 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-18 19:35:53 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-18 19:36:08 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Cantina del Último Trago
+2026-02-18 19:36:15 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-18 19:36:19 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 19:36:20 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-18 19:36:20 | INFO     | main                 | new_game        | Setting seleccionado: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-18 19:36:20 | INFO     | main                 | new_game        | Estilo seleccionado: PIRATAS
+2026-02-18 19:37:26 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Susurro de las Profundidades
+2026-02-18 19:37:26 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-18 19:37:26 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-18 19:37:39 | INFO     | main                 | oracle          | 🔮 Oráculo invocado para sesión: default_session
+2026-02-18 19:37:43 | INFO     | main                 | oracle          | ✅ Oráculo completado: 687 caracteres generados
+2026-02-18 19:38:45 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-18 19:38:49 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-18 19:38:59 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-18 19:39:10 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-18 19:39:12 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-18 19:39:12 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-18 19:39:20 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 La Caverna de los Susurros
+2026-02-18 19:39:25 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-18 19:39:29 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-18 19:39:33 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-18 19:51:18 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 19:51:18 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 19:51:18 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 19:51:18 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 19:51:21 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 19:51:23 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-18 19:51:23 | INFO     | main                 | new_game        | Setting seleccionado: un bosque de cristal que vibra con una canción que vuelve loca a la gente
+2026-02-18 19:51:23 | INFO     | main                 | new_game        | Estilo seleccionado: CIBERPUNK
+2026-02-18 19:51:40 | ERROR    | main                 | new_game        | Error al crear nueva aventura: unsupported operand type(s) for //: 'BackgroundTasks' and 'int'
+Traceback (most recent call last):
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/main.py", line 165, in new_game
+    data = crear_datos_aventura(sid, setting, estilo, background_tasks)
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/components/dnd/generator.py", line 23, in crear_datos_aventura
+    historia = _generar_historia(setting, estilo, pjs, nivel)
+  File "/home/matiascorderoflores/Machine Learning/DnD El Cronista/app/components/story/narrator.py", line 21, in _generar_historia
+    2. DIFICULTAD (CD): Escala las pruebas de habilidad: Fácil=10, Media=15, Difícil={15 + (nivel // 2)}.
+TypeError: unsupported operand type(s) for //: 'BackgroundTasks' and 'int'
+2026-02-18 19:53:17 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 19:53:17 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 19:53:17 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 19:53:17 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 19:53:19 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 19:53:20 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-18 19:53:20 | INFO     | main                 | new_game        | Setting seleccionado: unas islas flotantes unidas por cadenas oxidadas sobre un abismo sin fin
+2026-02-18 19:53:20 | INFO     | main                 | new_game        | Estilo seleccionado: CIBERPUNK
+2026-02-18 19:54:33 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Laberinto de Cadenas
+2026-02-18 19:54:33 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-18 19:54:33 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-18 20:03:36 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-18 20:03:36 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-18 20:03:47 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-18 20:03:47 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-18 20:03:48 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (player)
+2026-02-18 20:04:00 | INFO     | main                 | ws_endpoint     | Reenviando escena: 📍 El Muelle de las Nubes Rotas
+2026-02-18 20:04:10 | INFO     | main                 | vtt_project_scene | 🎮 Proyectando escena 0 al VTT (default_session)
+2026-02-18 20:04:10 | INFO     | main                 | ws_endpoint     | Estado de mapa enviado a default_session
+2026-02-18 20:04:50 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (player)
+2026-02-18 20:10:39 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-18 20:13:21 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 20:13:21 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 20:13:21 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 20:13:21 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 20:13:24 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 20:13:26 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-18 20:13:26 | INFO     | main                 | new_game        | Setting seleccionado: el Underdark, iluminado solo por hongos bioluminiscentes que susurran
+2026-02-18 20:13:26 | INFO     | main                 | new_game        | Estilo seleccionado: CIBERPUNK
+2026-02-18 20:14:45 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Resplandor de los Hongos
+2026-02-18 20:14:45 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-18 20:14:45 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-18 20:22:35 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-18 20:22:43 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 20:22:43 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 20:22:43 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 20:22:43 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 20:22:47 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 20:22:48 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-18 20:22:48 | INFO     | main                 | new_game        | Setting seleccionado: unas islas flotantes unidas por cadenas oxidadas sobre un abismo sin fin
+2026-02-18 20:22:48 | INFO     | main                 | new_game        | Estilo seleccionado: ALTA FANTASÍA
+2026-02-18 20:24:15 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: Las Islas Flotantes de Dragoneblight
+2026-02-18 20:24:15 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-18 20:24:15 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-18 20:28:12 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-18 20:30:37 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 20:30:37 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 20:30:37 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 20:30:37 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 20:30:45 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 20:30:46 | INFO     | main                 | new_game        | 📝 Iniciando generación de nueva aventura
+2026-02-18 20:30:46 | INFO     | main                 | new_game        | Setting seleccionado: una ciudad construida dentro del cráneo de un titán muerto hace eones
+2026-02-18 20:30:46 | INFO     | main                 | new_game        | Estilo seleccionado: ALTA FANTASÍA
+2026-02-18 20:32:21 | INFO     | main                 | new_game        | ✅ Aventura creada exitosamente: El Cráneo del Titán
+2026-02-18 20:32:21 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-18 20:32:21 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-18 20:35:10 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-18 20:46:10 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 20:46:10 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 20:46:10 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 20:46:10 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 20:46:12 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 20:46:13 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-18 20:46:13 | INFO     | main                 | new_game        | Setting: unas islas flotantes unidas por cadenas oxidadas sobre un abismo sin fin | Estilo: EDAD PRIMIGENIA | Nivel: 1
+2026-02-18 20:47:40 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: Las Islas Flotantes: La Lanza de los Chamanes
+2026-02-18 20:48:41 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 20:48:41 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 20:48:41 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 20:48:41 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 20:48:43 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 20:48:43 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (launcher)
+2026-02-18 20:51:41 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (launcher)
+2026-02-18 20:51:48 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 20:51:48 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 20:51:48 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 20:51:48 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 20:51:50 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 20:51:50 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (launcher)
+2026-02-18 20:51:50 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-18 20:51:50 | INFO     | main                 | new_game        | Setting: un bosque de cristal que vibra con una canción que vuelve loca a la gente | Estilo: CIENCIA FANTASÍA | Nivel: 1
+2026-02-18 20:53:21 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: El Bosque de Cristales Cantores
+2026-02-18 20:53:22 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (launcher)
+2026-02-18 20:56:47 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-18 20:56:47 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-18 20:56:47 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-18 20:56:47 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-18 20:56:50 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-18 20:56:50 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (launcher)
+2026-02-18 20:56:51 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-18 20:56:51 | INFO     | main                 | new_game        | Setting: una ciudad construida dentro del cráneo de un titán muerto hace eones | Estilo: MISTERIO NOIR | Nivel: 1
+2026-02-18 20:58:07 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Ciud... del Cráneo
+2026-02-18 20:58:08 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (launcher)
+2026-02-18 20:58:08 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-18 20:58:08 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-18 20:58:46 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-19 16:26:36 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:26:36 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:26:36 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:26:36 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:28:58 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:28:58 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:28:58 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:28:58 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:29:00 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 16:29:00 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (launcher)
+2026-02-19 16:29:47 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (launcher)
+2026-02-19 16:30:06 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:30:06 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:30:06 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:30:06 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:30:08 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 16:30:08 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (launcher)
+2026-02-19 16:30:38 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (launcher)
+2026-02-19 16:31:12 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:31:12 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:31:12 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:31:12 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:33:51 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:33:51 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:33:51 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:33:51 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:36:35 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:36:35 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:36:35 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:36:35 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:36:38 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 16:36:38 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (launcher)
+2026-02-19 16:36:39 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 16:36:39 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-19 16:38:12 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: Luz en la Oscuridad
+2026-02-19 16:38:13 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (launcher)
+2026-02-19 16:38:13 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-19 16:38:13 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-19 16:42:32 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-19 16:46:45 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:49:32 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:50:12 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:51:03 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:51:03 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:51:03 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:51:03 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:51:03 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:51:21 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 16:51:21 | INFO     | main                 | new_game        | Setting: Test setting for rate limit | Estilo: HORROR GÓTICO | Nivel: 1
+2026-02-19 16:52:50 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Niebla de Sangre
+2026-02-19 16:52:50 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 16:52:50 | INFO     | main                 | new_game        | Setting: Test setting for rate limit | Estilo: HORROR GÓTICO | Nivel: 1
+2026-02-19 16:54:13 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: El laberinto de la neblina sangrienta
+2026-02-19 16:54:13 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 16:54:13 | INFO     | main                 | new_game        | Setting: Test setting for rate limit | Estilo: HORROR GÓTICO | Nivel: 1
+2026-02-19 16:54:42 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:54:42 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:54:42 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:54:42 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:54:42 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:55:10 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:55:10 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:55:10 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:55:10 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:55:10 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:55:37 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:55:37 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:55:37 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:55:37 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:55:37 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:55:44 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:55:44 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:55:44 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:55:44 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:55:44 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:56:56 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:56:56 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:56:56 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:56:56 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:56:56 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:57:19 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:57:19 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:57:19 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:57:19 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:57:19 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:57:40 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 16:57:40 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 16:57:40 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 16:57:40 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 16:57:40 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 16:57:42 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 16:57:42 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (launcher)
+2026-02-19 16:57:44 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 16:57:44 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-19 16:58:59 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La sombra del dragón
+2026-02-19 16:59:00 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (launcher)
+2026-02-19 16:59:00 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-19 16:59:00 | INFO     | main                 | ws_endpoint     | 🔌 Nueva conexión WebSocket - Sesión: default_session (dm)
+2026-02-19 16:59:51 | INFO     | main                 | ws_endpoint     | 🔌 WebSocket desconectado - Sesión: default_session (dm)
+2026-02-19 17:08:36 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 17:08:36 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 17:08:36 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 17:08:36 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 17:08:36 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 17:08:39 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 17:08:41 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 17:08:41 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-19 17:10:08 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: Las sombras del antiguo mundo
+2026-02-19 17:10:08 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-19 17:10:08 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-19 17:16:11 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 17:16:11 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 17:16:11 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 17:16:11 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 17:16:11 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 17:16:13 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 17:16:15 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 17:16:15 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-19 17:17:36 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Rebelión de la Luna
+2026-02-19 17:17:37 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-19 17:37:27 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 17:37:27 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 17:37:27 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 17:37:27 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 17:37:27 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 17:37:31 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 17:37:32 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 17:37:32 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-19 17:38:57 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Rebelión del Dragón Negro
+2026-02-19 17:38:58 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-19 17:42:54 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 17:42:54 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 17:42:54 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 17:42:54 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 17:42:54 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 17:42:56 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 17:42:57 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 17:42:57 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-19 17:44:22 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Profecía del Dragón Negro
+2026-02-19 17:44:23 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-19 18:01:01 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 18:01:01 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 18:01:01 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 18:01:01 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 18:01:01 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 18:01:04 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 18:01:08 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 18:01:08 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-19 18:02:33 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: El Ocaso del Dominio de las Sombras
+2026-02-19 18:02:34 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-19 18:03:35 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-19 18:03:38 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-19 18:11:11 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-19 18:11:11 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-19 18:11:11 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-19 18:11:11 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-19 18:11:11 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-19 18:11:13 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-19 18:11:15 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-19 18:11:15 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-19 18:12:34 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La rebelión contra las sombras
+2026-02-19 18:12:35 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-19 18:13:03 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-21 22:12:18 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-21 22:12:18 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-21 22:12:18 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-21 22:12:18 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-21 22:12:18 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-21 22:12:21 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-21 22:12:23 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-21 22:12:23 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-21 22:13:42 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: El Legado de los Dragones
+2026-02-21 22:13:43 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-21 22:17:31 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-21 22:18:24 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-21 22:18:24 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-21 22:18:24 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-21 22:18:24 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-21 22:18:24 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-21 22:18:27 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-21 22:18:28 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-21 22:18:28 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-21 22:19:42 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: Los Guardianes del Canto Prohibido
+2026-02-21 22:19:43 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-21 22:23:23 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-21 22:23:29 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-21 22:23:35 | INFO     | main                 | player_interface | Acceso a interfaz jugador
+2026-02-21 22:27:24 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-21 22:27:40 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-21 22:27:40 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-21 22:27:40 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-21 22:27:40 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-21 22:27:40 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-21 22:27:43 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-21 22:27:44 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-21 22:27:44 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-21 22:28:55 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Prohibición de la Magia
+2026-02-21 22:28:56 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-21 22:37:30 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-21 22:37:30 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-21 22:37:30 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-21 22:37:30 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-21 22:37:30 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-21 22:37:33 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-21 22:37:36 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-21 22:37:36 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-21 22:38:45 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: El corazón del dragón negro
+2026-02-21 22:38:46 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-21 22:43:42 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-21 22:43:42 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-21 22:43:42 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-21 22:43:42 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-21 22:43:42 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-21 22:43:45 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-21 22:43:46 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-21 22:43:46 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-21 22:44:57 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Prohibición del Fuego Celestial
+2026-02-21 22:44:58 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-21 22:51:59 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-21 22:51:59 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-21 22:51:59 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-21 22:51:59 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-21 22:51:59 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-21 22:52:02 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-21 22:52:16 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-21 22:52:16 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: HORROR GÓTICO | Nivel: 5
+2026-02-21 22:53:34 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Profecía Prohibida
+2026-02-21 22:53:35 | INFO     | main                 | dm_interface    | Acceso a interfaz DM
+2026-02-21 23:08:53 | INFO     | main                 | <module>        | Rate limiting enabled (default: 100 req/min)
+2026-02-21 23:08:53 | INFO     | main                 | startup_event   | Modelo IA: mistral-nemo
+2026-02-21 23:08:53 | INFO     | main                 | startup_event   | URL Ollama: http://localhost:11434/api/generate
+2026-02-21 23:08:53 | INFO     | main                 | startup_event   | Directorio guardados: partidas_guardadas (legacy)
+2026-02-21 23:08:53 | INFO     | main                 | startup_event   | Base de datos: cronista.db (SQLite)
+2026-02-21 23:08:55 | INFO     | main                 | launcher        | Acceso a página launcher
+2026-02-21 23:08:57 | INFO     | main                 | new_game        | 📝 Iniciando solicitud de aventura (Async)
+2026-02-21 23:08:57 | INFO     | main                 | new_game        | Setting: Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan. | Estilo: ALTA FANTASÍA | Nivel: 1
+2026-02-21 23:10:08 | INFO     | main                 | run_async_generation | ✅ Aventura BG completada y guardada: La Profecía del Dragón Negro
+2026-02-21 23:10:09 | INFO     | main                 | dm_interface    | Acceso a interfaz DM

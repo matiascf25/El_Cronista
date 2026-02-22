@@ -1,0 +1,1008 @@
+import requests
+import json
+import random
+import urllib.parse
+import re
+import html
+import os
+from typing import Optional, Dict, Any, List
+from config import OLLAMA_URL, MODELO, SYSTEM_INSTRUCTIONS, CLASES_DND, PERSONAJES_EMERGENCIA
+from logger import setup_logger
+
+# Logger para este módulo
+logger = setup_logger("utils")
+
+# Timeout para requests desde variable de entorno
+OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "60"))
+
+# Datos adicionales de D&D para personajes completos
+RASGOS_PERSONALIDAD = [
+    "Siempre tiene un plan para cada situación",
+    "Nunca retrocede ante un desafío",
+    "Colecciona historias y leyendas",
+    "Desconfía de la magia arcana",
+    "Protege a los inocentes sin dudarlo",
+    "Busca gloria y reconocimiento",
+    "Prefiere la diplomacia al combate",
+    "Tiene un código de honor inquebrantable"
+]
+
+IDEALES = [
+    "Honor: El deber está por encima de todo",
+    "Libertad: Nadie debe vivir oprimido",
+    "Conocimiento: El saber es poder",
+    "Justicia: Los malvados deben pagar",
+    "Familia: La lealtad a los cercanos es suprema",
+    "Ambición: El poder debe ser alcanzado"
+]
+
+VINCULOS = [
+    "Busca vengar la muerte de un ser querido",
+    "Debe proteger un artefacto ancestral",
+    "Tiene una deuda de honor con su mentor",
+    "Busca redimirse de un error del pasado",
+    "Protege su pueblo natal a toda costa",
+    "Busca un artefacto perdido de su familia"
+]
+
+DEFECTOS = [
+    "No puede resistirse a un misterio",
+    "Desconfía de figuras de autoridad",
+    "Tiene un vicio secreto (juego, alcohol)",
+    "Es demasiado orgulloso para pedir ayuda",
+    "Guarda rencor durante años",
+    "Arriesga todo por la emoción"
+]
+
+IDIOMAS_DND = ["Común", "Élfico", "Enano", "Orco", "Gigante", "Dracónico", "Infernal", "Celestial", "Silvano"]
+
+COMPETENCIAS_ARMADURAS = {
+    "Bárbaro": ["Ligeras", "Medias", "Escudos"],
+    "Bardo": ["Ligeras"],
+    "Clérigo": ["Ligeras", "Medias", "Escudos"],
+    "Druida": ["Ligeras", "Medias (no metálica)", "Escudos (no metálico)"],
+    "Guerrero": ["Todas", "Escudos"],
+    "Monje": ["Ninguna"],
+    "Paladín": ["Todas", "Escudos"],
+    "Explorador": ["Ligeras", "Medias", "Escudos"],
+    "Pícaro": ["Ligeras"],
+    "Hechicero": ["Ninguna"],
+    "Brujo": ["Ligeras"],
+    "Mago": ["Ninguna"]
+}
+
+COMPETENCIAS_ARMAS = {
+    "Bárbaro": ["Simples", "Marciales"],
+    "Bardo": ["Simples", "Ballestas de mano", "Espadas largas", "Estoques", "Espadas cortas"],
+    "Clérigo": ["Simples"],
+    "Druida": ["Garrotes", "Dagas", "Dardos", "Jabalinas", "Mazas", "Bastones", "Cimitarras", "Hoces", "Hondas", "Lanzas"],
+    "Guerrero": ["Simples", "Marciales"],
+    "Monje": ["Simples", "Espadas cortas"],
+    "Paladín": ["Simples", "Marciales"],
+    "Explorador": ["Simples", "Marciales"],
+    "Pícaro": ["Simples", "Ballestas de mano", "Espadas largas", "Estoques", "Espadas cortas"],
+    "Hechicero": ["Dagas", "Dardos", "Hondas", "Bastones", "Ballestas ligeras"],
+    "Brujo": ["Simples"],
+    "Mago": ["Dagas", "Dardos", "Hondas", "Bastones", "Ballestas ligeras"]
+}
+
+# Mapeo de habilidades a sus atributos base
+HABILIDAD_A_ATRIBUTO = {
+    "Acrobacias": "DES",
+    "Aguante": "CON",
+    "Arcanos": "INT",
+    "Atletismo": "FUE",
+    "Engaño": "CAR",
+    "Historia": "INT",
+    "Interpretación": "CAR",
+    "Intimidación": "CAR",
+    "Investigación": "INT",
+    "Medicina": "SAB",
+    "Naturaleza": "INT",
+    "Percepción": "SAB",
+    "Perspicacia": "SAB",
+    "Persuasión": "CAR",
+    "Religión": "INT",
+    "Sigilo": "DES",
+    "Supervivencia": "SAB",
+    "Trato con Animales": "SAB"
+}
+
+def sanitizar_texto(texto: str) -> str:
+    """Escapa caracteres HTML peligrosos"""
+    try:
+        sanitized = html.escape(str(texto))
+        logger.debug(f"Texto sanitizado: {len(texto)} caracteres")
+        return sanitized
+    except Exception as e:
+        logger.error(f"Error al sanitizar texto: {e}")
+        return ""
+
+def calcular_mod(valor: int) -> int:
+    """Calcula el modificador de D&D desde un valor de atributo"""
+    try:
+        mod = (valor - 10) // 2
+        logger.debug(f"Modificador calculado: {valor} -> {mod:+d}")
+        return mod
+    except Exception as e:
+        logger.error(f"Error al calcular modificador para valor {valor}: {e}")
+        return 0
+
+def formatear_modificador(mod: int) -> str:
+    """Formatea un modificador con signo: +3 o -1"""
+    return f"{mod:+d}" if mod != 0 else "+0"
+
+def sanitizar_pj(raw_pj: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Normaliza y completa los datos de un personaje con información D&D completa
+    
+    Args:
+        raw_pj: Datos crudos del personaje
+    
+    Returns:
+        Personaje con TODOS los campos D&D necesarios
+    """
+    logger.info(f"Sanitizando personaje: {raw_pj.get('nombre', 'Sin nombre')}")
+    
+    try:
+        # Normalizar clase
+        clase = raw_pj.get('clase', 'Guerrero').capitalize()
+        traducciones = {
+            "Barbarian":"Bárbaro", "Bard":"Bardo", "Cleric":"Clérigo", 
+            "Druid":"Druida", "Fighter":"Guerrero", "Monk":"Monje", 
+            "Paladin":"Paladín", "Ranger":"Explorador", "Rogue":"Pícaro", 
+            "Sorcerer":"Hechicero", "Warlock":"Brujo", "Wizard":"Mago",
+            "Hechicera":"Hechicero", "Roguesombras":"Pícaro", "Pícara":"Pícaro"
+        }
+        
+        if clase in traducciones:
+            clase = traducciones[clase]
+        
+        for k in CLASES_DND:
+            if k.lower() in clase.lower():
+                clase = k
+                break
+        
+        if clase not in CLASES_DND:
+            logger.warning(f"Clase no reconocida '{clase}', usando 'Guerrero' por defecto")
+            clase = 'Guerrero'
+        
+        raw_pj['clase'] = clase
+        info = CLASES_DND[clase]
+        
+        nivel = raw_pj.get('nivel', 3)
+        raw_pj['nivel'] = nivel
+        
+        if 'stats' not in raw_pj or not isinstance(raw_pj['stats'], dict):
+            logger.warning(f"Stats faltantes para {raw_pj.get('nombre')}, generando aleatorios")
+            valores = [16, 14, 13, 12, 10, 8]
+            random.shuffle(valores)
+            raw_pj['stats'] = {k: v for k, v in zip(["FUE","DES","CON","INT","SAB","CAR"], valores)}
+        
+        mods = {k: calcular_mod(v) for k, v in raw_pj['stats'].items()}
+        raw_pj['modificadores'] = mods
+        
+        raw_pj['stats_display'] = {
+            k: f"{v} ({formatear_modificador(mods[k])})" 
+            for k, v in raw_pj['stats'].items()
+        }
+        
+        bonus_comp = 2 + ((nivel - 1) // 4)
+        raw_pj['bonus_competencia'] = bonus_comp
+        
+        raw_pj['hp'] = info['HitDie'] + mods['CON'] + (info['HitDie']//2 + 1 + mods['CON']) * (nivel-1)
+        raw_pj['hp_max'] = raw_pj['hp']
+        raw_pj['dados_golpe'] = f"{nivel}d{info['HitDie']}"
+        
+        raw_pj['ac'] = 10 + mods['DES']
+        if clase in ["Guerrero", "Paladín"]:
+            raw_pj['ac'] = 16
+            raw_pj['ac_detalle'] = "16 (Cota de mallas)"
+        elif clase == "Clérigo":
+            raw_pj['ac'] = 14 + (2 if "Escudo" in str(raw_pj.get('equipo', [])) else 0)
+            raw_pj['ac_detalle'] = f"{raw_pj['ac']} (Escamas + Escudo)"
+        elif clase == "Bárbaro":
+            raw_pj['ac'] = 10 + mods['DES'] + mods['CON']
+            raw_pj['ac_detalle'] = f"{raw_pj['ac']} (Sin armadura: 10 + DES + CON)"
+        elif clase == "Monje":
+            raw_pj['ac'] = 10 + mods['DES'] + mods['SAB']
+            raw_pj['ac_detalle'] = f"{raw_pj['ac']} (Sin armadura: 10 + DES + SAB)"
+        else:
+            raw_pj['ac_detalle'] = f"{raw_pj['ac']} (Armadura de cuero + DES)"
+        
+        raw_pj['velocidad'] = "9m (30 pies)" if raw_pj.get('raza', '').lower() != 'enano' else "7.5m (25 pies)"
+        
+        raw_pj['iniciativa'] = mods['DES']
+        raw_pj['iniciativa_display'] = formatear_modificador(mods['DES'])
+        
+        raw_pj['habilidades'] = info.get('Habs', [])
+        
+        primary_stats = info.get('Primary', ['FUE', 'CON'])[:2]
+        raw_pj['salvaciones_competentes'] = primary_stats
+        
+        raw_pj['salvaciones'] = {}
+        for stat in ["FUE", "DES", "CON", "INT", "SAB", "CAR"]:
+            es_competente = stat in primary_stats
+            mod = mods[stat]
+            valor = mod + (bonus_comp if es_competente else 0)
+            
+            raw_pj['salvaciones'][stat] = {
+                "valor": valor,
+                "display": formatear_modificador(valor),
+                "competente": es_competente,
+                "formula": f"{formatear_modificador(mod)} (mod)" + (f" {formatear_modificador(bonus_comp)} (comp)" if es_competente else "")
+            }
+        
+        habilidades_clase = _seleccionar_habilidades_clase(clase)
+        raw_pj['habilidades_competentes'] = habilidades_clase
+        
+        raw_pj['habilidades_valores'] = {}
+        for hab, stat_base in HABILIDAD_A_ATRIBUTO.items():
+            es_competente = hab in habilidades_clase
+            mod = mods[stat_base]
+            valor = mod + (bonus_comp if es_competente else 0)
+            
+            raw_pj['habilidades_valores'][hab] = {
+                "valor": valor,
+                "display": formatear_modificador(valor),
+                "competente": es_competente,
+                "stat_base": stat_base,
+                "formula": f"{formatear_modificador(mod)} ({stat_base})" + (f" {formatear_modificador(bonus_comp)} (comp)" if es_competente else "")
+            }
+        
+        raw_pj['competencias_armaduras'] = COMPETENCIAS_ARMADURAS.get(clase, ["Ninguna"])
+        raw_pj['competencias_armas'] = COMPETENCIAS_ARMAS.get(clase, ["Simples"])
+        
+        num_idiomas = 2 + max(0, mods['INT'])
+        idiomas_sample = random.sample(IDIOMAS_DND, min(num_idiomas, len(IDIOMAS_DND)))
+        raw_pj['idiomas'] = idiomas_sample
+        
+        if 'equipo' not in raw_pj or not raw_pj['equipo']:
+            raw_pj['equipo'] = _generar_equipo_completo(clase, nivel)
+        else:
+            if len(raw_pj['equipo']) < 3:
+                raw_pj['equipo'].extend(_generar_equipo_completo(clase, nivel)[:3])
+        
+        if 'trasfondo' not in raw_pj or len(raw_pj.get('trasfondo', '')) < 20:
+            raw_pj['trasfondo'] = _generar_trasfondo_generico(clase, raw_pj.get('raza', 'Humano'))
+        
+        raw_pj['rasgo_personalidad'] = raw_pj.get('rasgo_personalidad', random.choice(RASGOS_PERSONALIDAD))
+        raw_pj['ideal'] = raw_pj.get('ideal', random.choice(IDEALES))
+        raw_pj['vinculo'] = raw_pj.get('vinculo', raw_pj.get('motivacion', random.choice(VINCULOS)))
+        raw_pj['defecto'] = raw_pj.get('defecto', raw_pj.get('secreto', random.choice(DEFECTOS)))
+        
+        raw_pj['oro'] = raw_pj.get('oro', _calcular_oro_inicial(nivel))
+        
+        raw_pj['img'] = _generar_url_imagen_personaje(
+            raw_pj.get('raza', 'Humano'),
+            clase,
+            raw_pj.get('nombre', 'Aventurero')
+        )
+        
+        logger.info(f"✓ Personaje sanitizado: {raw_pj['nombre']} ({clase} Nv.{nivel}, HP:{raw_pj['hp']}, AC:{raw_pj['ac']})")
+        
+        return raw_pj
+        
+    except Exception as e:
+        logger.error(f"Error crítico al sanitizar personaje: {e}", exc_info=True)
+        return _personaje_emergencia_completo(raw_pj.get('nombre', 'PJ Genérico'))
+
+def _generar_url_imagen_personaje(raza: str, clase: str, nombre: str) -> str:
+    """Genera URL de imagen de personaje con estrategia optimizada por raza"""
+    raza_clean = raza.strip()
+    clase_clean = clase.strip()
+    
+    # ESTRATEGIA ESPECIAL PARA ENANOS
+    if "enano" in raza_clean.lower() or "dwarf" in raza_clean.lower():
+        logger.info(f"Usando estrategia especial de imagen para enano: {nombre}")
+        
+        queries_enano = [
+            f"https://tse2.mm.bing.net/th?q={urllib.parse.quote('dnd dwarf warrior male portrait bearded face detailed fantasy art headshot')}&w=500&h=650&c=12&rs=1&p=0&dpr=2",
+            f"https://tse1.mm.bing.net/th?q={urllib.parse.quote('fantasy dwarf fighter character portrait closeup beard')}&w=500&h=650&c=12&rs=1",
+            f"https://tse3.mm.bing.net/th?q={urllib.parse.quote('dungeons dragons dwarf cleric face portrait beard armor')}&w=500&h=650&c=7&o=5&dpr=2&pid=1.7",
+        ]
+        
+        index = hash(nombre) % len(queries_enano)
+        return queries_enano[index]
+    
+    raza_keywords = {
+        "Elfo": "elf elegant pointed ears fantasy",
+        "Humano": "human adventurer warrior",
+        "Mediano": "halfling small folk hobbit",
+        "Orco": "half-orc strong tusks green",
+        "Tiefling": "tiefling horns demonic tail",
+        "Gnomo": "gnome small beard cheerful",
+        "Dragonborn": "dragonborn dragon scales reptilian",
+        "Semielfo": "half-elf elegant mixed heritage",
+        "Serpiente": "yuan-ti snake humanoid scaled",
+        "Medusa": "medusa snake hair gorgon"
+    }
+    
+    clase_keywords = {
+        "Guerrero": "fighter warrior armored plate mail",
+        "Mago": "wizard mage robed spellcaster mystic",
+        "Pícaro": "rogue thief hooded leather stealth",
+        "Clérigo": "cleric priest holy religious armor",
+        "Bárbaro": "barbarian berserker muscular tribal",
+        "Bardo": "bard musician performer charismatic",
+        "Druida": "druid nature wild shaman",
+        "Monje": "monk martial artist robes disciplined",
+        "Paladín": "paladin holy knight shining armor",
+        "Explorador": "ranger hunter woodsman bow",
+        "Hechicero": "sorcerer arcane magical energy",
+        "Brujo": "warlock pact eldritch dark"
+    }
+    
+    raza_key = raza_keywords.get(raza_clean, raza_clean.lower())
+    clase_key = clase_keywords.get(clase_clean, clase_clean.lower())
+    
+    query_principal = f"dnd {raza_key} {clase_key} portrait character face centered detailed art headshot professional"
+    
+    queries = [
+        f"https://tse2.mm.bing.net/th?q={urllib.parse.quote(query_principal)}&w=500&h=650&c=12&o=5&dpr=2&pid=1.7",
+        f"https://tse1.mm.bing.net/th?q={urllib.parse.quote(f'{raza_clean} {clase_clean} fantasy portrait face closeup')}&w=450&h=600&c=7&rs=1&p=0",
+        f"https://tse3.mm.bing.net/th?q={urllib.parse.quote(f'dnd character {raza_clean} {clase_clean} headshot detailed')}&w=500&h=650&c=12&o=5",
+    ]
+    
+    index = hash(nombre) % len(queries)
+    return queries[index]
+
+def _seleccionar_habilidades_clase(clase: str) -> List[str]:
+    """Selecciona 4 habilidades apropiadas para la clase"""
+    habilidades_por_clase = {
+        "Bárbaro": ["Atletismo", "Intimidación", "Percepción", "Supervivencia"],
+        "Bardo": ["Interpretación", "Persuasión", "Engaño", "Arcanos"],
+        "Clérigo": ["Perspicacia", "Religión", "Medicina", "Persuasión"],
+        "Druida": ["Percepción", "Naturaleza", "Supervivencia", "Medicina"],
+        "Guerrero": ["Atletismo", "Intimidación", "Percepción", "Supervivencia"],
+        "Monje": ["Acrobacias", "Atletismo", "Sigilo", "Religión"],
+        "Paladín": ["Atletismo", "Intimidación", "Persuasión", "Religión"],
+        "Explorador": ["Atletismo", "Percepción", "Supervivencia", "Sigilo"],
+        "Pícaro": ["Sigilo", "Acrobacias", "Engaño", "Percepción"],
+        "Hechicero": ["Arcanos", "Engaño", "Persuasión", "Intimidación"],
+        "Brujo": ["Arcanos", "Engaño", "Intimidación", "Investigación"],
+        "Mago": ["Arcanos", "Historia", "Investigación", "Perspicacia"]
+    }
+    return habilidades_por_clase.get(clase, ["Atletismo", "Percepción", "Supervivencia", "Investigación"])
+
+def _generar_equipo_completo(clase: str, nivel: int) -> List[str]:
+    """Genera equipamiento completo y detallado basado en clase"""
+    equipo_base = {
+        "Bárbaro": ["Hacha de guerra grande (1d12)", "2 Hachas de mano (1d6)", "4 Jabalinas", "Mochila de explorador", "Pieles de animal"],
+        "Bardo": ["Estoque (1d8)", "Armadura de cuero", "Daga (1d4)", "Laúd", "Mochila de artista", "Disfraz"],
+        "Clérigo": ["Maza (1d6)", "Cota de escamas (AC 14)", "Escudo (+2 AC)", "Símbolo sagrado", "Libro de oraciones", "Mochila de sacerdote"],
+        "Druida": ["Cimitarra (1d6)", "Armadura de cuero", "Escudo de madera", "Foco druídico", "Bolsa de hierbas", "Mochila de explorador"],
+        "Guerrero": ["Espada larga (1d8/1d10)", "Cota de mallas (AC 16)", "Escudo (+2 AC)", "Ballesta ligera", "20 virotes", "Mochila"],
+        "Monje": ["Espada corta (1d6)", "10 Dardos (1d4)", "Mochila de explorador", "Instrumentos artesanos"],
+        "Paladín": ["Martillo de guerra (1d8)", "Cota de mallas (AC 16)", "Escudo (+2 AC)", "Símbolo sagrado", "Libro de oraciones", "5 Jabalinas"],
+        "Explorador": ["Armadura de escamas (AC 14)", "2 Espadas cortas (1d6)", "Arco largo (1d8)", "Carcaj con 20 flechas", "Mochila de explorador"],
+        "Pícaro": ["Estoque (1d8)", "Armadura de cuero tachonado (AC 12)", "Arco corto (1d6)", "Carcaj con 20 flechas", "Herramientas de ladrón", "Ganzúas"],
+        "Hechicero": ["Ballesta ligera (1d8)", "Bolsa de componentes", "Foco arcano (cristal)", "2 Dagas (1d4)", "Mochila de erudito"],
+        "Brujo": ["Armadura de cuero", "Ballesta ligera (1d8)", "Foco arcano (vara)", "Daga (1d4)", "Bolsa de componentes", "Grimorio"],
+        "Mago": ["Bastón (1d6)", "Libro de conjuros", "Bolsa de componentes", "Foco arcano", "Túnica", "Mochila de erudito", "Tinta y pluma"]
+    }
+    
+    equipo = equipo_base.get(clase, ["Equipo básico", "Mochila", "Cuerda (15m)", "Antorcha x10"])
+    
+    if nivel >= 3:
+        equipo.append("Poción de curación (2d4+2 HP)")
+    if nivel >= 5:
+        equipo.append("50 pies de cuerda de seda")
+        equipo.append("Ganchos de escalada")
+    
+    return equipo
+
+def _generar_trasfondo_generico(clase: str, raza: str) -> str:
+    """Genera un trasfondo genérico pero coherente"""
+    trasfondos = {
+        "Guerrero": f"Veterano de guerra {raza.lower()} que ha visto demasiadas batallas. Entrena diariamente para mantener sus habilidades.",
+        "Mago": f"Erudito {raza.lower()} que pasó años estudiando en una torre arcana. Busca conocimientos perdidos.",
+        "Pícaro": f"Antiguo ladrón {raza.lower()} de las calles que aprendió a sobrevivir con astucia y velocidad.",
+        "Clérigo": f"Devoto {raza.lower()} que sirve a su deidad con fe inquebrantable. Busca llevar la luz a la oscuridad.",
+        "Bárbaro": f"Guerrero tribal {raza.lower()} de las tierras salvajes. La civilización le resulta extraña.",
+        "Bardo": f"Artista itinerante {raza.lower()} que recorre el mundo recopilando historias y leyendas.",
+        "Druida": f"Guardián {raza.lower()} de la naturaleza que protege el equilibrio contra la civilización.",
+        "Monje": f"Asceta {raza.lower()} entrenado en un monasterio remoto en las artes marciales y meditación.",
+        "Paladín": f"Noble {raza.lower()} que juró un sagrado voto de proteger a los inocentes y destruir el mal.",
+        "Explorador": f"Rastreador {raza.lower()} de las tierras salvajes, acostumbrado a la soledad y la supervivencia.",
+        "Hechicero": f"Portador {raza.lower()} de magia innata que lucha por controlar el poder en su sangre.",
+        "Brujo": f"Mortal {raza.lower()} que hizo un pacto con una entidad poderosa a cambio de poderes arcanos."
+    }
+    return trasfondos.get(clase, f"Aventurero {raza.lower()} con un pasado misterioso.")
+
+def _calcular_oro_inicial(nivel: int) -> int:
+    """Calcula oro inicial basado en nivel"""
+    base = {1: 50, 2: 100, 3: 150, 4: 200, 5: 500}
+    return base.get(nivel, nivel * 100)
+
+def _personaje_emergencia_completo(nombre: str) -> Dict[str, Any]:
+    """Genera un personaje de emergencia completo con todos los campos"""
+    mods = {"FUE":3,"DES":1,"CON":2,"INT":0,"SAB":0,"CAR":-1}
+    stats = {"FUE":16,"DES":12,"CON":14,"INT":10,"SAB":10,"CAR":8}
+    
+    return {
+        "nombre": nombre,
+        "raza": "Humano",
+        "clase": "Guerrero",
+        "nivel": 3,
+        "stats": stats,
+        "modificadores": mods,
+        "stats_display": {k: f"{v} ({formatear_modificador(mods[k])})" for k, v in stats.items()},
+        "hp": 30,
+        "hp_max": 30,
+        "ac": 16,
+        "ac_detalle": "16 (Cota de mallas)",
+        "velocidad": "9m (30 pies)",
+        "iniciativa": 1,
+        "iniciativa_display": "+1",
+        "bonus_competencia": 2,
+        "dados_golpe": "3d10",
+        "salvaciones_competentes": ["FUE", "CON"],
+        "salvaciones": {
+            "FUE": {"valor": 5, "display": "+5", "competente": True, "formula": "+3 (mod) +2 (comp)"},
+            "DES": {"valor": 1, "display": "+1", "competente": False, "formula": "+1 (mod)"},
+            "CON": {"valor": 4, "display": "+4", "competente": True, "formula": "+2 (mod) +2 (comp)"},
+            "INT": {"valor": 0, "display": "+0", "competente": False, "formula": "+0 (mod)"},
+            "SAB": {"valor": 0, "display": "+0", "competente": False, "formula": "+0 (mod)"},
+            "CAR": {"valor": -1, "display": "-1", "competente": False, "formula": "-1 (mod)"}
+        },
+        "habilidades_competentes": ["Atletismo", "Intimidación", "Percepción", "Supervivencia"],
+        "habilidades_valores": {
+            "Atletismo": {"valor": 5, "display": "+5", "competente": True, "stat_base": "FUE", "formula": "+3 (FUE) +2 (comp)"},
+            "Percepción": {"valor": 2, "display": "+2", "competente": True, "stat_base": "SAB", "formula": "+0 (SAB) +2 (comp)"},
+        },
+        "competencias_armaduras": ["Todas", "Escudos"],
+        "competencias_armas": ["Simples", "Marciales"],
+        "idiomas": ["Común", "Orco"],
+        "habilidades": [{"nombre":"Segundo Aliento", "desc":"1d10+3 HP"}, {"nombre":"Action Surge", "desc":"Acción extra"}],
+        "equipo": ["Espada larga (1d8)", "Cota de mallas (AC 16)", "Escudo (+2 AC)", "Ballesta ligera", "Mochila"],
+        "trasfondo": "Veterano de guerra que busca redención",
+        "rasgo_personalidad": "Nunca retrocede ante un desafío",
+        "ideal": "Honor: El deber está por encima de todo",
+        "vinculo": "Protege a sus compañeros como familia",
+        "defecto": "Es demasiado orgulloso para pedir ayuda",
+        "oro": 150,
+        "img": "https://tse2.mm.bing.net/th?q=dnd%20human%20fighter%20portrait%20face&w=500&h=650&c=12&dpr=2&pid=1.7"
+    }
+
+def generar_con_ia(task_prompt: str, json_mode: bool = True) -> Optional[Any]:
+    """Genera contenido usando Ollama/LLM"""
+    full_prompt = f"{SYSTEM_INSTRUCTIONS}\n\nTAREA:\n{task_prompt}"
+    if json_mode:
+        full_prompt += "\n\nFORMATO: JSON válido ÚNICAMENTE."
+    
+    logger.info(f"Generando contenido con IA (JSON={json_mode})")
+    logger.debug(f"Prompt: {task_prompt[:100]}...")
+    
+    try:
+        response = requests.post(
+            OLLAMA_URL,
+            json={
+                "model": MODELO,
+                "prompt": full_prompt,
+                "format": "json" if json_mode else "",
+                "stream": False
+            },
+            timeout=OLLAMA_TIMEOUT
+        )
+        response.raise_for_status()
+        
+        data = response.json()
+        text = data.get('response', '')
+        
+        if not text:
+            logger.error("Respuesta vacía de Ollama")
+            return None
+        
+        logger.info(f"✓ Respuesta recibida de Ollama ({len(text)} caracteres)")
+        
+        if json_mode:
+            try:
+                start = text.find('{')
+                end = text.rfind('}') + 1
+                
+                if start != -1 and end > start:
+                    json_text = text[start:end]
+                    parsed = json.loads(json_text)
+                    logger.info("✓ JSON parseado exitosamente")
+                    return parsed
+                else:
+                    parsed = json.loads(text)
+                    logger.info("✓ JSON parseado exitosamente")
+                    return parsed
+                    
+            except json.JSONDecodeError as e:
+                logger.error(f"Error parseando JSON de IA: {e}")
+                logger.debug(f"Texto recibido: {text[:500]}")
+                return None
+        
+        return text
+        
+    except requests.Timeout:
+        logger.error(f"Timeout al contactar Ollama ({OLLAMA_TIMEOUT}s): {OLLAMA_URL}")
+        return None
+        
+    except requests.ConnectionError:
+        logger.error(f"No se pudo conectar a Ollama: {OLLAMA_URL}")
+        logger.warning("Verifica que Ollama esté corriendo: 'ollama serve'")
+        return None
+        
+    except requests.HTTPError as e:
+        logger.error(f"Error HTTP de Ollama: {e.response.status_code} - {e}")
+        return None
+        
+    except Exception as e:
+        logger.error(f"Error inesperado en generar_con_ia: {e}", exc_info=True)
+        return None
+
+def crear_datos_aventura(setting: str, estilo: Dict[str, str]) -> Dict[str, Any]:
+    """Genera una aventura completa con personajes e historia"""
+    logger.info(f"🎲 Iniciando generación de aventura")
+    logger.info(f"Setting: {setting}")
+    logger.info(f"Estilo: {estilo.get('nombre', 'Desconocido')}")
+    
+    logger.info("Paso 1/3: Generando personajes...")
+    pjs = _generar_personajes(setting)
+    logger.info(f"✓ {len(pjs)} personajes generados")
+    
+    logger.info("Paso 2/3: Generando historia ENRIQUECIDA...")
+    historia = _generar_historia(setting, estilo, pjs)
+    logger.info(f"✓ Historia generada: {historia.get('titulo', 'Sin título')}")
+    
+    logger.info("Paso 3/3: Agregando URLs de imágenes...")
+    _agregar_imagenes(historia)
+    logger.info("✓ Imágenes agregadas")
+    
+    logger.info("🎉 Aventura generada exitosamente")
+    return {"pjs": pjs, "historia": historia}
+
+def _generar_personajes(setting: str) -> list:
+    """Genera lista de personajes para la aventura"""
+    prompt = f"""Genera 4 PJs para: {setting}. IDIOMA: ESPAÑOL.
+    JSON: {{ "personajes": [ {{ "nombre": "Nombre", "raza": "Raza", "clase": "Clase", 
+    "trasfondo": "Historia detallada del personaje", "motivacion": "Hook", "secreto": "Secret" }} ] }}"""
+    
+    data_pjs = generar_con_ia(prompt)
+    
+    if not data_pjs or 'personajes' not in data_pjs:
+        logger.warning("Fallo generación de PJs, usando personajes de emergencia")
+        data_pjs = PERSONAJES_EMERGENCIA
+    
+    pjs_finales = [sanitizar_pj(p) for p in data_pjs.get('personajes', [])]
+    
+    if not pjs_finales:
+        logger.error("No se pudieron generar PJs, usando fallback completo")
+        pjs_finales = [sanitizar_pj(p) for p in PERSONAJES_EMERGENCIA['personajes']]
+    
+    return pjs_finales
+
+def _generar_historia(setting: str, estilo: Dict, pjs: list) -> Dict:
+    """
+    Genera una historia rica y coherente de 5 escenas con narrativa detallada
+    
+    ESTRUCTURA EN 5 ACTOS:
+    1. Inicio/Gancho - Presentación y primer contacto
+    2. Complicación - Las cosas se complican
+    3. Punto Medio - Revelación o giro importante
+    4. Escalada - Tensión máxima
+    5. Clímax - Confrontación final
+    """
+    nombres = ", ".join([f"{p['nombre']} ({p['clase']})" for p in pjs])
+    
+    prompt = f"""Eres un DUNGEON MASTER EXPERTO escribiendo una aventura de D&D 5e.
+
+MUNDO: {setting}
+ESTILO: {estilo['desc']}
+PERSONAJES: {nombres}
+
+OBJETIVO: Crea una aventura NARRATIVAMENTE RICA en 5 ESCENAS conectadas.
+
+REQUISITOS DE NARRATIVA (MUY IMPORTANTE):
+1. Usa DETALLES SENSORIALES: olores, sonidos, texturas, luz
+2. TERCERA PERSONA siempre: "Los aventureros ven..." NO "Ves..."
+3. Estilo LITERARIO: como novelista de fantasía, no como manual
+4. CONEXIONES entre escenas: cada escena menciona la siguiente
+5. COHERENCIA: los NPCs y enemigos tienen motivaciones claras
+
+ESTRUCTURA DE 5 ACTOS:
+- Escena 1: GANCHO - Presentación dramática, primer contacto con el conflicto
+- Escena 2: COMPLICACIÓN - Las cosas se tuercen, nueva información
+- Escena 3: PUNTO MEDIO - Revelación importante, giro de trama
+- Escena 4: ESCALADA - Tensión máxima, carreras contra el tiempo
+- Escena 5: CLÍMAX - Confrontación final, resolución del conflicto
+
+JSON REQUERIDO (ESPAÑOL, 3RA PERSONA):
+{{
+  "titulo": "Título épico y evocativo de la aventura",
+  "sinopsis": "Resumen de 2-3 líneas del conflicto principal",
+  "escenas": [
+    {{
+      "id": 1,
+      "nombre": "Nombre evocativo del lugar",
+      "narrativa": "Descripción DETALLADA y SENSORIAL de 4-6 líneas. Incluye: ambiente, olores, sonidos, luces/sombras, textura del aire. Usa metáforas y lenguaje evocativo. Ejemplo: 'La niebla se arrastra como dedos esqueléticos entre las lápidas. El olor a tierra húmeda y flores marchitas impregna el aire. A lo lejos, el graznido de un cuervo rompe el silencio sepulcral.'",
+      "visual_prompt": "Descripción artística para imagen",
+      "enemigos": [
+        {{
+          "nombre": "Nombre del enemigo",
+          "cantidad": "1d4+1",
+          "ac": 13,
+          "hp": 22,
+          "ataque": "+5",
+          "dano": "1d8+3",
+          "tactica": "Describe cómo pelean, sus estrategias, comportamiento en combate. 2-3 líneas."
+        }}
+      ],
+      "npcs": [
+        {{
+          "nombre": "Nombre completo del NPC",
+          "rol": "Su función en la historia",
+          "personalidad": "Descripción rica: manierismos, forma de hablar, motivaciones. 2-3 líneas.",
+          "frase_entrada": "Primera línea de diálogo memorable que dice al grupo"
+        }}
+      ],
+      "interacciones": [
+        {{
+          "accion": "Qué pueden hacer los PJs",
+          "exito": "Qué descubren o consiguen si tienen éxito",
+          "fallo": "Qué pasa si fallan (IMPORTANTE: agrega este campo)"
+        }}
+      ],
+      "botin": ["Item 1 (con descripción breve)", "Item 2", "Item 3"],
+      "hook_personaje": "Cómo conecta esta escena con el trasfondo de uno de los PJs. Específico.",
+      "transicion": "Pista o evento que lleva a la siguiente escena. Ejemplo: 'Entre los escombros encuentran un mapa que señala...'"
+    }}
+  ],
+  "plot_twist": {{
+    "titulo": "El Giro Final",
+    "descripcion": "Revelación inesperada de 2-3 líneas que cambia la perspectiva de la aventura"
+  }}
+}}
+
+IMPORTANTE: 
+- 5 escenas COMPLETAS (no 3)
+- Narrativa rica y literaria en cada escena
+- Conexiones claras entre escenas (campo "transicion")
+- NPCs con personalidad profunda
+- Enemigos con tácticas específicas
+- SIEMPRE en ESPAÑOL y TERCERA PERSONA"""
+    
+    historia = generar_con_ia(prompt)
+    
+    if not historia or 'escenas' not in historia or len(historia.get('escenas', [])) < 5:
+        logger.warning("Fallo generación de historia o menos de 5 escenas, usando historia enriquecida fallback")
+        return _historia_fallback_enriquecida()
+    
+    if 'plot_twist' not in historia:
+        logger.warning("Historia generada sin plot_twist, agregando uno genérico")
+        historia['plot_twist'] = {
+            "titulo": "Revelación Inesperada",
+            "descripcion": "Las apariencias engañan. Lo que parecía un simple encargo esconde un propósito mucho más oscuro..."
+        }
+    
+    return historia
+
+def _historia_fallback_enriquecida() -> Dict:
+    """
+    Historia de emergencia ENRIQUECIDA con 5 escenas narrativamente ricas
+    """
+    logger.info("Usando historia fallback ENRIQUECIDA (5 escenas)")
+    return {
+        "titulo": "El Secreto de las Ruinas de Sombraluna",
+        "sinopsis": "Un misterioso patrón contrata a los aventureros para recuperar un artefacto de unas ruinas antiguas. Pero las ruinas esconden secretos que algunos preferirían mantener enterrados para siempre.",
+        
+        "escenas": [
+            {
+                "id": 1,
+                "nombre": "La Taberna del Cuervo Sangriento",
+                "narrativa": "El humo de las pipas de hierbas forma espirales perezosas bajo las vigas ennegrecidas de la taberna. El olor a cerveza agria y carne asada se mezcla con el murmullo constante de conversaciones susurradas. En un rincón oscuro, una figura encapuchada hace señas a los aventureros. Sus manos, pálidas como la cera, contrastan con el cuero negro de sus guantes mientras desliza una bolsa de monedas sobre la mesa manchada de vino. La luz de las velas baila en su rostro oculto, revelando apenas una sonrisa que no llega a sus ojos.",
+                "visual_prompt": "dark medieval tavern smoky atmosphere cloaked figure candlelight mysterious",
+                "enemigos": [],
+                "npcs": [
+                    {
+                        "nombre": "Gerick el Encapuchado",
+                        "rol": "Contratante misterioso",
+                        "personalidad": "Habla con voz suave y medida, nunca alza la mirada directamente. Juguetea nerviosamente con un medallón de plata que lleva al cuello. Parece saber más de lo que dice, y sus ojos se desvían cada vez que alguien menciona las ruinas. Oculta una desesperación apenas contenida.",
+                        "frase_entrada": "He esperado mucho tiempo por aventureros con vuestra... particular reputación. Las Ruinas de Sombraluna guardan algo que me pertenece, y pagaré generosamente por su retorno."
+                    }
+                ],
+                "interacciones": [
+                    {
+                        "accion": "Negociar el pago (Persuasión CD 13)",
+                        "exito": "Gerick acepta pagar 100 po ahora y 500 po al completar la misión",
+                        "fallo": "Se ofrece solo 50 po adelantadas y 300 al completar"
+                    },
+                    {
+                        "accion": "Investigar a Gerick (Perspicacia CD 15)",
+                        "exito": "Notan que el medallón que lleva tiene el mismo símbolo que aparece en el mapa de las ruinas. Está mintiendo sobre algo.",
+                        "fallo": "Parece un cliente más, aunque nervioso"
+                    },
+                    {
+                        "accion": "Preguntar a otros parroquianos sobre las ruinas (Investigación CD 12)",
+                        "exito": "Un viejo marinero menciona que 'quien entra en Sombraluna cambia... si es que sale'. Habla de luces extrañas y voces en la niebla.",
+                        "fallo": "La gente evita el tema y cambia de conversación rápidamente"
+                    }
+                ],
+                "botin": [
+                    "Adelanto en oro (50-100 po según negociación)",
+                    "Mapa detallado de las ruinas con símbolos arcanos",
+                    "Frasco de aceite bendito (regalo del tabernero supersticioso)"
+                ],
+                "hook_personaje": "El símbolo en el medallón de Gerick coincide con uno que el mago del grupo vio en sus estudios, relacionado con un culto prohibido hace siglos.",
+                "transicion": "El mapa señala que las ruinas están a un día de viaje al norte, en los Páramos Desolados. Gerick insiste en que deben partir antes del amanecer, cuando 'las defensas están más débiles'."
+            },
+            
+            {
+                "id": 2,
+                "nombre": "Los Páramos Desolados",
+                "narrativa": "La niebla se extiende como un manto gris sobre la tierra yerma. El viento aúlla entre las rocas puntiagudas que emergen del suelo como dientes rotos. No hay vegetación, solo líquenes negros que se aferran a las piedras. El aire huele a azufre y a algo dulzón y podrido. A lo lejos, siluetas retorcidas que podrían ser árboles muertos... o algo peor. El camino marcado en el mapa serpentea entre formaciones rocosas, y cada paso resuena con un eco antinatural. Entonces, desde la niebla, emergen figuras humanoides de piel verdosa.",
+                "visual_prompt": "desolate wasteland fog twisted rocks dead trees goblin ambush eerie mist",
+                "enemigos": [
+                    {
+                        "nombre": "Saqueadores Goblins",
+                        "cantidad": "2d4",
+                        "ac": 13,
+                        "hp": 7,
+                        "ataque": "+4",
+                        "dano": "1d6+2",
+                        "tactica": "Atacan desde las rocas con arcos cortos, gritando en su lengua gutural. Si hieren a alguien, se vuelven más audaces y cargan en manada. Si mueren dos, los demás huyen chillando. Uno lleva un cuerno para pedir refuerzos."
+                    }
+                ],
+                "npcs": [],
+                "interacciones": [
+                    {
+                        "accion": "Intimidar a los goblins (Intimidación CD 13)",
+                        "exito": "Huyen aterrorizados, dejando caer parte de su botín robado",
+                        "fallo": "Atacan con renovada ferocidad (+2 a daño durante 1 ronda)"
+                    },
+                    {
+                        "accion": "Rastrear el origen de los goblins (Supervivencia CD 14)",
+                        "exito": "Descubren que vienen de un campamento cerca de las ruinas. Algo los ha alterado recientemente.",
+                        "fallo": "Las huellas se pierden en el terreno rocoso"
+                    },
+                    {
+                        "accion": "Examinar el terreno (Percepción CD 13)",
+                        "exito": "Notan que la niebla fluye en una dirección específica, como si algo la atrajera hacia las ruinas",
+                        "fallo": "La niebla los desorienta, alargando el viaje 2 horas"
+                    }
+                ],
+                "botin": [
+                    "Flechas goblins (1d6+2 recuperables)",
+                    "Amuleto tosco con el símbolo de Sombraluna (¡el mismo del mapa!)",
+                    "Pedazo de pergamino antiguo con escritura élfica borrada"
+                ],
+                "hook_personaje": "El explorador nota que estas tierras fueron fértiles hace mucho tiempo. Algo las corrompió. En su juventud, su mentor le habló de una maldición...",
+                "transicion": "Al caer la tarde, las ruinas emergen de la niebla: torres derruidas que se recortan contra el cielo morado del ocaso. Los muros están cubiertos de símbolos que brillan débilmente. Una entrada abierta exhala aire frío y húmedo."
+            },
+            
+            {
+                "id": 3,
+                "nombre": "La Antecámara Olvidada",
+                "narrativa": "La entrada conduce a una sala circular de piedra negra pulida que refleja la luz de las antorchas como agua oscura. El techo se pierde en las sombras, pero algo se mueve allá arriba: aleteos susurrantes y chillidos agudos. Las paredes están grabadas con frescos que representan figuras encapuchadas adorando a una luna llena teñida de rojo. En el centro de la sala, un altar de obsidiana sostiene un libro abierto. Las páginas se mueven solas, volteándose sin viento. El olor a incienso antiguo y a algo muerto hace mucho tiempo impregna el aire. Entonces, una voz incorpórea susurra en élfico antiguo: 'Los que buscan deben demostrar su valía...'",
+                "visual_prompt": "ancient stone chamber obsidian altar glowing runes frescoes shadows ceiling bats",
+                "enemigos": [
+                    {
+                        "nombre": "Espectros Guardianes",
+                        "cantidad": "1d3",
+                        "ac": 12,
+                        "hp": 22,
+                        "ataque": "+4",
+                        "dano": "3d6 necrótico",
+                        "tactica": "Emergen de las paredes cuando alguien toca el altar. Se mueven atravesando objetos sólidos. Gimen nombres de los vivos, intentando drenar su esencia vital. Vulnerables a ataques radiantes o de energía positiva. Si el libro es cerrado con un ritual apropiado, se disipan."
+                    }
+                ],
+                "npcs": [
+                    {
+                        "nombre": "Eco del Guardián Élfico",
+                        "rol": "Protección mágica antigua",
+                        "personalidad": "No es realmente consciente, es un eco de memoria. Repite frases de advertencia: 'La luna sangra cuando los dignos fracasan', 'Tres llaves abren, tres secretos sellan'. Su voz resuena directamente en las mentes de quienes tienen afinidad arcana.",
+                        "frase_entrada": "Pasad la prueba de conocimiento o uniros a quienes ya guardan estas estancias... eternamente."
+                    }
+                ],
+                "interacciones": [
+                    {
+                        "accion": "Leer el libro del altar (Arcanos CD 15)",
+                        "exito": "Es un grimorio de rituales lunares. Revela que las ruinas fueron un templo dedicado a Selûne que fue corrompido. Se necesitan tres llaves para acceder a la cripta inferior.",
+                        "fallo": "Una descarga arcana inflige 2d6 de daño psíquico y causa visiones perturbadoras"
+                    },
+                    {
+                        "accion": "Descifrar los frescos (Historia CD 14)",
+                        "exito": "Los frescos cuentan la historia de un sumo sacerdote que traicionó a su diosa, invocando algo oscuro de 'más allá de las estrellas'. La traición ocurrió durante un eclipse.",
+                        "fallo": "Los símbolos son demasiado antiguos para interpretarlos"
+                    },
+                    {
+                        "accion": "Negociar con el Eco (Religión CD 16 o Persuasión CD 18)",
+                        "exito": "El Eco reconoce que los aventureros no sirven a la oscuridad y revela un pasadizo oculto que evita una trampa mortal más adelante",
+                        "fallo": "El Eco invoca más espectros"
+                    }
+                ],
+                "botin": [
+                    "Grimorio lunar (contiene 2 hechizos de adivinación)",
+                    "Primera Llave: Símbolo de plata en forma de media luna",
+                    "Polvo de huesos antiguos (componente de hechizo valioso)",
+                    "Relicario élfico (vale 150 po para un coleccionista)"
+                ],
+                "hook_personaje": "El clérigo siente una conexión con el lugar. Su deidad susurra advertencias: 'Este lugar clama por redención'. Ganar experiencia inspiradora si consagra el altar.",
+                "transicion": "El pasadizo oculto (o el principal, si no lo encontraron) desciende en una espiral hacia las profundidades. El aire se vuelve más frío. Grabados en las paredes muestran una cuenta regresiva lunar. Faltan tres días para... ¿un eclipse?"
+            },
+            
+            {
+                "id": 4,
+                "nombre": "Los Túneles Susurrantes",
+                "narrativa": "Los túneles se estrechan, obligando al grupo a agacharse. Las paredes de piedra transpiran una humedad fría que huele a tumba. Raíces retorcidas cuelgan del techo como tentáculos, y de ellas gotea una sustancia luminiscente verde que ilumina débilmente el camino. Los susurros están en todas partes ahora, un murmullo constante de voces que hablan en lenguas muertas. Las palabras son casi comprensibles, casi... y entonces, de las sombras, emerge una criatura humanoide cubierta de líquenes brillantes, con ojos vacíos que brillan con hambre antinatural. No está sola.",
+                "visual_prompt": "narrow underground tunnels glowing lichen roots dripping cursed undead guardians shadows",
+                "enemigos": [
+                    {
+                        "nombre": "Servidores Corrompidos",
+                        "cantidad": "1d4+1",
+                        "ac": 14,
+                        "hp": 30,
+                        "ataque": "+5",
+                        "dano": "1d8+3 cortante + CD 12 CON o envenenado",
+                        "tactica": "Fueron sacerdotes que cayeron con el templo. Atacan en silencio absoluto, moviéndose con coordinación antinatural. Intentan separar al grupo arrastrando víctimas a túneles laterales. Su toque marchita plantas y contamina agua. Vulnerables a fuego sagrado."
+                    },
+                    {
+                        "nombre": "Enjambre de Murciélagos Corrompidos",
+                        "cantidad": "1",
+                        "ac": 12,
+                        "hp": 22,
+                        "ataque": "+4",
+                        "dano": "2d4 perforante + ceguera temporal (CD 11 CON)",
+                        "tactica": "Emergen del techo cuando se perturba el silencio. Atacan en masa, apagando fuentes de luz y desorientando. Se dispersan si se usa trueno o fuego en área."
+                    }
+                ],
+                "npcs": [
+                    {
+                        "nombre": "Fantasma de Elara la Redentora",
+                        "rol": "Sacerdotisa caída que busca expiación",
+                        "personalidad": "Aparece como una joven elfa translúcida de ojos tristes. Habla con voz etérea y melancólica. Intentó detener la traición del sumo sacerdote pero falló. Ahora está atada a las ruinas. Se muestra más sustancial cerca de objetos consagrados a Selûne. Busca desesperadamente la redención.",
+                        "frase_entrada": "Finalmente... alguien que puede escucharme. Hace tanto... Por favor, deben detenerlo antes del eclipse. Él despertará a lo que duerme abajo."
+                    }
+                ],
+                "interacciones": [
+                    {
+                        "accion": "Hablar con Elara (Perspicacia CD 13 para ganar su confianza)",
+                        "exito": "Revela que Gerick es descendiente del sumo sacerdote traidor y busca completar el ritual interrumpido hace siglos. La Segunda Llave está en su tumba. Señala la entrada oculta.",
+                        "fallo": "Elara desaparece, sobrepasada por el dolor de sus recuerdos"
+                    },
+                    {
+                        "accion": "Seguir los túneles susurrantes (Percepción CD 15)",
+                        "exito": "Llevan a una cámara secreta con murales que explican el ritual oscuro. Ganar ventaja en el enfrentamiento final.",
+                        "fallo": "Se pierden 30 minutos en un laberinto de túneles que vuelven al inicio"
+                    },
+                    {
+                        "accion": "Purificar el área con magia divina (Religión CD 14)",
+                        "exito": "Elara recupera fuerza suficiente para manifestarse físicamente y ayudar en un combate futuro",
+                        "fallo": "La energía divina perturba el equilibrio, atrayendo más no-muertos"
+                    }
+                ],
+                "botin": [
+                    "Segunda Llave: Frasco con lágrimas de luna (líquido plateado luminoso)",
+                    "Anillo de resistencia al veneno (en el dedo de un servidor caído)",
+                    "Mapa etéreo que muestra el verdadero diseño de las ruinas",
+                    "Diario de Elara (cuenta la verdadera historia de la traición)"
+                ],
+                "hook_personaje": "El bardo siente que la historia de Elara es una balada épica esperando ser contada. Si la ayudan a redimirse, ganará inspiración para componer 'La Balada de la Redentora de Sombraluna'.",
+                "transicion": "Al fondo del túnel, una puerta sellada con tres cerraduras en forma de luna. Tres llaves. Dos ya están en posesión del grupo. Pero detrás de la puerta, se escuchan pasos. Alguien llegó primero..."
+            },
+            
+            {
+                "id": 5,
+                "nombre": "La Cripta del Eclipse",
+                "narrativa": "La puerta cede con un gemido de piedra contra piedra. La cripta es vasta, sus techos arqueados se pierden en una oscuridad antinatural que parece absorber la luz. En el centro, un círculo ritual grabado en el suelo pulsa con energía roja oscura. Gerick está allí, sin su capucha, revelando rasgos élficos marcados por cicatrices rituales. A su alrededor, velas negras arden con llamas que no dan calor. Sostiene la Tercera Llave. Detrás de él, un altar de obsidiana sobre el cual yace un sarcófago abierto... vacío. 'Llegas justo a tiempo', susurra Gerick, con una sonrisa que no es la suya. Sus ojos brillan con una luz que no es de este mundo. 'Ella necesita testigos para su despertar.' Las paredes comienzan a sangrar una oscuridad viscosa.",
+                "visual_prompt": "dark ritual chamber obsidian altar red glowing circle empty sarcophagus cultist shadows bleeding darkness",
+                "enemigos": [
+                    {
+                        "nombre": "Gerick el Poseído",
+                        "cantidad": "1",
+                        "ac": 16,
+                        "hp": 68,
+                        "ataque": "+7",
+                        "dano": "2d8+4 necrótico + CD 14 SAB o maldición",
+                        "tactica": "Poseído por el espíritu del sumo sacerdote traidor. Lanza hechizos de nivel 3 (Bola de Fuego, Rayo de Escarcha, Disipar Magia). Invoca tentáculos de sombra del círculo ritual para agarrar enemigos (CD 15 FUE para escapar). En 50% HP, el sarcófago comienza a emanar energía oscura que lo cura 10 HP por turno a menos que se interrumpa el ritual. Debilidad: ataques radiantes y símbolos sagrados."
+                    },
+                    {
+                        "nombre": "Tentáculos de la Entidad Dormida",
+                        "cantidad": "1d3 (reaparecen cada 2 rondas)",
+                        "ac": 13,
+                        "hp": "15 cada uno",
+                        "ataque": "+5",
+                        "dano": "1d6+3 contundente + agarrar",
+                        "tactica": "Emergen del círculo ritual. Agarran e intentan arrastrar víctimas hacia el sarcófago. Si logran meter a alguien en el sarcófago, esa persona debe hacer CD 16 SAB o ser poseída temporalmente. Destruir las velas negras reduce su número."
+                    }
+                ],
+                "npcs": [
+                    {
+                        "nombre": "Elara (si fue ayudada antes)",
+                        "rol": "Aliada espectral",
+                        "personalidad": "Aparece en el momento más oscuro, canalizada por luz lunar filtrada. Puede lanzar Luz Sagrada una vez y dar ventaja en salvaciones contra posesión.",
+                        "frase_entrada": "¡No mientras mi alma aún tenga voluntad! ¡Selûne, préstame tu luz una última vez!"
+                    }
+                ],
+                "interacciones": [
+                    {
+                        "accion": "Interrumpir el ritual (Arcanos CD 17 o Religión CD 15)",
+                        "exito": "Rompen el vínculo entre Gerick y el espíritu. Gerick cae inconsciente pero vivo. El combate se vuelve más fácil.",
+                        "fallo": "El ritual se acelera. La entidad dormida comienza a manifestarse (combate más difícil)"
+                    },
+                    {
+                        "accion": "Destruir las velas negras (acción de ataque)",
+                        "exito": "Cada vela destruida reduce en 1 el número de tentáculos que aparecen",
+                        "fallo": "Las llamas negras queman (1d6 fuego + 1d6 necrótico)"
+                    },
+                    {
+                        "accion": "Apelar a lo que queda de Gerick (Persuasión CD 18)",
+                        "exito": "Gerick lucha contra la posesión desde dentro, dándote 1 turno de ventaja en ataques",
+                        "fallo": "El espíritu se burla y contraataca con un hechizo adicional"
+                    },
+                    {
+                        "accion": "Cerrar el sarcófago (Atletismo CD 16 contra los tentáculos)",
+                        "exito": "Sella la entidad, haciendo que Gerick pierda la mitad de su poder",
+                        "fallo": "Los tentáculos contraatacan con ventaja"
+                    }
+                ],
+                "botin": [
+                    "Tercera Llave: Corona de Obsidiana (poderoso foco arcano)",
+                    "Túnica del Sumo Sacerdote Caído (AC 12 + DES, resistencia a necrótico)",
+                    "Grimorio del Culto Lunar (contiene 5 hechizos de nivel 1-3, algunos prohibidos)",
+                    "Artefacto: 'Fragmento de la Luna Roja' - piedra que brilla con luz carmesí (¿qué hace?)",
+                    "Cofre del tesoro del templo: 800 po, joyas por valor de 500 po, pergamino de Resurrección",
+                    "El medallón de Gerick (si sobrevive, lo entrega agradecido; vale 200 po)"
+                ],
+                "hook_personaje": "El mago/hechicero siente la energía arcana del lugar. Si estudia los rituales aquí, puede aprender un hechizo prohibido nuevo. El paladín/clérigo siente que puede consagrar de nuevo el templo a Selûne, ganando una bendición permanente.",
+                "transicion": "Con Gerick derrotado o liberado y el ritual interrumpido, las ruinas comienzan a temblar. La oscuridad antinatural se disipa. Los primeros rayos del amanecer se filtran por grietas en el techo. Elara, si fue redimida, se desvanece en paz con una sonrisa. Las ruinas pueden ser purificadas... o el fragmento de la Luna Roja podría ser estudiado para descubrir qué oscuridad se esconde más allá de las estrellas."
+            }
+        ],
+        
+        "plot_twist": {
+            "titulo": "El Heredero Involuntario",
+            "descripcion": "Gerick no sabía que era descendiente del sumo sacerdote traidor. El medallón que llevaba era una reliquia familiar que, al acercarse a las ruinas, despertó la conciencia ancestral dormida en su sangre. Fue usado como vasija para completar un ritual comenzado hace siglos. La verdadera pregunta es: ¿qué entidad está más allá de las estrellas esperando despertar? El Fragmento de la Luna Roja pulsa como si estuviera vivo..."
+        }
+    }
+
+def _agregar_imagenes(historia: Dict):
+    """Agrega URLs de Bing Images a las escenas"""
+    for esc in historia.get('escenas', []):
+        prompt = esc.get('visual_prompt', 'dungeon')
+        q = urllib.parse.quote(f"dnd 5e battle map top down grid {prompt} tabletop")
+        esc['img'] = f"https://tse2.mm.bing.net/th?q={q}&w=800&h=600&c=7&rs=1"
+        logger.debug(f"Imagen agregada a escena {esc.get('id')}: {prompt}")
+
+def evaluar_formula_dados(formula: str) -> Dict[str, Any]:
+    """Evalúa una fórmula de dados tipo D&D"""
+    logger.info(f"Evaluando dados: {formula}")
+    
+    try:
+        f = formula.lower().replace(' ', '')
+        match = re.match(r'(\d*)d(\d+)([\+\-]\d+)?', f)
+        
+        if not match:
+            logger.warning(f"Fórmula inválida: {formula}")
+            return {"error": True, "mensaje": "Formato inválido. Usa: XdY+Z"}
+        
+        n = int(match.group(1) or 1)
+        sides = int(match.group(2))
+        mod = int(match.group(3) or 0)
+        
+        if n > 100 or sides > 1000:
+            logger.warning(f"Fórmula excesiva: {n}d{sides}")
+            return {"error": True, "mensaje": "Máximo: 100d1000"}
+        
+        rolls = [random.randint(1, sides) for _ in range(n)]
+        total = sum(rolls) + mod
+        
+        explicacion = f"{rolls} {'+' if mod >= 0 else ''}{mod if mod != 0 else ''}"
+        
+        logger.info(f"✓ Resultado: {total} ({explicacion})")
+        
+        return {
+            "resultado": total,
+            "explicacion": explicacion.strip(),
+            "formula": formula,
+            "error": False,
+            "rolls": rolls,
+            "modificador": mod
+        }
+        
+    except Exception as e:
+        logger.error(f"Error al evaluar dados '{formula}': {e}")
+        return {"error": True, "mensaje": str(e)}

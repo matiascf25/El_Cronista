@@ -1,0 +1,675 @@
+2026-02-09 19:14:26 | INFO     | system               | log_startup_info | ============================================================
+2026-02-09 19:14:26 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-09 19:14:26 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-09 19:14:26 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-09 19:14:26 | INFO     | system               | log_startup_info | ============================================================
+2026-02-09 19:18:25 | INFO     | system               | log_startup_info | ============================================================
+2026-02-09 19:18:25 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-09 19:18:25 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-09 19:18:25 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-09 19:18:25 | INFO     | system               | log_startup_info | ============================================================
+2026-02-09 19:18:28 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-09 19:19:09 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 39.167s
+2026-02-09 19:19:09 | WARNING  | system               | log_request     | GET /dm - Status: 500 - Duration: 0.006s
+2026-02-09 19:19:09 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.000s
+2026-02-09 19:32:23 | INFO     | system               | log_startup_info | ============================================================
+2026-02-09 19:32:23 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-09 19:32:23 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-09 19:32:23 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-09 19:32:23 | INFO     | system               | log_startup_info | ============================================================
+2026-02-09 19:32:26 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-09 19:33:08 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 40.688s
+2026-02-09 19:33:08 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.006s
+2026-02-09 19:34:00 | INFO     | system               | log_request     | POST /combat - Status: 200 - Duration: 0.001s
+2026-02-09 19:35:14 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 3.106s
+2026-02-09 19:35:35 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 9.378s
+2026-02-09 19:38:17 | INFO     | system               | log_request     | GET /journal/summary - Status: 200 - Duration: 0.000s
+2026-02-09 19:38:37 | INFO     | system               | log_request     | POST /roll - Status: 200 - Duration: 0.001s
+2026-02-09 19:38:38 | INFO     | system               | log_request     | POST /roll - Status: 200 - Duration: 0.001s
+2026-02-10 07:08:30 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 07:08:30 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-10 07:08:30 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-10 07:08:30 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-10 07:08:30 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 07:08:32 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-10 07:09:16 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 42.941s
+2026-02-10 07:09:16 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.006s
+2026-02-10 07:17:30 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 07:17:30 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-10 07:17:30 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-10 07:17:30 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-10 07:17:30 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 07:17:33 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-10 07:18:13 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 38.488s
+2026-02-10 07:18:13 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.006s
+2026-02-10 19:55:05 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 19:55:05 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-10 19:55:05 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-10 19:55:05 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-10 19:55:05 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 19:55:07 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-10 19:55:54 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 45.850s
+2026-02-10 19:55:54 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.006s
+2026-02-10 19:59:50 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 19:59:50 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-10 19:59:50 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-10 19:59:50 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-10 19:59:50 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 19:59:52 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-10 20:00:24 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 30.588s
+2026-02-10 20:00:24 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.006s
+2026-02-10 20:22:57 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 20:22:57 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-10 20:22:57 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-10 20:22:57 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-10 20:22:57 | INFO     | system               | log_startup_info | ============================================================
+2026-02-10 20:23:00 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-10 20:24:02 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 60.973s
+2026-02-10 20:24:02 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-10 20:24:35 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 6.413s
+2026-02-10 20:25:53 | INFO     | system               | log_request     | POST /roll - Status: 200 - Duration: 0.001s
+2026-02-10 20:26:14 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 4.540s
+2026-02-10 20:27:23 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.001s
+2026-02-10 20:28:49 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 77.447s
+2026-02-10 20:29:56 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 67.196s
+2026-02-10 20:29:56 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.001s
+2026-02-10 20:33:48 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 8.563s
+2026-02-14 10:35:48 | INFO     | system               | log_startup_info | ============================================================
+2026-02-14 10:35:48 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-14 10:35:48 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-14 10:35:48 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-14 10:35:48 | INFO     | system               | log_startup_info | ============================================================
+2026-02-14 10:43:41 | INFO     | system               | log_startup_info | ============================================================
+2026-02-14 10:43:41 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-14 10:43:41 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-14 10:43:41 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-14 10:43:41 | INFO     | system               | log_startup_info | ============================================================
+2026-02-14 10:43:47 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-14 10:43:47 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.000s
+2026-02-14 10:45:00 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 71.769s
+2026-02-14 10:45:00 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.014s
+2026-02-14 10:45:50 | INFO     | system               | log_request     | POST /combat - Status: 200 - Duration: 0.002s
+2026-02-16 19:19:00 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 19:19:00 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 19:19:00 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 19:19:00 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 19:19:00 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 19:19:06 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 19:20:19 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 71.871s
+2026-02-16 19:20:19 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 19:21:42 | INFO     | system               | log_request     | GET /journal/summary - Status: 200 - Duration: 0.000s
+2026-02-16 19:21:44 | INFO     | system               | log_request     | GET /journal/summary - Status: 200 - Duration: 0.001s
+2026-02-16 19:21:49 | INFO     | system               | log_request     | POST /roll - Status: 200 - Duration: 0.001s
+2026-02-16 19:23:01 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.003s
+2026-02-16 19:23:02 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.003s
+2026-02-16 19:23:04 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.003s
+2026-02-16 19:23:06 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.003s
+2026-02-16 19:34:33 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 19:34:33 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 19:34:33 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 19:34:33 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 19:34:33 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 19:34:36 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 19:35:13 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 35.374s
+2026-02-16 19:35:13 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 20:11:55 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:11:55 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 20:11:55 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 20:11:55 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 20:11:55 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:12:00 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 20:13:11 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 70.388s
+2026-02-16 20:13:11 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 20:14:01 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.004s
+2026-02-16 20:19:26 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:19:26 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 20:19:26 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 20:19:26 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 20:19:26 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:19:29 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 20:20:50 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 79.972s
+2026-02-16 20:20:50 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 20:34:57 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:34:57 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 20:34:57 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 20:34:57 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 20:34:57 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:35:02 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 20:36:18 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 58.564s
+2026-02-16 20:36:18 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 20:36:31 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.004s
+2026-02-16 20:39:25 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.001s
+2026-02-16 20:41:21 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:41:21 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 20:41:21 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 20:41:21 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 20:41:21 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:41:23 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 20:42:27 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 63.057s
+2026-02-16 20:42:27 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 20:42:33 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.004s
+2026-02-16 20:42:40 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.003s
+2026-02-16 20:42:40 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.003s
+2026-02-16 20:46:54 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.009s
+2026-02-16 20:46:56 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 0.003s
+2026-02-16 20:47:05 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:47:05 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 20:47:05 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 20:47:05 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 20:47:05 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:47:07 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 20:48:12 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 64.252s
+2026-02-16 20:48:12 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 20:48:19 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 1.857s
+2026-02-16 20:53:02 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:53:02 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 20:53:02 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 20:53:02 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 20:53:02 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 20:53:07 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 20:54:11 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 62.418s
+2026-02-16 20:54:11 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 20:57:04 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 2.463s
+2026-02-16 20:57:11 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 3.471s
+2026-02-16 21:00:20 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 21:00:20 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 21:00:20 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 21:00:20 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 21:00:20 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 21:00:24 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 21:01:22 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 56.657s
+2026-02-16 21:01:22 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 21:01:54 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 2.945s
+2026-02-16 21:09:40 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 21:09:40 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 21:09:40 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 21:09:40 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 21:09:40 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 21:09:42 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 21:10:45 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 61.618s
+2026-02-16 21:10:45 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.007s
+2026-02-16 21:11:26 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 9.758s
+2026-02-16 21:22:14 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 21:22:14 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 21:22:14 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 21:22:14 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 21:22:14 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 21:22:16 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 21:23:18 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 61.204s
+2026-02-16 21:23:18 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.009s
+2026-02-16 21:30:40 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 21:30:40 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 21:30:40 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 21:30:40 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 21:30:40 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 21:30:42 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 21:31:49 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 65.940s
+2026-02-16 21:31:49 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.009s
+2026-02-16 22:26:36 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 22:26:36 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 22:26:36 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 22:26:36 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 22:26:36 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 22:27:55 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 22:27:55 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 22:27:55 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 22:27:55 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 22:27:55 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 22:27:57 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-16 22:28:52 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 53.238s
+2026-02-16 22:28:52 | WARNING  | system               | log_request     | GET /dm - Status: 500 - Duration: 0.006s
+2026-02-16 22:28:52 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.000s
+2026-02-16 22:31:37 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 22:31:37 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-16 22:31:37 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-16 22:31:37 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-16 22:31:37 | INFO     | system               | log_startup_info | ============================================================
+2026-02-16 22:31:39 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.001s
+2026-02-16 22:32:50 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 69.127s
+2026-02-16 22:32:50 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.009s
+2026-02-16 22:33:12 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 5.406s
+2026-02-16 22:33:21 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 3.769s
+2026-02-16 22:33:56 | INFO     | system               | log_request     | GET /library/search - Status: 200 - Duration: 0.006s
+2026-02-17 16:37:23 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 16:37:23 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-17 16:37:23 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-17 16:37:23 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-17 16:37:23 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 16:37:26 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-17 16:38:44 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 75.956s
+2026-02-17 16:38:44 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-17 16:39:01 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.003s
+2026-02-17 16:40:10 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 2.617s
+2026-02-17 16:40:19 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 16:40:33 | INFO     | system               | log_request     | GET /library/search - Status: 200 - Duration: 0.011s
+2026-02-17 16:43:08 | INFO     | system               | log_request     | GET /journal/summary - Status: 200 - Duration: 0.001s
+2026-02-17 16:45:37 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 16:45:37 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-17 16:45:37 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-17 16:45:37 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-17 16:45:37 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 16:45:42 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-17 16:46:46 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 63.222s
+2026-02-17 16:46:46 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-17 16:48:10 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:00:02 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 17:00:02 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-17 17:00:02 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-17 17:00:02 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-17 17:00:02 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 17:03:47 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 17:03:47 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-17 17:03:47 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-17 17:03:47 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-17 17:03:47 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 17:03:53 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-17 17:05:00 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 65.687s
+2026-02-17 17:05:00 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.006s
+2026-02-17 17:05:00 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-17 17:06:22 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:06:23 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.001s
+2026-02-17 17:06:28 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:06:36 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:06:44 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:06:45 | WARNING  | system               | log_request     | GET /null - Status: 404 - Duration: 0.000s
+2026-02-17 17:07:04 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:07:05 | WARNING  | system               | log_request     | GET /null - Status: 404 - Duration: 0.000s
+2026-02-17 17:07:53 | INFO     | system               | log_request     | POST /roll - Status: 200 - Duration: 0.001s
+2026-02-17 17:08:00 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 2.759s
+2026-02-17 17:08:12 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:08:36 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:08:42 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:08:46 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:08:49 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:08:50 | WARNING  | system               | log_request     | GET /null - Status: 404 - Duration: 0.000s
+2026-02-17 17:21:48 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 17:21:48 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-17 17:21:48 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-17 17:21:48 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-17 17:21:48 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 17:21:51 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-17 17:22:56 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 62.664s
+2026-02-17 17:22:56 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.010s
+2026-02-17 17:23:09 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.000s
+2026-02-17 17:23:44 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:23:45 | WARNING  | system               | log_request     | GET /null - Status: 404 - Duration: 0.000s
+2026-02-17 17:24:28 | INFO     | system               | log_request     | GET /library/search - Status: 200 - Duration: 0.007s
+2026-02-17 17:24:29 | INFO     | system               | log_request     | GET /journal/summary - Status: 200 - Duration: 0.000s
+2026-02-17 17:24:33 | INFO     | system               | log_request     | POST /combat - Status: 200 - Duration: 0.006s
+2026-02-17 17:25:09 | INFO     | system               | log_request     | POST /combat - Status: 200 - Duration: 0.001s
+2026-02-17 17:25:12 | INFO     | system               | log_request     | POST /combat - Status: 200 - Duration: 0.005s
+2026-02-17 17:25:25 | INFO     | system               | log_request     | POST /combat - Status: 200 - Duration: 0.001s
+2026-02-17 17:25:28 | INFO     | system               | log_request     | POST /combat - Status: 200 - Duration: 0.005s
+2026-02-17 17:28:37 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.012s
+2026-02-17 17:30:07 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 55.051s
+2026-02-17 17:30:07 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.001s
+2026-02-17 17:30:44 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.003s
+2026-02-17 17:31:01 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:31:02 | WARNING  | system               | log_request     | GET /null - Status: 404 - Duration: 0.000s
+2026-02-17 17:45:48 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 17:45:48 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-17 17:45:48 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-17 17:45:48 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-17 17:45:48 | INFO     | system               | log_startup_info | ============================================================
+2026-02-17 17:45:50 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-17 17:46:54 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 62.389s
+2026-02-17 17:46:54 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.005s
+2026-02-17 17:46:54 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.010s
+2026-02-17 17:46:54 | INFO     | system               | log_request     | GET /static/css/vtt_style.css - Status: 200 - Duration: 0.002s
+2026-02-17 17:47:17 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:47:17 | INFO     | system               | log_request     | GET /static/css/vtt_style.css - Status: 200 - Duration: 0.001s
+2026-02-17 17:47:18 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:47:36 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:48:00 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:48:01 | WARNING  | system               | log_request     | GET /null - Status: 404 - Duration: 0.000s
+2026-02-17 17:48:56 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:49:01 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:49:05 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-17 17:49:05 | INFO     | system               | log_request     | GET /static/css/vtt_style.css - Status: 304 - Duration: 0.000s
+2026-02-17 17:49:09 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-17 17:49:10 | WARNING  | system               | log_request     | GET /null - Status: 404 - Duration: 0.000s
+2026-02-18 19:34:33 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 19:34:33 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 19:34:33 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 19:34:33 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 19:34:33 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 19:34:36 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 19:35:53 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 75.977s
+2026-02-18 19:35:53 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-18 19:36:19 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.001s
+2026-02-18 19:37:26 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 65.658s
+2026-02-18 19:37:26 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.001s
+2026-02-18 19:37:43 | INFO     | system               | log_request     | POST /oracle - Status: 200 - Duration: 4.030s
+2026-02-18 19:38:45 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.003s
+2026-02-18 19:38:46 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.000s
+2026-02-18 19:38:49 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-18 19:38:59 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-18 19:39:10 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-18 19:39:12 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-18 19:39:12 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-18 19:39:25 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-18 19:39:29 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-18 19:51:18 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 19:51:18 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 19:51:18 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 19:51:18 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 19:51:18 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 19:51:21 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 19:51:40 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 17.486s
+2026-02-18 19:53:17 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 19:53:17 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 19:53:17 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 19:53:17 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 19:53:17 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 19:53:19 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 19:54:33 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 73.317s
+2026-02-18 19:54:33 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.013s
+2026-02-18 20:03:36 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.003s
+2026-02-18 20:03:37 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.000s
+2026-02-18 20:03:47 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-18 20:04:10 | INFO     | system               | log_request     | POST /vtt/scene - Status: 200 - Duration: 0.001s
+2026-02-18 20:04:11 | WARNING  | system               | log_request     | GET /null - Status: 404 - Duration: 0.000s
+2026-02-18 20:13:21 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:13:21 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 20:13:21 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 20:13:21 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 20:13:21 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:13:24 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 20:14:45 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 78.703s
+2026-02-18 20:14:45 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-18 20:22:43 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:22:43 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 20:22:43 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 20:22:43 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 20:22:43 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:22:47 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 20:24:15 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 87.575s
+2026-02-18 20:24:15 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-18 20:30:37 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:30:37 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 20:30:37 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 20:30:37 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 20:30:37 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:30:45 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 20:32:21 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 95.138s
+2026-02-18 20:32:21 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-18 20:46:10 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:46:10 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 20:46:10 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 20:46:10 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 20:46:10 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:46:12 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 20:46:13 | INFO     | system               | log_request     | GET /new - Status: 200 - Duration: 0.001s
+2026-02-18 20:48:41 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:48:41 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 20:48:41 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 20:48:41 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 20:48:41 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:48:43 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 20:48:44 | WARNING  | system               | log_request     | POST /new - Status: 405 - Duration: 0.000s
+2026-02-18 20:51:48 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:51:48 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 20:51:48 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 20:51:48 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 20:51:48 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:51:50 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 20:51:50 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-18 20:53:22 | WARNING  | system               | log_request     | GET /dm_screen - Status: 404 - Duration: 0.000s
+2026-02-18 20:53:22 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.000s
+2026-02-18 20:53:51 | WARNING  | system               | log_request     | GET /dm_screen - Status: 404 - Duration: 0.000s
+2026-02-18 20:53:51 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.000s
+2026-02-18 20:56:47 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:56:47 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-18 20:56:47 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-18 20:56:47 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-18 20:56:47 | INFO     | system               | log_startup_info | ============================================================
+2026-02-18 20:56:50 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-18 20:56:51 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-18 20:58:08 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-19 16:26:36 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:26:36 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:26:36 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:26:36 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:26:36 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:28:58 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:28:58 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:28:58 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:28:58 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:28:58 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:29:00 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-19 16:29:01 | WARNING  | system               | log_request     | POST /new - Status: 422 - Duration: 0.001s
+2026-02-19 16:30:06 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:30:06 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:30:06 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:30:06 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:30:06 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:30:08 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-19 16:30:09 | WARNING  | system               | log_request     | POST /new - Status: 422 - Duration: 0.001s
+2026-02-19 16:31:12 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:31:12 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:31:12 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:31:12 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:31:12 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:33:51 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:33:51 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:33:51 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:33:51 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:33:51 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:36:35 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:36:35 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:36:35 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:36:35 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:36:35 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:36:38 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.003s
+2026-02-19 16:36:39 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 16:38:13 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-19 16:51:03 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:51:03 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:51:03 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:51:03 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:51:03 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:51:17 | INFO     | system               | log_request     | GET /api/rate-limit-status - Status: 200 - Duration: 0.001s
+2026-02-19 16:51:21 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 16:52:50 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 16:52:50 | WARNING  | system               | log_request     | POST /new - Status: 422 - Duration: 0.002s
+2026-02-19 16:54:13 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.000s
+2026-02-19 16:54:42 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:54:42 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:54:42 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:54:42 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:54:42 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:55:10 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:55:10 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:55:10 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:55:10 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:55:10 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:55:18 | INFO     | system               | log_request     | GET /api/rate-limit-status - Status: 200 - Duration: 0.000s
+2026-02-19 16:55:37 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:55:37 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:55:37 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:55:37 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:55:37 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:55:44 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:55:44 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:55:44 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:55:44 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:55:44 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:56:56 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:56:56 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:56:56 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:56:56 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:56:56 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:57:13 | INFO     | system               | log_request     | GET /api/rate-limit-status - Status: 200 - Duration: 0.001s
+2026-02-19 16:57:19 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:57:19 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:57:19 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:57:19 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:57:19 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:57:40 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:57:40 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 16:57:40 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 16:57:40 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 16:57:40 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 16:57:42 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-19 16:57:44 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 16:59:00 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.035s
+2026-02-19 17:06:04 | WARNING  | system               | log_request     | GET /api/connections/default_session - Status: 404 - Duration: 0.000s
+2026-02-19 17:06:48 | INFO     | system               | log_request     | GET /api/rate-limit-status - Status: 200 - Duration: 0.000s
+2026-02-19 17:08:36 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 17:08:36 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 17:08:36 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 17:08:36 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 17:08:36 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 17:08:39 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-19 17:08:41 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 17:10:08 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.003s
+2026-02-19 17:10:08 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.000s
+2026-02-19 17:16:11 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 17:16:11 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 17:16:11 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 17:16:11 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 17:16:11 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 17:16:13 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-19 17:16:15 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 17:17:37 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-19 17:37:27 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 17:37:27 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 17:37:27 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 17:37:27 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 17:37:27 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 17:37:31 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-19 17:37:32 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 17:38:58 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.012s
+2026-02-19 17:42:54 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 17:42:54 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 17:42:54 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 17:42:54 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 17:42:54 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 17:42:56 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-19 17:42:57 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 17:44:23 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.010s
+2026-02-19 17:44:53 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:45:23 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:45:53 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:46:23 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:46:53 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:47:23 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.001s
+2026-02-19 17:47:56 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:48:26 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:48:56 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:49:26 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:49:56 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:50:26 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:50:57 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:51:27 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:51:58 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:52:28 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:52:58 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:53:28 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:53:59 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:54:29 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:54:59 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:55:29 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:56:00 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:56:30 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:57:00 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.001s
+2026-02-19 17:57:30 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:58:00 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:58:30 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 17:59:00 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.001s
+2026-02-19 17:59:30 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 18:00:01 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.001s
+2026-02-19 18:01:01 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 18:01:01 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 18:01:01 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 18:01:01 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 18:01:01 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 18:01:04 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.003s
+2026-02-19 18:01:08 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 18:02:34 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.004s
+2026-02-19 18:03:35 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.002s
+2026-02-19 18:03:35 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.001s
+2026-02-19 18:03:38 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-19 18:03:48 | INFO     | system               | log_request     | GET /api/ai/cache/stats - Status: 200 - Duration: 0.000s
+2026-02-19 18:11:11 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 18:11:11 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-19 18:11:11 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-19 18:11:11 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-19 18:11:11 | INFO     | system               | log_startup_info | ============================================================
+2026-02-19 18:11:13 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-19 18:11:15 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-19 18:12:35 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.005s
+2026-02-19 18:13:01 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.001s
+2026-02-19 18:13:03 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.002s
+2026-02-21 22:12:18 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:12:18 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-21 22:12:18 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-21 22:12:18 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-21 22:12:18 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:12:21 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-21 22:12:23 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-21 22:13:43 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.009s
+2026-02-21 22:17:31 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.003s
+2026-02-21 22:17:32 | WARNING  | system               | log_request     | GET /favicon.ico - Status: 404 - Duration: 0.001s
+2026-02-21 22:18:24 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:18:24 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-21 22:18:24 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-21 22:18:24 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-21 22:18:24 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:18:27 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-21 22:18:28 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-21 22:19:43 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.009s
+2026-02-21 22:23:23 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.002s
+2026-02-21 22:23:29 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-21 22:23:35 | INFO     | system               | log_request     | GET /player - Status: 200 - Duration: 0.001s
+2026-02-21 22:27:24 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.000s
+2026-02-21 22:27:40 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:27:40 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-21 22:27:40 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-21 22:27:40 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-21 22:27:40 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:27:43 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-21 22:27:44 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.002s
+2026-02-21 22:28:56 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-21 22:37:30 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:37:30 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-21 22:37:30 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-21 22:37:30 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-21 22:37:30 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:37:33 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-21 22:37:36 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-21 22:38:46 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.010s
+2026-02-21 22:39:13 | WARNING  | system               | log_request     | GET /api/library/search - Status: 404 - Duration: 0.000s
+2026-02-21 22:39:14 | WARNING  | system               | log_request     | GET /api/library/search - Status: 404 - Duration: 0.000s
+2026-02-21 22:39:17 | WARNING  | system               | log_request     | GET /api/library/search - Status: 404 - Duration: 0.001s
+2026-02-21 22:39:18 | WARNING  | system               | log_request     | GET /api/library/search - Status: 404 - Duration: 0.000s
+2026-02-21 22:39:18 | WARNING  | system               | log_request     | GET /api/library/search - Status: 404 - Duration: 0.000s
+2026-02-21 22:43:42 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:43:42 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-21 22:43:42 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-21 22:43:42 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-21 22:43:42 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:43:45 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-21 22:43:46 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-21 22:44:58 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-21 22:45:39 | WARNING  | system               | log_request     | GET /api/library/search - Status: 404 - Duration: 0.000s
+2026-02-21 22:46:05 | WARNING  | system               | log_request     | GET /api/library/search - Status: 404 - Duration: 0.000s
+2026-02-21 22:46:15 | INFO     | system               | log_request     | GET /api/loot/generate - Status: 200 - Duration: 0.000s
+2026-02-21 22:46:20 | INFO     | system               | log_request     | GET /api/loot/generate - Status: 200 - Duration: 0.000s
+2026-02-21 22:51:59 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:51:59 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-21 22:51:59 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-21 22:51:59 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-21 22:51:59 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 22:52:02 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-21 22:52:16 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-21 22:53:35 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s
+2026-02-21 22:54:46 | WARNING  | system               | log_request     | GET /api/library/search - Status: 404 - Duration: 0.001s
+2026-02-21 23:08:53 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 23:08:53 | INFO     | system               | log_startup_info | 🎲 CRONISTA V80 - Sistema de Logging Inicializado
+2026-02-21 23:08:53 | INFO     | system               | log_startup_info | Nivel de Log: INFO
+2026-02-21 23:08:53 | INFO     | system               | log_startup_info | Directorio de Logs: /home/matiascorderoflores/Machine Learning/DnD El Cronista/logs
+2026-02-21 23:08:53 | INFO     | system               | log_startup_info | ============================================================
+2026-02-21 23:08:55 | INFO     | system               | log_request     | GET / - Status: 200 - Duration: 0.002s
+2026-02-21 23:08:57 | INFO     | system               | log_request     | POST /new - Status: 200 - Duration: 0.001s
+2026-02-21 23:10:09 | INFO     | system               | log_request     | GET /dm - Status: 200 - Duration: 0.011s

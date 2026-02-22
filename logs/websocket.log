@@ -1,0 +1,377 @@
+2026-02-09 19:18:25 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-09 19:18:25 | INFO     | websocket            | <module>        | Sistemas inicializados y listos
+2026-02-09 19:32:23 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-09 19:32:23 | INFO     | websocket            | <module>        | Sistemas inicializados y listos
+2026-02-09 19:33:08 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-09 20:03:00 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-10 07:08:30 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-10 07:08:30 | INFO     | websocket            | <module>        | Sistemas inicializados y listos
+2026-02-10 07:09:16 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-10 07:12:15 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-10 07:17:30 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-10 07:17:30 | INFO     | websocket            | <module>        | Sistemas inicializados y listos
+2026-02-10 07:18:13 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-10 07:18:40 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-10 19:55:05 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-10 19:55:05 | INFO     | websocket            | <module>        | Sistemas inicializados y listos
+2026-02-10 19:55:54 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-10 19:56:47 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-10 19:59:50 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-10 19:59:50 | INFO     | websocket            | <module>        | Sistemas inicializados y listos
+2026-02-10 20:00:24 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-10 20:01:25 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-10 20:16:43 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-10 20:16:43 | INFO     | websocket            | <module>        | Sistemas inicializados y listos
+2026-02-10 20:22:57 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-10 20:22:57 | INFO     | websocket            | <module>        | Sistemas inicializados y listos
+2026-02-10 20:24:02 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-10 20:27:23 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-10 20:27:23 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-10 20:27:31 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-10 20:29:57 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-10 20:34:24 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-14 10:43:41 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-14 10:45:00 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-14 10:46:00 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 19:17:51 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 19:19:00 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 19:20:19 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 19:22:41 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 19:23:08 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 19:23:22 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 19:33:00 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 19:34:33 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 19:35:13 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 19:35:19 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 20:11:10 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:11:55 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:13:11 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 20:16:57 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 20:19:26 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:20:50 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 20:27:14 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 20:31:31 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:32:33 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:34:57 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:36:18 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 20:37:34 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:37:34 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:41:18 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 20:41:21 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:42:27 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 20:46:54 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 20:46:54 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 20:46:57 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 20:47:05 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:48:12 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 20:51:39 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 20:53:02 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 20:54:11 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 20:59:49 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 21:00:20 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 21:01:22 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 21:09:34 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 21:09:40 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 21:10:45 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 21:14:28 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 21:22:14 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 21:23:18 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 21:26:36 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 21:30:40 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 21:31:49 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 22:06:50 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-16 22:18:03 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 22:26:36 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 22:27:55 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 22:28:56 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:29:00 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:29:04 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:29:08 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:29:12 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:29:14 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:29:16 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:29:18 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:29:20 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-16 22:31:37 | INFO     | websocket            | __init__        | ConnectionManager inicializado
+2026-02-16 22:32:50 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session
+2026-02-16 22:34:06 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 16:27:17 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 16:31:29 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 16:37:23 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 16:38:44 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-17 16:41:40 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 16:45:26 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 16:45:37 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 16:46:46 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-17 16:48:32 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:00:02 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 17:03:47 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 17:05:00 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-17 17:06:22 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:06:28 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:06:28 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:06:36 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:06:37 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:07:36 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:08:13 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:08:36 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:08:46 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:09:19 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:21:44 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:21:48 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 17:22:56 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-17 17:23:09 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:24:20 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:28:37 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:28:37 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-17 17:29:11 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:30:07 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-17 17:30:44 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:31:19 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:31:29 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:45:48 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-17 17:46:54 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-17 17:47:17 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:47:18 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:47:18 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:47:37 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:47:37 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:48:31 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:49:05 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-17 17:49:45 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-17 17:55:53 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 19:31:11 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 19:31:57 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 19:34:33 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 19:35:53 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-18 19:36:15 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 19:36:17 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 19:37:26 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 19:37:26 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-18 19:39:33 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 19:47:17 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 19:51:18 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 19:53:17 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 19:54:33 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-18 20:03:36 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-18 20:03:47 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:03:48 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (player) — Total: 2
+2026-02-18 20:04:50 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:10:39 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:10:56 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:12:02 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:13:21 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:14:45 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-18 20:19:30 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:21:48 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:22:35 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:22:43 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:24:15 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-18 20:27:21 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:28:12 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:30:37 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:32:21 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-18 20:35:10 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:46:09 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:46:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:46:37 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:46:48 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:46:48 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:46:58 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:47:07 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:47:17 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:47:29 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:47:40 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:47:40 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:47:40 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:48:41 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:48:43 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (launcher) — Total: 1
+2026-02-18 20:51:41 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:51:48 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:51:50 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (launcher) — Total: 1
+2026-02-18 20:53:22 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:53:25 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:53:29 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:53:33 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:53:37 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:53:41 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:53:43 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:53:45 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:53:47 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:53:49 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-18 20:56:47 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-18 20:56:50 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (launcher) — Total: 1
+2026-02-18 20:58:08 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-18 20:58:08 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-18 20:58:46 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-19 16:23:22 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:25:09 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:26:35 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:28:58 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:29:00 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (launcher) — Total: 1
+2026-02-19 16:29:47 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-19 16:30:06 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:30:08 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (launcher) — Total: 1
+2026-02-19 16:30:38 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-19 16:31:12 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:33:51 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:36:35 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:36:38 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (launcher) — Total: 1
+2026-02-19 16:38:13 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-19 16:38:13 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-19 16:42:32 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-19 16:46:45 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:49:32 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:50:12 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:51:03 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:51:21 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:51:46 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:51:54 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:51:54 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:03 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:15 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:27 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:37 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:52:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:22 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:22 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:32 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:45 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:53:54 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:03 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:13 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:35 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:42 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:54:44 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:44 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:54:54 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:55:05 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 16:55:10 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:55:36 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:55:44 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:56:56 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:57:19 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:57:40 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 16:57:42 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (launcher) — Total: 1
+2026-02-19 16:59:00 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-19 16:59:00 | INFO     | websocket            | connect         | ✓ Cliente conectado - Sesión: default_session (dm) — Total: 1
+2026-02-19 16:59:51 | INFO     | websocket            | disconnect      | ✗ Cliente desconectado - Sesión: default_session
+2026-02-19 17:08:36 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 17:08:41 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:09:08 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:09:18 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:09:18 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:09:27 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:09:38 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:09:48 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:09:57 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:08 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:08 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:08 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:14 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:18 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:22 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:26 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:30 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:34 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:38 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:42 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:10:44 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:16:11 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 17:16:13 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-19 17:17:37 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:17:37 | INFO     | websocket            | connect         | ✓ DM (dm) conectado a default_session — Total: 1
+2026-02-19 17:18:51 | INFO     | websocket            | disconnect      | ✗ DM (dm) desconectado de default_session
+2026-02-19 17:18:51 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:35:45 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 17:37:27 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 17:37:31 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-19 17:38:58 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:38:58 | INFO     | websocket            | connect         | ✓ DM (dm) conectado a default_session — Total: 1
+2026-02-19 17:39:39 | INFO     | websocket            | disconnect      | ✗ DM (dm) desconectado de default_session
+2026-02-19 17:39:39 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:42:54 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 17:42:56 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-19 17:44:23 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 17:44:23 | INFO     | websocket            | connect         | ✓ DM (dm) conectado a default_session — Total: 1
+2026-02-19 18:00:06 | INFO     | websocket            | disconnect      | ✗ DM (dm) desconectado de default_session
+2026-02-19 18:00:06 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 18:01:01 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 18:01:04 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-19 18:02:34 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 18:02:34 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-19 18:03:35 | INFO     | websocket            | connect         | ✓ Player (player) conectado a default_session — Total: 2
+2026-02-19 18:03:38 | INFO     | websocket            | disconnect      | ✗ Player (player) desconectado de default_session
+2026-02-19 18:03:38 | INFO     | websocket            | connect         | ✓ Player (player) conectado a default_session — Total: 2
+2026-02-19 18:04:03 | INFO     | websocket            | disconnect      | ✗ Player (player) desconectado de default_session
+2026-02-19 18:05:50 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-19 18:05:50 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 18:11:11 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-19 18:11:13 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-19 18:12:35 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-19 18:12:35 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-19 18:13:01 | INFO     | websocket            | connect         | ✓ Player (player) conectado a default_session — Total: 2
+2026-02-19 18:13:04 | INFO     | websocket            | disconnect      | ✗ Player (player) desconectado de default_session
+2026-02-19 18:13:04 | INFO     | websocket            | connect         | ✓ Player (player) conectado a default_session — Total: 2
+2026-02-19 18:13:25 | INFO     | websocket            | disconnect      | ✗ Player (player) desconectado de default_session
+2026-02-19 18:13:26 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-19 18:13:26 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:12:18 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-21 22:12:21 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-21 22:13:43 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:13:43 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-21 22:17:31 | INFO     | websocket            | connect         | ✓ Player (player) conectado a default_session — Total: 2
+2026-02-21 22:18:16 | INFO     | websocket            | disconnect      | ✗ Player (player) desconectado de default_session
+2026-02-21 22:18:22 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-21 22:18:22 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:18:24 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-21 22:18:27 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-21 22:19:43 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:19:43 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-21 22:23:24 | INFO     | websocket            | connect         | ✓ Player (player) conectado a default_session — Total: 2
+2026-02-21 22:23:29 | INFO     | websocket            | disconnect      | ✗ Player (player) desconectado de default_session
+2026-02-21 22:23:29 | INFO     | websocket            | connect         | ✓ Player (player) conectado a default_session — Total: 2
+2026-02-21 22:23:33 | INFO     | websocket            | disconnect      | ✗ Player (player) desconectado de default_session
+2026-02-21 22:23:36 | INFO     | websocket            | connect         | ✓ Player (player) conectado a default_session — Total: 2
+2026-02-21 22:23:53 | INFO     | websocket            | disconnect      | ✗ Player (player) desconectado de default_session
+2026-02-21 22:26:58 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-21 22:26:58 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:27:24 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-21 22:27:25 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:27:40 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-21 22:27:44 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-21 22:28:56 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:28:56 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-21 22:37:26 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-21 22:37:26 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:37:30 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-21 22:37:33 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-21 22:38:46 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:38:46 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-21 22:43:32 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-21 22:43:32 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:43:42 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-21 22:43:45 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-21 22:44:58 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:44:58 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-21 22:49:05 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-21 22:49:05 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:51:59 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-21 22:52:02 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-21 22:53:35 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 22:53:35 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-21 22:54:55 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-21 22:54:55 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 23:08:53 | INFO     | websocket            | __init__        | ConnectionManager multi-cliente inicializado
+2026-02-21 23:08:55 | INFO     | websocket            | connect         | ✓ Player (launcher) conectado a default_session — Total: 1
+2026-02-21 23:10:09 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session
+2026-02-21 23:10:09 | INFO     | websocket            | connect         | ✓ Player (dm) conectado a default_session — Total: 1
+2026-02-21 23:10:46 | INFO     | websocket            | disconnect      | ✗ Player (dm) desconectado de default_session
+2026-02-21 23:10:46 | WARNING  | websocket            | send_to_session | Intento de enviar a sesión no conectada: default_session

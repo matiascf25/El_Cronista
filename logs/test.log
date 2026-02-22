@@ -1,0 +1,6 @@
+2026-02-09 19:14:26 | INFO     | test                 | test_logging_system | Este es un mensaje INFO
+2026-02-09 19:14:26 | WARNING  | test                 | test_logging_system | Este es un mensaje WARNING
+2026-02-09 19:14:26 | ERROR    | test                 | test_logging_system | Este es un mensaje ERROR (de prueba)
+2026-02-14 10:35:48 | INFO     | test                 | test_logging_system | Este es un mensaje INFO
+2026-02-14 10:35:48 | WARNING  | test                 | test_logging_system | Este es un mensaje WARNING
+2026-02-14 10:35:48 | ERROR    | test                 | test_logging_system | Este es un mensaje ERROR (de prueba)

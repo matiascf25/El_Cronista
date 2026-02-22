@@ -1,0 +1,559 @@
+2026-02-14 10:43:49 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-14 10:44:09 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2960 caracteres)
+2026-02-14 10:44:09 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-14 10:44:09 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-14 10:45:00 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8572 caracteres)
+2026-02-14 10:45:00 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 19:19:07 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 19:19:27 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2418 caracteres)
+2026-02-16 19:19:27 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 19:19:27 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 19:20:19 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9572 caracteres)
+2026-02-16 19:20:19 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 19:34:37 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 19:34:50 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2201 caracteres)
+2026-02-16 19:34:50 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 19:34:50 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 19:35:13 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (4255 caracteres)
+2026-02-16 19:35:13 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:12:01 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:12:15 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2533 caracteres)
+2026-02-16 20:12:15 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:12:15 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:13:11 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (10930 caracteres)
+2026-02-16 20:13:11 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:19:30 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:19:50 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2612 caracteres)
+2026-02-16 20:19:50 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:19:50 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:20:50 | ERROR    | ai_client            | generar_con_ia  | Timeout al contactar Ollama (60s): http://localhost:11434/api/generate
+2026-02-16 20:35:20 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:35:33 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2554 caracteres)
+2026-02-16 20:35:33 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:35:33 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:36:18 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8387 caracteres)
+2026-02-16 20:36:18 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:41:24 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:41:35 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1784 caracteres)
+2026-02-16 20:41:35 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:41:35 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:42:27 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9891 caracteres)
+2026-02-16 20:42:27 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:47:08 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:47:22 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2893 caracteres)
+2026-02-16 20:47:22 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:47:22 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:48:12 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9303 caracteres)
+2026-02-16 20:48:12 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:53:08 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:53:24 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3244 caracteres)
+2026-02-16 20:53:24 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 20:53:24 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 20:54:11 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8476 caracteres)
+2026-02-16 20:54:11 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 21:00:26 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 21:00:37 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2041 caracteres)
+2026-02-16 21:00:37 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 21:00:37 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 21:01:22 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8699 caracteres)
+2026-02-16 21:01:22 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 21:09:44 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 21:09:59 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2685 caracteres)
+2026-02-16 21:09:59 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 21:09:59 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 21:10:45 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8766 caracteres)
+2026-02-16 21:10:45 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 21:22:17 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 21:22:33 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2930 caracteres)
+2026-02-16 21:22:33 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 21:22:33 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 21:23:18 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8976 caracteres)
+2026-02-16 21:23:18 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 21:30:43 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 21:31:00 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3193 caracteres)
+2026-02-16 21:31:00 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 21:31:00 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 21:31:49 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9536 caracteres)
+2026-02-16 21:31:49 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 22:27:58 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 22:28:09 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1660 caracteres)
+2026-02-16 22:28:09 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 22:28:09 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 22:28:52 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (7973 caracteres)
+2026-02-16 22:28:52 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 22:31:41 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 22:31:52 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2382 caracteres)
+2026-02-16 22:31:52 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-16 22:31:52 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-16 22:32:50 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (11054 caracteres)
+2026-02-16 22:32:50 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 16:37:28 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 16:37:46 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2814 caracteres)
+2026-02-17 16:37:46 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 16:37:46 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 16:38:44 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9653 caracteres)
+2026-02-17 16:38:44 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 16:45:43 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 16:45:57 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2452 caracteres)
+2026-02-17 16:45:57 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 16:45:57 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 16:46:46 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9769 caracteres)
+2026-02-17 16:46:46 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 17:03:54 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 17:04:14 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2563 caracteres)
+2026-02-17 17:04:14 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 17:04:14 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 17:05:00 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8047 caracteres)
+2026-02-17 17:05:00 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 17:21:53 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 17:22:10 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3040 caracteres)
+2026-02-17 17:22:10 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 17:22:10 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 17:22:56 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8973 caracteres)
+2026-02-17 17:22:56 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 17:29:12 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 17:29:19 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1151 caracteres)
+2026-02-17 17:29:19 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 17:29:19 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 17:30:07 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8714 caracteres)
+2026-02-17 17:30:07 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 17:45:51 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 17:46:05 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2521 caracteres)
+2026-02-17 17:46:05 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-17 17:46:05 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-17 17:46:54 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9338 caracteres)
+2026-02-17 17:46:54 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 19:34:37 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 19:35:00 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2561 caracteres)
+2026-02-18 19:35:00 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 19:35:00 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 19:35:53 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9302 caracteres)
+2026-02-18 19:35:53 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 19:36:20 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 19:36:39 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2991 caracteres)
+2026-02-18 19:36:39 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 19:36:39 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 19:37:26 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (9051 caracteres)
+2026-02-18 19:37:26 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 19:51:23 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 19:51:40 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2604 caracteres)
+2026-02-18 19:51:40 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 19:53:20 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 19:53:43 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2868 caracteres)
+2026-02-18 19:53:43 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 19:53:43 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 19:54:33 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8598 caracteres)
+2026-02-18 19:54:33 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:13:26 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:13:50 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2740 caracteres)
+2026-02-18 20:13:50 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:13:50 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:14:45 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (8951 caracteres)
+2026-02-18 20:14:45 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:22:48 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:23:16 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3868 caracteres)
+2026-02-18 20:23:16 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:23:16 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:23:25 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1438 caracteres)
+2026-02-18 20:23:25 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:23:25 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:23:34 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1480 caracteres)
+2026-02-18 20:23:34 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:23:34 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:23:44 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1583 caracteres)
+2026-02-18 20:23:44 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:23:44 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:23:55 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1555 caracteres)
+2026-02-18 20:23:55 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:23:55 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:24:05 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1590 caracteres)
+2026-02-18 20:24:05 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:24:05 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:24:15 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1484 caracteres)
+2026-02-18 20:24:15 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:30:46 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:31:13 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3642 caracteres)
+2026-02-18 20:31:13 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:31:13 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:31:22 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1661 caracteres)
+2026-02-18 20:31:22 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:31:22 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:31:32 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1541 caracteres)
+2026-02-18 20:31:32 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:31:32 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:31:44 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1806 caracteres)
+2026-02-18 20:31:44 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:31:44 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:31:55 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1911 caracteres)
+2026-02-18 20:31:55 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:31:55 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:32:08 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2012 caracteres)
+2026-02-18 20:32:08 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:32:08 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:32:21 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2087 caracteres)
+2026-02-18 20:32:21 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:46:13 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:46:37 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3103 caracteres)
+2026-02-18 20:46:37 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:46:37 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:46:48 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1928 caracteres)
+2026-02-18 20:46:48 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:46:48 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:46:58 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1618 caracteres)
+2026-02-18 20:46:58 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:46:58 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:47:07 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1565 caracteres)
+2026-02-18 20:47:07 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:47:07 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:47:17 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1510 caracteres)
+2026-02-18 20:47:17 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:47:17 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:47:29 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1877 caracteres)
+2026-02-18 20:47:29 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:47:29 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:47:40 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1843 caracteres)
+2026-02-18 20:47:40 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:51:50 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:52:17 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3472 caracteres)
+2026-02-18 20:52:17 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:52:17 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:52:25 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1326 caracteres)
+2026-02-18 20:52:25 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:52:25 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:52:36 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1815 caracteres)
+2026-02-18 20:52:36 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:52:36 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:52:46 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1570 caracteres)
+2026-02-18 20:52:46 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:52:46 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:52:58 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1828 caracteres)
+2026-02-18 20:52:58 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:52:58 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:53:09 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1787 caracteres)
+2026-02-18 20:53:09 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:53:09 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:53:21 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2036 caracteres)
+2026-02-18 20:53:21 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:56:51 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:57:12 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3257 caracteres)
+2026-02-18 20:57:12 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:57:12 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:57:19 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1507 caracteres)
+2026-02-18 20:57:19 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:57:19 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:57:28 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1446 caracteres)
+2026-02-18 20:57:28 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:57:28 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:57:36 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1452 caracteres)
+2026-02-18 20:57:36 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:57:36 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:57:47 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1841 caracteres)
+2026-02-18 20:57:47 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:57:47 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:57:56 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1647 caracteres)
+2026-02-18 20:57:56 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-18 20:57:56 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-18 20:58:07 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2020 caracteres)
+2026-02-18 20:58:07 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:36:39 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:37:14 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3342 caracteres)
+2026-02-19 16:37:14 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:37:14 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:37:23 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1406 caracteres)
+2026-02-19 16:37:23 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:37:23 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:37:33 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1711 caracteres)
+2026-02-19 16:37:33 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:37:33 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:37:42 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1317 caracteres)
+2026-02-19 16:37:42 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:37:42 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:37:52 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1552 caracteres)
+2026-02-19 16:37:52 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:37:52 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:38:01 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1506 caracteres)
+2026-02-19 16:38:01 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:38:01 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:38:12 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1834 caracteres)
+2026-02-19 16:38:12 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:51:21 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:51:46 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3189 caracteres)
+2026-02-19 16:51:46 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:51:46 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:51:54 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1502 caracteres)
+2026-02-19 16:51:54 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:51:54 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:52:03 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1520 caracteres)
+2026-02-19 16:52:03 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:52:03 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:52:15 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1979 caracteres)
+2026-02-19 16:52:15 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:52:15 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:52:27 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1956 caracteres)
+2026-02-19 16:52:27 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:52:27 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:52:37 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1665 caracteres)
+2026-02-19 16:52:37 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:52:37 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:52:50 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2128 caracteres)
+2026-02-19 16:52:50 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:52:50 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:53:13 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3275 caracteres)
+2026-02-19 16:53:13 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:53:13 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:53:22 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1403 caracteres)
+2026-02-19 16:53:22 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:53:22 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:53:32 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1535 caracteres)
+2026-02-19 16:53:32 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:53:32 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:53:45 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2187 caracteres)
+2026-02-19 16:53:45 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:53:45 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:53:54 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1504 caracteres)
+2026-02-19 16:53:54 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:53:54 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:54:03 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1501 caracteres)
+2026-02-19 16:54:03 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:54:03 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:54:13 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1719 caracteres)
+2026-02-19 16:54:13 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:54:13 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:54:35 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3113 caracteres)
+2026-02-19 16:54:35 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:54:35 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:54:44 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1543 caracteres)
+2026-02-19 16:54:44 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:54:44 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:54:54 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1747 caracteres)
+2026-02-19 16:54:54 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:54:54 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:55:05 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1822 caracteres)
+2026-02-19 16:55:05 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:55:05 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:57:44 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:58:04 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (2724 caracteres)
+2026-02-19 16:58:04 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:58:04 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:58:12 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1781 caracteres)
+2026-02-19 16:58:12 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:58:12 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:58:21 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1443 caracteres)
+2026-02-19 16:58:21 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:58:21 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:58:29 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1566 caracteres)
+2026-02-19 16:58:29 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:58:29 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:58:40 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1923 caracteres)
+2026-02-19 16:58:40 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:58:40 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:58:48 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1403 caracteres)
+2026-02-19 16:58:48 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 16:58:48 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 16:58:59 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1964 caracteres)
+2026-02-19 16:58:59 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:08:41 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:09:08 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3316 caracteres)
+2026-02-19 17:09:08 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:09:08 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:09:18 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1840 caracteres)
+2026-02-19 17:09:18 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:09:18 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:09:27 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1549 caracteres)
+2026-02-19 17:09:27 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:09:27 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:09:38 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1792 caracteres)
+2026-02-19 17:09:38 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:09:38 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:09:48 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1610 caracteres)
+2026-02-19 17:09:48 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:09:48 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:09:57 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1664 caracteres)
+2026-02-19 17:09:57 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:09:57 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:10:08 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1855 caracteres)
+2026-02-19 17:10:08 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:16:15 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:16:38 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (3067 caracteres)
+2026-02-19 17:16:38 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:16:38 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:16:47 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1622 caracteres)
+2026-02-19 17:16:47 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:16:47 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:16:57 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1534 caracteres)
+2026-02-19 17:16:57 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:16:57 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:17:07 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1742 caracteres)
+2026-02-19 17:17:07 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:17:07 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:17:16 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1381 caracteres)
+2026-02-19 17:17:16 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:17:16 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:17:25 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1626 caracteres)
+2026-02-19 17:17:25 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:17:25 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True)
+2026-02-19 17:17:36 | INFO     | ai_client            | generar_con_ia  | ✓ Respuesta recibida de Ollama (1765 caracteres)
+2026-02-19 17:17:36 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:28:59 | INFO     | ai_client            | clear_prompt_cache | Prompt cache cleared: 0 entries removed
+2026-02-19 17:28:59 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=False, cached=False)
+2026-02-19 17:28:59 | INFO     | ai_client            | clear_prompt_cache | Prompt cache cleared: 0 entries removed
+2026-02-19 17:28:59 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=False, cached=True)
+2026-02-19 17:28:59 | INFO     | ai_client            | generar_con_ia  | ✓ Cache HIT (1 total) - Prompt: Test Prompt...
+2026-02-19 17:28:59 | INFO     | ai_client            | clear_prompt_cache | Prompt cache cleared: 1 entries removed
+2026-02-19 17:28:59 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:28:59 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:28:59 | INFO     | ai_client            | generar_con_ia  | ✓ Cache HIT (1 total) - Prompt: JSON Prompt...
+2026-02-19 17:37:32 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:37:57 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:37:57 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:38:06 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:38:06 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:38:14 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:38:14 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:38:23 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:38:23 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:38:35 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:38:35 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:38:46 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:38:46 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:38:57 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:42:57 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:43:25 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:43:25 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:43:34 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:43:34 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:43:42 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:43:42 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:43:51 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:43:51 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:44:01 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:44:01 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:44:12 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 17:44:12 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 17:44:22 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:01:08 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:01:34 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:01:34 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:01:42 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:01:42 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:01:53 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:01:53 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:02:02 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:02:02 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:02:10 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:02:10 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:02:20 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:02:20 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:02:33 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:11:15 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:11:40 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:11:40 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:11:48 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:11:48 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:11:58 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:11:58 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:12:07 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:12:07 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:12:14 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:12:14 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:12:24 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-19 18:12:24 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-19 18:12:34 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:12:23 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:12:51 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:12:51 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:13:00 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:13:00 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:13:08 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:13:08 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:13:18 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:13:18 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:13:26 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:13:26 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:13:33 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:13:33 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:13:42 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:18:28 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:18:51 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:18:51 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:19:01 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:19:01 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:19:10 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:19:10 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:19:19 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:19:19 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:19:26 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:19:26 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:19:34 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:19:34 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:19:42 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:27:44 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:28:06 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:28:06 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:28:14 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:28:14 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:28:20 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:28:20 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:28:30 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:28:30 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:28:39 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:28:39 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:28:47 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:28:47 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:28:55 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:37:36 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:37:59 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:37:59 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:38:07 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:38:07 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:38:14 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:38:14 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:38:22 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:38:22 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:38:29 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:38:29 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:38:36 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:38:36 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:38:45 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:43:46 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:44:09 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:44:09 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:44:17 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:44:17 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:44:24 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:44:24 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:44:33 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:44:33 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:44:42 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:44:42 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:44:49 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:44:49 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:44:57 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:52:16 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:52:41 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:52:41 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:52:50 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:52:50 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:52:59 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:52:59 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:53:07 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:53:07 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:53:17 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:53:17 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:53:25 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 22:53:25 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 22:53:34 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 23:08:57 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 23:09:19 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 23:09:19 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 23:09:29 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 23:09:29 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 23:09:36 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 23:09:36 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 23:09:44 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 23:09:44 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 23:09:52 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 23:09:52 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 23:10:00 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente
+2026-02-21 23:10:00 | INFO     | ai_client            | generar_con_ia  | Generando contenido con IA (JSON=True, cached=True)
+2026-02-21 23:10:08 | INFO     | ai_client            | generar_con_ia  | ✓ JSON parseado exitosamente

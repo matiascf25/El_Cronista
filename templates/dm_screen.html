@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRONISTA V80 - CÓDICE DM</title>
+    <meta charset="utf-8">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;700&family=Cinzel+Decorative:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0b0a09;
+            --paper-dark: #1a1714;
+            --paper-light: #24201d;
+            /* Un poco más claro para contraste */
+            --gold: #c5a059;
+            --gold-dim: #8a6e36;
+            --text-main: #e8e1d5;
+            --text-muted: #a8a195;
+            --accent-red: #8b3a3a;
+            --accent-blue: #3a5a8b;
+            --accent-green: #3a8b4a;
+            --border-style: 1px solid #332e29;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold-dim) var(--bg-dark);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1714' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* TIPOGRAFÍA */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--gold);
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+        }
+
+        button {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* LAYOUT PRINCIPAL */
+        .layout {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* BARRA LATERAL (Book Spine) */
+        .sidebar {
+            width: 320px;
+            background: var(--paper-dark);
+            border-right: 2px solid var(--gold-dim);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        .book-title {
+            text-align: center;
+            border-bottom: 2px solid var(--gold-dim);
+            padding-bottom: 15px;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* BOTONES DE NAVEGACIÓN */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .nav-btn {
+            background: rgba(197, 160, 89, 0.05);
+            border: 1px solid var(--gold-dim);
+            color: var(--gold);
+            padding: 12px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: rgba(197, 160, 89, 0.15);
+            border-color: var(--gold);
+            padding-left: 15px;
+            /* Slight movement */
+            box-shadow: inset 0 0 10px rgba(197, 160, 89, 0.1);
+        }
+
+        .nav-btn.active::before {
+            content: '❖';
+            color: var(--gold);
+        }
+
+        /* CONTENIDO PRINCIPAL (Paginas) */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+            background: var(--bg-dark);
+            position: relative;
+        }
+
+        .tab-content {
+            display: none;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* TARJETAS Y PANELES */
+        .panel {
+            background: var(--paper-dark);
+            border: 1px solid var(--gold-dim);
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .panel::after {
+            /* Decorative corner */
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            border-top: 15px solid var(--gold);
+            border-left: 15px solid transparent;
+            width: 0;
+            height: 0;
+            opacity: 0.5;
+        }
+
+        /* BOTONES GENERALES */
+        .btn {
+            background: var(--gold);
+            color: #1a1714;
+            border: none;
+            padding: 8px 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            background: #e0b86e;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 0.75rem;
+        }
+
+        .btn-blue {
+            background: var(--accent-blue);
+            color: #fff;
+        }
+
+        .btn-blue:hover {
+            background: #4a6aa0;
+        }
+
+        .btn-red {
+            background: var(--accent-red);
+            color: #fff;
+        }
+
+        .btn-red:hover {
+            background: #a04a4a;
+        }
+
+        .btn-green {
+            background: var(--accent-green);
+            color: #fff;
+        }
+
+        /* ESCENAS (Historial) */
+        .scene-card {
+            background: var(--paper-light);
+            border: 1px solid #3a3530;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .scene-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3a3530;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .read-aloud {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-left: 3px solid var(--gold);
+            font-style: italic;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* EDITABLE */
+        [contenteditable="true"] {
+            outline: none;
+            transition: all 0.3s;
+            border-bottom: 1px dashed transparent;
+        }
+
+        [contenteditable="true"]:hover {
+            border-bottom-color: var(--gold-dim);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        [contenteditable="true"]:focus {
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom-color: var(--gold);
+            color: #fff;
+        }
+
+        /* BIBLIOTECA */
+        .lib-nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            overflow-x: auto;
+        }
+
+        .lib-subtab {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .lib-subtab:hover {
+            color: var(--gold);
+        }
+
+        .lib-subtab.active {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            font-weight: bold;
+        }
+
+        .lib-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 15px;
+        }
+
+        .lib-card {
+            background: var(--paper-light);
+            border: 1px solid #3a3530;
+            padding: 15px;
+            cursor: grab;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .lib-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .tag-badge {
+            background: #000;
+            color: var(--gold);
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border: 1px solid #333;
+            text-transform: uppercase;
+        }
+
+        /* DADO FLOTANTE */
+        #dice-roller {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--paper-dark);
+            border: 2px solid var(--gold);
+            padding: 20px;
+            border-radius: 4px;
+            /* Slight rounding */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            width: 220px;
+            text-align: center;
+            display: none;
+        }
+
+        #dice-result {
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-family: 'Cinzel Decorative', serif;
+            margin: 10px 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h1 class="book-title">EL CRONISTA <span
+                    style="font-size:0.5em; display:block; color:var(--text-muted); font-family:'Montserrat'">EDICIÓN
+                    V80</span></h1>
+
+            <div style="background:rgba(0,0,0,0.2); padding:10px; border:1px solid #333;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <span style="color:var(--text-muted); font-size:0.8rem; font-family:'Montserrat'">SESIÓN
+                        ACTUAL</span>
+                    <button class="btn btn-green btn-small" onclick="saveGame()">💾 GUARDAR</button>
+                </div>
+                <hr style="border-color:#333; margin: 10px 0;">
+                <h4 style="font-size:0.9rem; margin-bottom:5px;">JUGADORES (<span id="connection-count">0</span>)</h4>
+                <ul id="connected-clients-list"
+                    style="list-style:none; padding:0; margin:0; font-size:0.85rem; color:var(--text-muted);">
+                    <li style="font-style:italic;">Esperando aventureros...</li>
+                </ul>
+            </div>
+
+            <nav class="nav-grid">
+                <button class="nav-btn active" onclick="openTab('adventure', this)">📜 HISTORIA</button>
+                <button class="nav-btn" onclick="openTab('heroes', this)">⚔️ HÉROES</button>
+                <button class="nav-btn" onclick="openTab('combat', this)">💀 COMBATE</button>
+                <button class="nav-btn" onclick="openTab('journal', this)">🖋️ DIARIO</button>
+                <button class="nav-btn" onclick="openTab('library', this)">📚 BIBLIOTECA</button>
+            </nav>
+
+            <div style="margin-top:auto;">
+                <!-- Dice Toggle -->
+                <button class="nav-btn" onclick="toggleDiceRoller()" style="text-align:center; justify-content:center;">
+                    🎲 LANZAR DADOS
+                </button>
+            </div>
+
+            <!-- CACHE IA (New Module) -->
+            <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.2); border: 1px solid #333;">
+                <h4 style="font-size:0.8rem; margin-bottom:10px;">🧠 MEMORIA ARCANA (CACHE)</h4>
+                <div id="cache-stats">
+                    <button onclick="loadCacheStats()" class="btn btn-small btn-blue" style="width:100%">Escanear
+                        Memoria</button>
+                    <div id="cache-stats-display"
+                        style="margin-top:8px; font-size:0.75rem; color:var(--text-muted); min-height:20px;"></div>
+                </div>
+                <button onclick="clearCache()" class="btn btn-small btn-red" style="width:100%; margin-top:8px;">Olvidar
+                    Todo</button>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+            <!-- TAB: ADVENTURE -->
+            <div id="tab-adventure" class="tab-content active">
+                <div class="panel" style="text-align:center;">
+                    <h2 contenteditable="true" id="adv-title" style="font-size:2.5rem;">{{ adv.historia.titulo }}</h2>
+                    <p contenteditable="true" id="adv-synopsis"
+                        style="color:var(--text-muted); font-style:italic; font-size:1.1rem;">{{ adv.historia.sinopsis
+                        }}</p>
+                </div>
+
+                <!-- Scene List -->
+                {% for esc in adv.historia.escenas %}
+                {% set scene_idx = loop.index0 %}
+                <div class="panel scene-card" id="scene-{{ scene_idx }}">
+                    <div style="flex:1; max-width:280px;">
+                        <img src="{{ esc.img or '' }}" id="scene-img-{{ scene_idx }}"
+                            style="width:100%; border:2px solid #333; min-height:200px; background:#000; cursor:pointer; transition:all 0.3s;"
+                            onclick="sendLightbox(this.src)" onerror="this.style.opacity='0.2'">
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-top:10px;">
+                            <button class="btn btn-blue btn-small" onclick="sendScene({{ scene_idx }})">👁️ VER</button>
+                            <button class="btn btn-green btn-small" onclick="projectSceneToVTT({{ scene_idx }})">♟️
+                                VTT</button>
+                        </div>
+                        <button class="btn btn-small" style="width:100%; margin-top:5px; background:#444; color:#ccc;"
+                            onclick="generateImage({{ scene_idx }})">🎨 RE-IMAGINAR</button>
+                    </div>
+
+                    <div style="flex:2;">
+                        <h3 contenteditable="true" id="scene-title-{{ scene_idx }}"
+                            style="border-bottom:1px dashed #444; padding-bottom:5px;">{{ esc.nombre }}</h3>
+                        <div class="read-aloud" contenteditable="true" id="narrative-{{ scene_idx }}">
+                            {{ esc.narrativa }}
+                        </div>
+
+                        <!-- ENEMIGOS -->
+                        {% if esc.enemigos %}
+                        <div
+                            style="margin-top:15px; border:1px solid #8b3a3a; padding:10px; background:rgba(139, 58, 58, 0.1);">
+                            <h4 style="color:#e74c3c; font-size:0.85rem; border-bottom:1px solid #8b3a3a;">⚔️ ENEMIGOS
+                            </h4>
+                            <div
+                                style="display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr)); gap:8px;">
+                                {% for en in esc.enemigos %}
+                                <div style="font-size:0.8rem; background:#222; padding:5px;">
+                                    <strong style="color:#e74c3c;">{{ en.nombre }}</strong><br>
+                                    AC: {{ en.ac }} | HP: {{ en.hp }}<br>
+                                    Atk: {{ en.ataque }} ({{ en.dano }})
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- NPCs -->
+                        {% if esc.npcs %}
+                        <div
+                            style="margin-top:15px; border:1px solid #3a5a8b; padding:10px; background:rgba(58, 90, 139, 0.1);">
+                            <h4 style="color:#3498db; font-size:0.85rem; border-bottom:1px solid #3a5a8b;">🗣️ NPCs</h4>
+                            <ul style="font-size:0.85rem; margin:0; padding-left:20px; color:#ccc;">
+                                {% for npc in esc.npcs %}
+                                <li><strong>{{ npc.nombre }}</strong> ({{ npc.rol }}): <em>"{{ npc.frase_entrada
+                                        }}"</em></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        <!-- Acciones Sugeridas -->
+                        <div style="margin-top:20px;">
+                            <h4 style="font-size:0.9rem; color:var(--gold-dim);">POSIBILIDADES</h4>
+                            <ul style="color:var(--text-muted); font-size:0.9rem;">
+                                {% if esc.interacciones %}
+                                {% for int in esc.interacciones %}
+                                <li><strong>{{ int.accion }}</strong>: {{ int.exito }}</li>
+                                {% endfor %}
+                                {% else %}
+                                <li>Investigar los alrededores...</li>
+                                <li>Hablar con los lugareños...</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                        <div style="margin-top:20px; text-align:right;">
+                            <button class="btn" onclick="expandScene({{ scene_idx }})">✨ EXPANDIR ESCENA</button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- TAB: HEROES -->
+            <div id="tab-heroes" class="tab-content">
+                <div class="panel">
+                    <h2>HÉROES</h2>
+                    <div style="display:grid; grid-template-columns:1fr; gap:20px;">
+                        {% for pj in adv.pjs %}
+                        <div
+                            style="background:var(--paper-light); border:1px solid #333; padding:20px; display:flex; flex-direction:column; gap:15px; font-size:1.1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+                            <div style="display:flex; gap:20px; align-items:center;">
+                                <div
+                                    style="width:140px; height:140px; background:#000; border:2px solid var(--gold); overflow:hidden; flex-shrink:0;">
+                                    <img id="pj-img-{{ loop.index0 }}" src="{{ pj.img or '' }}"
+                                        style="width:100%; height:100%; object-fit:cover; display: {{ 'block' if pj.img else 'none' }};"
+                                        onerror="if(this.src && this.src !== window.location.href) this.style.display='none'">
+                                </div>
+                                <div>
+                                    <h3 style="margin:0; font-size:1.2rem;">{{ pj.nombre }}</h3>
+                                    <p style="margin:5px 0; color:var(--text-muted); font-size:0.9rem;">{{ pj.raza }} {{
+                                        pj.clase }} Nvl {{ pj.nivel }}</p>
+                                    <div
+                                        style="display:flex; gap:10px; font-family:'Montserrat'; font-size:0.8rem; flex-wrap:wrap;">
+                                        <span title="{{ pj.ac_detalle }}">🛡️ AC {{ pj.ac }}</span>
+                                        <span title="Max: {{ pj.hp_max }}">❤️ {{ pj.hp }} HP</span>
+                                        <span title="Velocidad">🦶 {{ pj.velocidad }}</span>
+                                        <span title="Iniciativa">⚡ {{ pj.iniciativa_display }}</span>
+                                        <span title="Dados de Golpe">🎲 {{ pj.dados_golpe }}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- STATS GRID -->
+                            <div
+                                style="display:grid; grid-template-columns:repeat(6, 1fr); gap:5px; text-align:center; background:rgba(0,0,0,0.2); padding:10px; border:1px solid #444;">
+                                {% for stat in ["FUE", "DES", "CON", "INT", "SAB", "CAR"] %}
+                                <div>
+                                    <div style="font-size:0.75rem; color:var(--text-muted);">{{ stat }}</div>
+                                    <div style="font-size:1.1rem; color:var(--gold);">{{ pj.stats[stat] }}</div>
+                                    <div style="font-size:0.8rem;">{{ pj.stats_display[stat].split(' ')[1] }}</div>
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                            <div
+                                style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:15px; font-size:0.85rem;">
+                                <!-- COL 1: SAVES & SKILLS -->
+                                <div>
+                                    <h4
+                                        style="margin:0 0 5px 0; font-size:0.9rem; color:var(--gold-dim); border-bottom:1px solid #333;">
+                                        Competencias Clave</h4>
+                                    <ul
+                                        style="list-style:none; padding:0; margin:0; color:var(--text-muted); max-height:220px; overflow-y:auto;">
+                                        <li style="margin-bottom:5px; color:#fff;"><strong>Salvaciones:</strong> {% for
+                                            s in pj.salvaciones_competentes %}{{ s }}{% if not loop.last %}, {% endif
+                                            %}{% endfor %}</li>
+                                        {% for hab in pj.habilidades_competentes %}
+                                        <li>+{{ pj.habilidades_valores[hab].valor }} {{ hab }} ({{
+                                            pj.habilidades_valores[hab].stat_base }})</li>
+                                        {% endfor %}
+                                        <li style="margin-top:10px; color:#fff;"><strong>Idiomas:</strong> {% for lang
+                                            in pj.idiomas %}{{ lang }}{% if not loop.last %}, {% endif %}{% endfor %}
+                                        </li>
+                                        <li style="margin-top:5px; color:#fff;"><strong>Armas/Armaduras:</strong> {{
+                                            pj.competencias_armas|join(', ') }} / {{ pj.competencias_armaduras|join(',
+                                            ') }}</li>
+                                    </ul>
+                                </div>
+
+                                <!-- COL 2: TRAITS & MAGIC -->
+                                <div>
+                                    <h4
+                                        style="margin:0 0 5px 0; font-size:0.9rem; color:var(--gold-dim); border-bottom:1px solid #333;">
+                                        Rasgos de Clase</h4>
+                                    <ul
+                                        style="list-style:none; padding:0; margin:0 0 10px 0; color:var(--text-muted); max-height:100px; overflow-y:auto; border-bottom:1px solid #222; padding-bottom:5px;">
+                                        {% for h in pj.habilidades %}
+                                        <li style="margin-bottom:4px;">
+                                            <strong style="color:#ddd;">{{ h.nombre if h is mapping else h }}</strong>
+                                            {% if h is mapping and h.desc %}<span
+                                                style="font-size:0.75rem; display:block; line-height:1.2;">{{ h.desc
+                                                }}</span>{% endif %}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+
+                                    <h4
+                                        style="margin:0 0 5px 0; font-size:0.9rem; color:var(--gold-dim); border-bottom:1px solid #333;">
+                                        Magia / Trucos</h4>
+                                    <ul
+                                        style="list-style:none; padding:0; margin:0; color:var(--text-muted); max-height:90px; overflow-y:auto;">
+                                        {% for truco in pj.trucos %}
+                                        <li>✨ {{ truco.nombre if truco is mapping else truco }} <span
+                                                style="font-size:0.7rem;">(Truco)</span></li>
+                                        {% endfor %}
+                                        {% for hechizo in pj.hechizos %}
+                                        <li>🔮 {{ hechizo.nombre if hechizo is mapping else hechizo }}</li>
+                                        {% endfor %}
+                                        {% if not pj.trucos and not pj.hechizos %}<li>No conoce hechizos ni trucos.</li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+
+                                <!-- COL 3: BACKGROUND & INVENTORY -->
+                                <div>
+                                    <h4
+                                        style="margin:0 0 5px 0; font-size:0.9rem; color:var(--gold-dim); border-bottom:1px solid #333;">
+                                        Trasfondo: {{ pj.trasfondo }}</h4>
+                                    <div
+                                        style="font-size:0.8rem; color:var(--text-muted); max-height:120px; overflow-y:auto; margin-bottom:10px; border-bottom:1px solid #222; padding-bottom:5px;">
+                                        <p style="margin:0 0 5px 0; color:#ddd;"><strong>{{ pj.rasgo_trasfondo or 'Rasgo
+                                                único' }}</strong></p>
+                                        <p style="margin:0 0 2px 0;"><em>Personalidad:</em> {{ pj.rasgo_personalidad }}
+                                        </p>
+                                        <p style="margin:0 0 2px 0;"><em>Ideal:</em> {{ pj.ideal }}</p>
+                                        <p style="margin:0 0 2px 0;"><em>Vínculo:</em> {{ pj.vinculo }}</p>
+                                        <p style="margin:0;"><em>Defecto:</em> {{ pj.defecto }}</p>
+                                    </div>
+
+                                    <h4
+                                        style="margin:0 0 5px 0; font-size:0.9rem; color:var(--gold-dim); border-bottom:1px solid #333;">
+                                        Equipo</h4>
+                                    <ul
+                                        style="list-style:none; padding:0; margin:0; color:var(--text-muted); max-height:80px; overflow-y:auto;">
+                                        {% for eq in pj.equipo %}
+                                        <li>📦 {{ eq }}</li>
+                                        {% endfor %}
+                                        <li style="color:var(--gold); margin-top:3px;">💰 {{ pj.oro }} po</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: COMBAT -->
+            <div id="tab-combat" class="tab-content">
+                <div class="panel">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                        <h2>ENCUENTRO TÁCTICO</h2>
+                        <div>
+                            <button class="btn btn-blue" onclick="initiative()">🎲 INICIATIVA</button>
+                            <button class="btn btn-red" onclick="endCombat()">CERRAR</button>
+                        </div>
+                    </div>
+                    <div id="combat-tracker"
+                        style="min-height:300px; border:1px dashed #444; display:flex; align-items:center; justify-content:center; color:#555;">
+                        <p>No hay combate activo. Arrastra monstruos desde la biblioteca o inicia uno nuevo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: JOURNAL -->
+            <div id="tab-journal" class="tab-content">
+                <div class="panel">
+                    <h2>DIARIO DE CAMPAÑA</h2>
+                    <div id="journal-entries" style="display:flex; flex-direction:column; gap:15px;">
+                        {% for entry in adv.diario %}
+                        <div style="border-left:2px solid var(--gold-dim); padding-left:15px;">
+                            <small style="color:var(--text-muted);">{{ entry.fecha }}</small>
+                            <p>{{ entry.contenido }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- New Entry -->
+                    <div style="margin-top:20px; border-top:1px solid #333; padding-top:20px;">
+                        <textarea id="journal-input"
+                            style="width:100%; height:100px; background:#111; border:1px solid #333; color:#ccc; padding:10px;"
+                            placeholder="Registra los eventos..."></textarea>
+                        <button class="btn" onclick="addJournal()" style="margin-top:10px;">AGREGAR ENTRADA</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: LIBRARY -->
+            <div id="tab-library" class="tab-content">
+                <div class="panel">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                        <h2>BIBLIOTECA DEL CRONISTA</h2>
+                        <div>
+                            <button class="btn btn-blue" onclick="showLootForm()">💰 GENERAR BOTÍN</button>
+                            <button class="btn" onclick="showCreateForm()">+ NUEVO REGISTRO</button>
+                        </div>
+                    </div>
+
+                    <div class="lib-nav">
+                        <button class="lib-subtab active" id="lib-tab-all"
+                            onclick="changeLibraryTab('all')">Todos</button>
+                        <button class="lib-subtab" id="lib-tab-enemies"
+                            onclick="changeLibraryTab('enemies')">Monstruos</button>
+                        <button class="lib-subtab" id="lib-tab-npcs" onclick="changeLibraryTab('npcs')">NPCs</button>
+                        <button class="lib-subtab" id="lib-tab-items"
+                            onclick="changeLibraryTab('items')">Objetos</button>
+                        <button class="lib-subtab" id="lib-tab-encounters"
+                            onclick="changeLibraryTab('encounters')">Encuentros</button>
+                    </div>
+
+                    <div style="margin-bottom:20px;">
+                        <input type="text" id="lib-search"
+                            placeholder="Buscar en los archivos arcanos (Nombre, Etiquetas)..."
+                            oninput="debounceLoadLibrary()"
+                            style="width:100%; box-sizing:border-box; background:#111; border:1px solid #333; color:#fff; padding:10px;">
+                    </div>
+
+                    <!-- Create Form -->
+                    <div id="lib-form"
+                        style="display:none; background:#222; padding:15px; margin-bottom:20px; border:1px solid var(--gold);">
+                        <h4>Nuevo Registro</h4>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+                            <input id="form-name" placeholder="Nombre"
+                                style="background:#111; border:1px solid #444; color:#fff; padding:5px;">
+                            <select id="form-type"
+                                style="background:#111; border:1px solid #444; color:#fff; padding:5px;">
+                                <option value="monster">Monstruo</option>
+                                <option value="item">Objeto</option>
+                                <option value="spell">Hechizo</option>
+                            </select>
+                        </div>
+                        <textarea id="form-desc" placeholder="Descripción"
+                            style="width:100%; height:60px; background:#111; border:1px solid #444; color:#fff; margin-bottom:10px;"></textarea>
+                        <button class="btn btn-green" onclick="createLibraryItem()">GUARDAR</button>
+                        <button class="btn btn-red"
+                            onclick="document.getElementById('lib-form').style.display='none'">CANCELAR</button>
+                    </div>
+
+                    <!-- Loot Form -->
+                    <div id="loot-form"
+                        style="display:none; background:#222; padding:15px; margin-bottom:20px; border:1px solid var(--gold);">
+                        <h4>Generador de Botín D&D 5e</h4>
+                        <div style="display:flex; gap:10px; margin-bottom:10px; align-items:center; flex-wrap:wrap;">
+                            <label>CR:</label>
+                            <input type="number" id="loot-cr" value="1" min="0" max="30"
+                                style="background:#111; border:1px solid #444; color:#fff; padding:5px; width:60px;">
+                            <label>Tipo:</label>
+                            <select id="loot-type"
+                                style="background:#111; border:1px solid #444; color:#fff; padding:5px;">
+                                <option value="individual">Bolsillo (Individual)</option>
+                                <option value="hoard">Guarida (Hoard)</option>
+                            </select>
+                            <button class="btn btn-green" onclick="generateLoot()">TIRAR DADOS</button>
+                            <button class="btn btn-red"
+                                onclick="document.getElementById('loot-form').style.display='none'">CERRAR</button>
+                        </div>
+                        <div id="loot-result"
+                            style="display:none; background:#111; padding:10px; border-left:3px solid var(--gold-dim); margin-top:10px;">
+                            <pre id="loot-text"
+                                style="white-space:pre-wrap; font-family:monospace; margin-bottom:10px; color:#ccc;"></pre>
+                            <button class="btn btn-blue" style="width:100%;" onclick="sendLootToChat()">💬 Enviar al
+                                Chat</button>
+                        </div>
+                    </div>
+                    <div id="lib-form"
+                        style="display:none; background:#222; padding:15px; margin-bottom:20px; border:1px solid var(--gold);">
+                        <h4>Nuevo Registro</h4>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+                            <input id="form-name" placeholder="Nombre"
+                                style="background:#111; border:1px solid #444; color:#fff; padding:5px;">
+                            <select id="form-type"
+                                style="background:#111; border:1px solid #444; color:#fff; padding:5px;">
+                                <option value="monster">Monstruo</option>
+                                <option value="item">Objeto</option>
+                                <option value="spell">Hechizo</option>
+                            </select>
+                        </div>
+                        <textarea id="form-desc" placeholder="Descripción"
+                            style="width:100%; height:60px; background:#111; border:1px solid #444; color:#fff; margin-bottom:10px;"></textarea>
+                        <button class="btn btn-green" onclick="createLibraryItem()">GUARDAR</button>
+                        <button class="btn btn-red"
+                            onclick="document.getElementById('lib-form').style.display='none'">CANCELAR</button>
+                    </div>
+
+                    <div class="lib-grid" id="library-container">
+                        <!-- Items will be loaded here -->
+                        <div style="text-align:center; padding:20px; color:#555;">Cargando archivos...</div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- DADO FLOTANTE -->
+    <div id="dice-roller">
+        <div id="dice-result">-</div>
+        <input type="text" id="dice-input" placeholder="1d20+5"
+            style="width:100%; padding:5px; background:#111; border:1px solid #444; color:#fff; text-align:center; margin-bottom:10px;">
+        <button class="btn" style="width:100%;" onclick="rollFromInput()">TIRAR</button>
+    </div>
+
+    <!-- NOTIFICACIONES -->
+    <div id="notification"
+        style="position:fixed; top:20px; right:20px; background:var(--gold); color:#000; padding:15px; border-radius:4px; display:none; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.5); z-index:2000;">
+        Notificación
+    </div>
+
+    <script>
+        // GLOBAL STATE
+        let activeTab = 'adventure';
+
+        // WEBSOCKET SETUP
+        const ws = new WebSocket("ws://" + location.host + "/ws/default_session?client_type=dm");
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            console.log("WS:", data);
+
+            if (data.type === 'client_list_update') {
+                updateClientList(data.clients);
+            } else if (data.type === 'image_generated') {
+                if (data.subtype === 'portrait' && data.pj_index !== undefined) {
+                    const imgEl = document.getElementById(`pj-img-${data.pj_index}`);
+                    if (imgEl) {
+                        imgEl.src = data.url;
+                        imgEl.style.display = 'block';
+                        showNotification("Retrato arcano revelado 👤");
+                    }
+                } else if (data.scene_id !== undefined) {
+                    const sceneImg = document.getElementById(`scene-img-${data.scene_id}`);
+                    if (sceneImg) {
+                        sceneImg.src = data.url;
+                        sceneImg.style.opacity = '1';
+                        showNotification("Visión de escena clarificada 🗺️");
+                    }
+                }
+            }
+        };
+
+        function updateClientList(clients) {
+            const list = document.getElementById('connected-clients-list');
+            const count = document.getElementById('connection-count');
+            list.innerHTML = '';
+
+            // Filter out launcher/dm from visible count if desired, though here we verify connections
+            let visibleCount = 0;
+
+            clients.forEach(c => {
+                if (c.client_type === 'player') {
+                    const li = document.createElement('li');
+                    li.innerHTML = `🧙‍♂️ ${c.client_name || 'Héroe Anónimo'}`;
+                    li.style.marginTop = '4px';
+                    list.appendChild(li);
+                    visibleCount++;
+                }
+            });
+            count.innerText = visibleCount;
+        }
+
+        // TABS
+        function openTab(tabName, btn) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+
+            // Show selected
+            document.getElementById('tab-' + tabName).classList.add('active');
+            if (btn) btn.classList.add('active');
+
+            activeTab = tabName;
+
+            if (tabName === 'library') loadLibrary();
+        }
+
+        // DADO
+        function toggleDiceRoller() {
+            const el = document.getElementById('dice-roller');
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+
+        async function rollFromInput() {
+            const formula = document.getElementById('dice-input').value || '1d20';
+            try {
+                const res = await fetch('/api/roll', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ formula: formula, user: "DM" })
+                });
+                const data = await res.json();
+                document.getElementById('dice-result').innerText = data.total;
+
+                // Show notification
+                showNotification(`🎲 ${formula}: ${data.total}`);
+
+            } catch (e) { console.error(e); }
+        }
+
+        // CACHE STATS
+        async function loadCacheStats() {
+            try {
+                const res = await fetch('/api/ai/cache/stats');
+                const data = await res.json();
+                const s = data.cache;
+                const html = `Items: ${s.size}/${s.maxsize} | Hits: ${s.hits} | Rate: ${s.hit_rate_percent}%`;
+                document.getElementById('cache-stats-display').innerText = html;
+            } catch (e) {
+                document.getElementById('cache-stats-display').innerText = "Error leyendo memoria.";
+            }
+        }
+
+        async function clearCache() {
+            if (confirm("¿Borrar toda la memoria caché?")) {
+                await fetch('/api/ai/cache/clear', { method: 'POST' });
+                loadCacheStats();
+            }
+        }
+
+        // LIBRARY FUNCTIONS
+        let activeLibraryTab = 'all';
+        let libSearchTimer = null;
+
+        function changeLibraryTab(type) {
+            activeLibraryTab = type;
+            document.querySelectorAll('.lib-subtab').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('lib-tab-' + type).classList.add('active');
+            loadLibrary();
+        }
+
+        function debounceLoadLibrary() {
+            clearTimeout(libSearchTimer);
+            libSearchTimer = setTimeout(loadLibrary, 300);
+        }
+
+        async function loadLibrary() {
+            const query = document.getElementById('lib-search').value;
+            const grid = document.getElementById('library-container');
+            grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:#555;">Consultando archivos arcanos...</div>';
+
+            try {
+                let params = new URLSearchParams();
+                if (query) params.append('q', query);
+                if (activeLibraryTab !== 'all') params.append('type', activeLibraryTab);
+
+                const res = await fetch('/api/library/search?' + params.toString());
+                const data = await res.json();
+
+                grid.innerHTML = '';
+                let totalItems = 0;
+
+                // Render enemies
+                if (data.enemies && data.enemies.length > 0) {
+                    totalItems += data.enemies.length;
+                    data.enemies.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'lib-card';
+                        card.innerHTML = `
+                            <span class="tag-badge" style="position:absolute; top:10px; right:10px;">CR ${item.cr}</span>
+                            <h4 style="margin:0 0 5px 0; color:var(--gold); padding-right:60px;">${item.name}</h4>
+                            <div style="font-size:0.8rem; color:#ccc; margin-bottom:5px;">
+                                <span>❤️ HP: ${item.hp}</span> | <span>🛡️ AC: ${item.ac}</span><br>
+                                <span>⚔️ Atq: ${item.attack} (${item.damage})</span>
+                            </div>
+                            <div style="font-size:0.75rem; color:#888; margin-bottom:10px; max-height:40px; overflow-y:auto;">
+                                ${item.tags ? `<em>Tags: ${item.tags}</em><br>` : ''}
+                                ${(item.abilities && item.abilities.length > 0) ? item.abilities.map(a => a.name).join(', ') : ''}
+                            </div>
+                            <button class="btn btn-red" style="width:100%; font-size:0.8rem; padding:4px;" onclick='addMonsterToCombat(${JSON.stringify(item).replace(/'/g, "&#39;")})'>⚔️ AÑADIR A COMBATE</button>
+                        `;
+                        grid.appendChild(card);
+                    });
+                }
+
+                // Render NPCs
+                if (data.npcs && data.npcs.length > 0) {
+                    totalItems += data.npcs.length;
+                    data.npcs.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'lib-card';
+                        card.innerHTML = `
+                            <span class="tag-badge" style="position:absolute; top:10px; right:10px;">NPC</span>
+                            <h4 style="margin:0 0 5px 0; color:var(--gold); padding-right:40px;">${item.name}</h4>
+                            <div style="font-size:0.85rem; color:#ccc; margin-bottom:5px;">${item.race} • ${item.class_name}</div>
+                            <div style="font-size:0.75rem; color:#888; margin-bottom:10px; max-height:40px; overflow-y:auto;">
+                                ${item.description || item.personality || 'Sin descripción'}
+                            </div>
+                            <button class="btn" style="width:100%; font-size:0.8rem; padding:4px;" onclick='sendToChat("🖼️ ${item.name} ha aparecido.")'>💬 ENVIAR A CHAT</button>
+                        `;
+                        grid.appendChild(card);
+                    });
+                }
+
+                // Render Items
+                if (data.items && data.items.length > 0) {
+                    totalItems += data.items.length;
+                    data.items.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'lib-card';
+                        card.innerHTML = `
+                            <span class="tag-badge" style="position:absolute; top:10px; right:10px;">${item.item_type}</span>
+                            <h4 style="margin:0 0 5px 0; color:var(--gold); padding-right:60px;">${item.name}</h4>
+                            <div style="font-size:0.8rem; color:#ccc; margin-bottom:5px;">Rareza: <span style="color:var(--gold-dim);">${item.rarity}</span></div>
+                            <div style="font-size:0.75rem; color:#888; margin-bottom:10px; max-height:40px; overflow-y:auto;">
+                                ${item.description || item.properties || 'Sin descripción'}
+                            </div>
+                            <div style="display:flex; gap:5px;">
+                                <button class="btn btn-blue" style="flex:1; font-size:0.75rem; padding:4px;" onclick='sendToChat("🎁 Objeto Mágico: ${item.name}\\n${item.description || ""}")'>👁️ PROYECTAR</button>
+                            </div>
+                        `;
+                        grid.appendChild(card);
+                    });
+                }
+
+                // Render Encounters
+                if (data.encounters && data.encounters.length > 0) {
+                    totalItems += data.encounters.length;
+                    data.encounters.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'lib-card';
+                        card.innerHTML = `
+                            <span class="tag-badge" style="position:absolute; top:10px; right:10px;">Encuentro</span>
+                            <h4 style="margin:0 0 5px 0; color:var(--gold); padding-right:60px;">${item.name}</h4>
+                            <div style="font-size:0.8rem; color:#ccc; margin-bottom:5px;">Dif: <span style="color:var(--red);">${item.difficulty}</span></div>
+                            <div style="font-size:0.75rem; color:#888; margin-bottom:10px; max-height:40px; overflow-y:auto;">
+                                ${item.description || 'Sin descripción'}
+                            </div>
+                            <button class="btn btn-green" style="width:100%; font-size:0.8rem; padding:4px;" onclick='showNotification("Puedes arrastrarlo a una escena desde el planificador")'>📁 VERIFICADO</button>
+                        `;
+                        grid.appendChild(card);
+                    });
+                }
+
+                if (totalItems === 0) {
+                    grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:#666;">No se encontraron registros en los archivos (prueba refrescar SRD).</div>';
+                }
+            } catch (err) {
+                console.error(err);
+                grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:var(--red);">Error crítico al consultar la API de la biblioteca.</div>';
+            }
+        }
+
+        async function addMonsterToCombat(monster) {
+            try {
+                const res = await fetch('/combat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: 'default_session',
+                        action: 'add_enemy',
+                        data: {
+                            enemigo: {
+                                nombre: monster.name,
+                                hp: monster.hp,
+                                hp_max: monster.hp,
+                                ac: monster.ac,
+                                ataque: monster.attack,
+                                dano: monster.damage
+                            }
+                        }
+                    })
+                });
+                const data = await res.json();
+                if (data && data.activo) {
+                    showNotification(`${monster.name} añadido al combate en curso ⚔️`);
+                } else if (data && !data.activo) {
+                    showNotification("Combate Inactivo: Ve al Encuentro Táctico e Inicia un combate primero.");
+                } else {
+                    showNotification("Error añadiendo monstruo.");
+                }
+            } catch (err) {
+                console.error("error agregando a combate:", err);
+            }
+        }
+
+        function sendToChat(text) {
+            ws.send(JSON.stringify({
+                type: 'chat',
+                sender: 'Cronista',
+                text: text
+            }));
+            showNotification("Mensaje proyectado en la red astral.");
+        }
+
+        // LOOT FUNCTIONS
+        function showLootForm() {
+            document.getElementById('loot-form').style.display = 'block';
+            document.getElementById('loot-result').style.display = 'none';
+        }
+
+        async function generateLoot() {
+            const cr = document.getElementById('loot-cr').value || 0;
+            const type = document.getElementById('loot-type').value;
+            try {
+                const res = await fetch(`/api/loot/generate?cr=${cr}&type=${type}`);
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    document.getElementById('loot-result').style.display = 'block';
+                    document.getElementById('loot-text').innerText = data.loot.formatted_text;
+                } else {
+                    showNotification("Error: " + data.message);
+                }
+            } catch (err) {
+                console.error(err);
+                showNotification("Error de conexión al generar botín.");
+            }
+        }
+
+        function sendLootToChat() {
+            const text = document.getElementById('loot-text').innerText;
+            if (!text) return;
+            sendToChat("🎁 **Recompensa Encontrada:**\\n" + text);
+        }
+
+        // UTILS
+        function showNotification(msg) {
+            const n = document.getElementById('notification');
+            n.innerText = msg;
+            n.style.display = 'block';
+            setTimeout(() => n.style.display = 'none', 3000);
+        }
+
+        async function saveGame() {
+            showNotification("Guardando estado del mundo...");
+            await fetch('/save', { method: 'POST' });
+            showNotification("✅ Progreso Guardado");
+        }
+
+        // SCENE ACTIONS
+        async function sendScene(idx) {
+            const narrative = document.getElementById(`narrative-${idx}`).innerText;
+            const img = document.getElementById(`scene-img-${idx}`).src;
+
+            ws.send(JSON.stringify({
+                type: 'show_scene',
+                narrative: narrative,
+                img: img
+            }));
+            showNotification("Escena enviada a jugadores");
+
+            // Auto-project to VTT if configured (User request: "AutoProjectMap")
+            // We can optionally call this here if we want seamless transition
+            // autoProjectMap(idx);
+        }
+
+        async function projectSceneToVTT(idx) {
+            const img = document.getElementById(`scene-img-${idx}`).src;
+            // VTT Sync Logic
+            ws.send(JSON.stringify({
+                type: 'vtt_scene',
+                img: img,
+                grid_size: 50 // Standard grid
+            }));
+            showNotification("Tablero Táctico Activado");
+        }
+
+        // Function requested by user for explicit VTT sync if needed elsewhere
+        function autoProjectMap(idx) {
+            projectSceneToVTT(idx);
+        }
+
+        function sendLightbox(src) {
+            if (!src) return;
+            ws.send(JSON.stringify({
+                type: 'show_image',
+                url: src
+            }));
+            showNotification("Imagen proyectada");
+        }
+
+    </script>
+</body>
+
+</html>

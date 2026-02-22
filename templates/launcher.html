@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRONISTA - INICIO</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Metamorphous&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --paper-bg: #1a1714;
+            --paper-texture: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMWExNzE0Ii8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMyYjI2MjIiLz4KPC9zdmc+');
+            --gold-accent: #c5a059;
+            --gold-shadow: #8a6e36;
+            --text-color: #e8e1d5;
+            --leather-dark: #2b2622;
+        }
+
+        body {
+            background-color: #0b0a09;
+            background-image: radial-gradient(circle at center, #1a1714 0%, #000000 100%);
+            color: var(--text-color);
+            font-family: 'Cormorant Garamond', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .book-cover {
+            background: var(--paper-bg);
+            background-image: var(--paper-texture);
+            padding: 60px;
+            border: 4px double var(--gold-accent);
+            border-radius: 8px;
+            text-align: center;
+            box-shadow:
+                0 0 50px rgba(0, 0, 0, 0.8),
+                inset 0 0 100px rgba(0, 0, 0, 0.9),
+                0 0 0 15px var(--leather-dark),
+                0 0 0 18px var(--gold-accent);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        /* Esquinas ornamentales */
+        .book-cover::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            pointer-events: none;
+        }
+
+        h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3.5rem;
+            color: var(--gold-accent);
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 4px #000;
+            letter-spacing: 2px;
+            background: linear-gradient(to bottom, #ebd5a0, #c5a059, #8a6e36);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.5));
+        }
+
+        p {
+            font-family: 'Metamorphous', cursive;
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--gold-accent);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .seal-btn {
+            background: radial-gradient(circle at 30% 30%, #d4af37, #8a6e36);
+            border: 4px solid #5c4822;
+            color: #2b2622;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow:
+                0 10px 20px rgba(0, 0, 0, 0.5),
+                inset 0 5px 10px rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px auto;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+
+        .seal-btn::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px dashed rgba(43, 38, 34, 0.5);
+            border-radius: 50%;
+        }
+
+        .seal-btn:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.6),
+                inset 0 5px 10px rgba(255, 255, 255, 0.4),
+                0 0 30px var(--gold-accent);
+        }
+
+        .secondary-btn {
+            background: transparent;
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 12px 30px;
+            font-family: 'Metamorphous', cursive;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secondary-btn:hover {
+            background: rgba(197, 160, 89, 0.1);
+            box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+            text-shadow: 0 0 5px var(--gold-accent);
+        }
+
+        #loading {
+            margin-top: 30px;
+            font-family: 'Metamorphous', cursive;
+            color: var(--gold-accent);
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: #111;
+            margin-top: 15px;
+            border: 1px solid #333;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #8a6e36, #ebd5a0, #8a6e36);
+            width: 0%;
+            transition: width 0.3s;
+            box-shadow: 0 0 10px var(--gold-accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book-cover">
+        <h1>EL CRONISTA</h1>
+        <p>Grimorio de Campañas V80</p>
+
+        <div
+            style="background:rgba(0,0,0,0.4); border:1px solid #444; padding:15px; border-radius:5px; margin-bottom:20px; text-align:left;">
+            <div style="margin-bottom:10px;">
+                <label
+                    style="display:block; color:var(--gold-accent); margin-bottom:5px; font-family:'Metamorphous', cursive; font-size:0.9rem;">ENTORNO
+                    (SETTING)</label>
+                <input type="text" id="setup-setting"
+                    value="Una tierra de fantasía oscura donde la magia está prohibida y los dragones gobiernan."
+                    style="width:100%; box-sizing:border-box; background:#111; border:1px solid #555; color:#eee; padding:8px; font-family:'Cormorant Garamond', serif;">
+            </div>
+            <div style="display:flex; gap:10px;">
+                <div style="flex:1;">
+                    <label
+                        style="display:block; color:var(--gold-accent); margin-bottom:5px; font-family:'Metamorphous', cursive; font-size:0.9rem;">ESTILO</label>
+                    <select id="setup-style"
+                        style="width:100%; box-sizing:border-box; background:#111; border:1px solid #555; color:#eee; padding:8px; font-family:'Cormorant Garamond', serif;">
+                        <option value="ALTA FANTASÍA">Alta Fantasía</option>
+                        <option value="FANTASÍA OSCURA">Fantasía Oscura</option>
+                        <option value="HORROR GÓTICO">Horror Gótico</option>
+                        <option value="MISTERIO E INTRIGA">Misterio e Intriga</option>
+                        <option value="MITOLOGÍA ÉPICA">Mitología Épica</option>
+                    </select>
+                </div>
+                <div style="width:80px;">
+                    <label
+                        style="display:block; color:var(--gold-accent); margin-bottom:5px; font-family:'Metamorphous', cursive; font-size:0.9rem;">NIVEL</label>
+                    <input type="number" id="setup-nivel" value="1" min="1" max="20"
+                        style="width:100%; box-sizing:border-box; background:#111; border:1px solid #555; color:#eee; padding:8px; font-family:'Cormorant Garamond', serif;">
+                </div>
+            </div>
+        </div>
+
+        <button class="seal-btn" onclick="startNew()">
+            NUEVA<br>AVENTURA
+        </button>
+
+        <button class="secondary-btn" onclick="loadGame()">CONTINUAR RELATO</button>
+
+        <div id="loading" style="display:none;">
+            <span id="loading-msg">Invocando magia antigua...</span>
+            <div class="progress-container">
+                <div id="loading-bar" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ws = new WebSocket("ws://" + location.host + "/ws/default_session?client_type=launcher");
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+
+            if (data.type === 'loading_progress') {
+                document.getElementById('loading').style.display = 'block';
+                document.getElementById('loading-msg').innerText = "✨ " + data.message;
+                document.getElementById('loading-bar').style.width = data.progress + "%";
+            }
+
+            if (data.type === 'adventure_ready') {
+                document.getElementById('loading-msg').innerText = "📜 El tomo se ha abierto.";
+                document.getElementById('loading-bar').style.width = "100%";
+                setTimeout(() => {
+                    window.location.href = '/dm';
+                }, 1000);
+            }
+        };
+
+        function startNew() {
+            document.getElementById('loading').style.display = 'block';
+
+            const setting = document.getElementById('setup-setting').value;
+            const style = document.getElementById('setup-style').value;
+            const nivel = parseInt(document.getElementById('setup-nivel').value) || 1;
+
+            const payload = {
+                "setting": setting,
+                "style": style,
+                "nivel": nivel
+            };
+
+            // Trigger async generation
+            fetch('/new', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+                .then(async r => {
+                    if (!r.ok) {
+                        const err = await r.json();
+                        alert("Error: " + (err.detail || "Fallo al iniciar"));
+                        document.getElementById('loading').style.display = 'none';
+                    }
+                })
+                .catch(e => {
+                    console.error(e);
+                    alert("Error de conexión");
+                    document.getElementById('loading').style.display = 'none';
+                });
+        }
+
+        function loadGame() {
+            window.location.href = '/dm';
+        }
+    </script>
+</body>
+
+</html>
